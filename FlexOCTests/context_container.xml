@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flexoccontext>
+	<objects>
+	
+		<object id="stringRef1" type="NSString">
+			<init selector="initWithString:">
+				<argument value="Hello stringRef1" />
+			</init>
+		</object>
+		
+		<object id="stringRef2" type="NSString">
+			<init selector="initWithString:">
+				<argument value="Hello stringRef2" />
+			</init>
+		</object>
+		
+<!--	
+		<object id="dictionary" type="NSDictionary">
+			<init selector="initWithDictionary">
+				<argument>
+					<dictionary>
+						<entry key="One" value="One" />
+						<entry key="Two" ref="stringRef1" />					
+						<entry key="Three" ref="stringRef2" />					
+					</dictionary>
+				</argument>
+			</init>
+		</object>
+	
+		<object id="array" type="NSArray">
+			<init selector="initWithArray">
+				<argument>
+					<list>
+						<entry value="One" />
+						<entry ref="stringRef1" />					
+						<entry ref="stringRef2" />					
+					</list>
+				</argument>
+			</init>
+		</object>
+-->
+	</objects>
+</flexoccontext>

@@ -1,0 +1,827 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D173E7A154E2090004FCD47 /* XmlAppCtxListHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */; };
+		3D173E7B154E2090004FCD47 /* XmlAppCtxListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */; };
+		3D27F6A7155048F100753582 /* ObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27F6A5155048F100753582 /* ObjectProxy.h */; };
+		3D27F6A8155048F100753582 /* ObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27F6A6155048F100753582 /* ObjectProxy.m */; };
+		3D27F6AB1550512F00753582 /* LazyObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27F6A91550512F00753582 /* LazyObjectProxy.h */; };
+		3D27F6AC1550512F00753582 /* LazyObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27F6AA1550512F00753582 /* LazyObjectProxy.m */; };
+		3D295AA315367D9900DAF40F /* CircularService1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D295AA215367D9900DAF40F /* CircularService1.m */; };
+		3D295AA815367DC400DAF40F /* CircularService2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D295AA715367DC400DAF40F /* CircularService2.m */; };
+		3D295AAA153680DA00DAF40F /* CircularContext.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D295AA9153680DA00DAF40F /* CircularContext.plist */; };
+		3D713FF31547972E00EB3B1F /* XmlAppCtxObjectHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D713FF11547972E00EB3B1F /* XmlAppCtxObjectHandler.h */; };
+		3D713FF41547972E00EB3B1F /* XmlAppCtxObjectHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D713FF21547972E00EB3B1F /* XmlAppCtxObjectHandler.m */; };
+		3D713FF71547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */; };
+		3D713FF81547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */; };
+		3DA4BE2D153C44820042221C /* Circularcontext.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DA4BE2C153C44820042221C /* Circularcontext.xml */; };
+		3DAB67CC153700BB00E7EE16 /* context.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB67CB153700BB00E7EE16 /* context.xml */; };
+		3DAC0C8E154EA48000157D1B /* InstanceContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC0C8D154EA48000157D1B /* InstanceContainer.m */; };
+		3DB610B0153C312F0027DCD9 /* FlexOCXmlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB610AF153C312F0027DCD9 /* FlexOCXmlTest.m */; };
+		3DB6A58E153B67DC006F4983 /* ApplicationContextResourceProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB6A58C153B67DC006F4983 /* ApplicationContextResourceProvider.h */; };
+		3DB6A58F153B67DC006F4983 /* ApplicationContextResourceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6A58D153B67DC006F4983 /* ApplicationContextResourceProvider.m */; };
+		3DB809C615514CF0001303D6 /* ITypeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809C515514CF0001303D6 /* ITypeFilter.h */; };
+		3DB809C815514D19001303D6 /* IMessageMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809C715514D19001303D6 /* IMessageMatcher.h */; };
+		3DB809CA15514E7B001303D6 /* IPointcut.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809C915514E7B001303D6 /* IPointcut.h */; };
+		3DB809CC15514F43001303D6 /* IAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809CB15514F43001303D6 /* IAdvice.h */; };
+		3DB809CF15514F69001303D6 /* IAdvisor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809CE15514F69001303D6 /* IAdvisor.h */; };
+		3DB809D115514F8C001303D6 /* IPointcutAdvisor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */; };
+		3DC17BC2153D08E10030FB44 /* context_factorytest.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DC17BC1153D08E10030FB44 /* context_factorytest.xml */; };
+		3DC17BC9153D092E0030FB44 /* FlexOCTestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */; };
+		3DC17BCC153D0F650030FB44 /* InstanceServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC17BCB153D0F650030FB44 /* InstanceServiceFactory.m */; };
+		3DC17BCE153D13C20030FB44 /* context_container.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DC17BCD153D13C20030FB44 /* context_container.xml */; };
+		3DCFFD06154B1EF70083386A /* XmlAppCtxDictionayHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCFFD04154B1EF70083386A /* XmlAppCtxDictionayHandler.h */; };
+		3DCFFD07154B1EF70083386A /* XmlAppCtxDictionayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFFD05154B1EF70083386A /* XmlAppCtxDictionayHandler.m */; };
+		3DCFFD0A154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCFFD08154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h */; };
+		3DCFFD0B154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFFD09154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m */; };
+		3DD5F9BD153AFDED009A3712 /* IApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9AA153AFDED009A3712 /* IApplicationContext.h */; };
+		3DD5F9BE153AFDED009A3712 /* IApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9AB153AFDED009A3712 /* IApplicationContext.m */; };
+		3DD5F9BF153AFDED009A3712 /* DictionaryApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9AD153AFDED009A3712 /* DictionaryApplicationContext.h */; };
+		3DD5F9C0153AFDED009A3712 /* DictionaryApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9AE153AFDED009A3712 /* DictionaryApplicationContext.m */; };
+		3DD5F9C1153AFDED009A3712 /* XmlApplicationContextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B0153AFDED009A3712 /* XmlApplicationContextParser.h */; };
+		3DD5F9C2153AFDED009A3712 /* XmlApplicationContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9B1153AFDED009A3712 /* XmlApplicationContextParser.m */; };
+		3DD5F9C3153AFDED009A3712 /* pListApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B2153AFDED009A3712 /* pListApplicationContext.h */; };
+		3DD5F9C4153AFDED009A3712 /* pListApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9B3153AFDED009A3712 /* pListApplicationContext.m */; };
+		3DD5F9C5153AFDED009A3712 /* XmlApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B4153AFDED009A3712 /* XmlApplicationContext.h */; };
+		3DD5F9C6153AFDED009A3712 /* XmlApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9B5153AFDED009A3712 /* XmlApplicationContext.m */; };
+		3DD5F9C7153AFDED009A3712 /* IObjectFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B9153AFDED009A3712 /* IObjectFactory.h */; };
+		3DD5F9C8153AFDED009A3712 /* UIApplication+FlexOC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9BB153AFDED009A3712 /* UIApplication+FlexOC.h */; };
+		3DD5F9C9153AFDED009A3712 /* UIApplication+FlexOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9BC153AFDED009A3712 /* UIApplication+FlexOC.m */; };
+		3DD5F9CC153AFFBF009A3712 /* ICache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9CB153AFFBF009A3712 /* ICache.h */; };
+		3DD5F9CE153AFFFD009A3712 /* ICachePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9CD153AFFFD009A3712 /* ICachePolicy.h */; };
+		3DD5F9D2153B0421009A3712 /* MemoryWarningCachePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9D0153B0421009A3712 /* MemoryWarningCachePolicy.h */; };
+		3DD5F9D3153B0421009A3712 /* MemoryWarningCachePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9D1153B0421009A3712 /* MemoryWarningCachePolicy.m */; };
+		3DD5F9D7153B0977009A3712 /* ReadWriteLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9D5153B0977009A3712 /* ReadWriteLock.h */; };
+		3DD5F9D8153B0977009A3712 /* ReadWriteLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9D6153B0977009A3712 /* ReadWriteLock.m */; };
+		3DD5F9E0153B1FB9009A3712 /* DictionaryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9DE153B1FB9009A3712 /* DictionaryCache.h */; };
+		3DD5F9E1153B1FB9009A3712 /* DictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9DF153B1FB9009A3712 /* DictionaryCache.m */; };
+		3DD74EF21548DEAB00CC0BBB /* NestedService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD74EF11548DEAB00CC0BBB /* NestedService.m */; };
+		3DDF0664153623A70029C4AB /* Context.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF0663153623A70029C4AB /* Context.plist */; };
+		3DDF06691536245D0029C4AB /* InstanceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF06681536245D0029C4AB /* InstanceService.m */; };
+		3DDF066D15362D090029C4AB /* InjectionInstanceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF066C15362D090029C4AB /* InjectionInstanceService.m */; };
+		3DE3CCDB153D83070044F5DE /* IXmlApplicationContextParserHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCDA153D83070044F5DE /* IXmlApplicationContextParserHandler.h */; };
+		3DE3CCDE153D83CA0044F5DE /* XmlAppCtxRootHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCDC153D83CA0044F5DE /* XmlAppCtxRootHandler.h */; };
+		3DE3CCDF153D83CA0044F5DE /* XmlAppCtxRootHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCDD153D83CA0044F5DE /* XmlAppCtxRootHandler.m */; };
+		3DE3CCE2153D84D80044F5DE /* XmlAppCtxHandlerBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCE0153D84D80044F5DE /* XmlAppCtxHandlerBase.h */; };
+		3DE3CCE3153D84D80044F5DE /* XmlAppCtxHandlerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCE1153D84D80044F5DE /* XmlAppCtxHandlerBase.m */; };
+		3DE3CCE6153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCE4153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h */; };
+		3DE3CCE7153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCE5153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m */; };
+		3DFC86411533297400883AD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC86401533297400883AD9 /* Foundation.framework */; };
+		3DFC864F1533297400883AD9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC864E1533297400883AD9 /* SenTestingKit.framework */; };
+		3DFC86511533297400883AD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC86501533297400883AD9 /* UIKit.framework */; };
+		3DFC86521533297400883AD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC86401533297400883AD9 /* Foundation.framework */; };
+		3DFC86551533297400883AD9 /* libFlexOC-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC863D1533297400883AD9 /* libFlexOC-iOS.a */; };
+		3DFC865B1533297400883AD9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DFC86591533297400883AD9 /* InfoPlist.strings */; };
+		3DFC865E1533297400883AD9 /* FlexOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC865D1533297400883AD9 /* FlexOCTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DFC86531533297400883AD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DFC86341533297400883AD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DFC863C1533297400883AD9;
+			remoteInfo = FlexOC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxListHandler.h; sourceTree = "<group>"; };
+		3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxListHandler.m; sourceTree = "<group>"; };
+		3D27F6A5155048F100753582 /* ObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectProxy.h; sourceTree = "<group>"; };
+		3D27F6A6155048F100753582 /* ObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectProxy.m; sourceTree = "<group>"; };
+		3D27F6A91550512F00753582 /* LazyObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyObjectProxy.h; sourceTree = "<group>"; };
+		3D27F6AA1550512F00753582 /* LazyObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyObjectProxy.m; sourceTree = "<group>"; };
+		3D295AA115367D9900DAF40F /* CircularService1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularService1.h; sourceTree = "<group>"; };
+		3D295AA215367D9900DAF40F /* CircularService1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularService1.m; sourceTree = "<group>"; };
+		3D295AA615367DC400DAF40F /* CircularService2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularService2.h; sourceTree = "<group>"; };
+		3D295AA715367DC400DAF40F /* CircularService2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularService2.m; sourceTree = "<group>"; };
+		3D295AA9153680DA00DAF40F /* CircularContext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CircularContext.plist; sourceTree = "<group>"; };
+		3D713FF11547972E00EB3B1F /* XmlAppCtxObjectHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectHandler.h; sourceTree = "<group>"; };
+		3D713FF21547972E00EB3B1F /* XmlAppCtxObjectHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectHandler.m; sourceTree = "<group>"; };
+		3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectPropertyHandler.h; sourceTree = "<group>"; };
+		3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectPropertyHandler.m; sourceTree = "<group>"; };
+		3DA4BE2C153C44820042221C /* Circularcontext.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Circularcontext.xml; sourceTree = "<group>"; };
+		3DAB67CB153700BB00E7EE16 /* context.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context.xml; sourceTree = "<group>"; };
+		3DAC0C8C154EA48000157D1B /* InstanceContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceContainer.h; sourceTree = "<group>"; };
+		3DAC0C8D154EA48000157D1B /* InstanceContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceContainer.m; sourceTree = "<group>"; };
+		3DB610AE153C312F0027DCD9 /* FlexOCXmlTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexOCXmlTest.h; sourceTree = "<group>"; };
+		3DB610AF153C312F0027DCD9 /* FlexOCXmlTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCXmlTest.m; sourceTree = "<group>"; };
+		3DB6A58C153B67DC006F4983 /* ApplicationContextResourceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationContextResourceProvider.h; sourceTree = "<group>"; };
+		3DB6A58D153B67DC006F4983 /* ApplicationContextResourceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationContextResourceProvider.m; sourceTree = "<group>"; };
+		3DB809C515514CF0001303D6 /* ITypeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITypeFilter.h; sourceTree = "<group>"; };
+		3DB809C715514D19001303D6 /* IMessageMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; path = IMessageMatcher.h; sourceTree = "<group>"; };
+		3DB809C915514E7B001303D6 /* IPointcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPointcut.h; sourceTree = "<group>"; };
+		3DB809CB15514F43001303D6 /* IAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdvice.h; sourceTree = "<group>"; };
+		3DB809CE15514F69001303D6 /* IAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdvisor.h; sourceTree = "<group>"; };
+		3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPointcutAdvisor.h; sourceTree = "<group>"; };
+		3DC17BC1153D08E10030FB44 /* context_factorytest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_factorytest.xml; sourceTree = "<group>"; };
+		3DC17BC7153D092E0030FB44 /* FlexOCTestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexOCTestFactory.h; sourceTree = "<group>"; };
+		3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCTestFactory.m; sourceTree = "<group>"; };
+		3DC17BCA153D0F650030FB44 /* InstanceServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceServiceFactory.h; sourceTree = "<group>"; };
+		3DC17BCB153D0F650030FB44 /* InstanceServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceServiceFactory.m; sourceTree = "<group>"; };
+		3DC17BCD153D13C20030FB44 /* context_container.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_container.xml; sourceTree = "<group>"; };
+		3DCFFD04154B1EF70083386A /* XmlAppCtxDictionayHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxDictionayHandler.h; sourceTree = "<group>"; };
+		3DCFFD05154B1EF70083386A /* XmlAppCtxDictionayHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxDictionayHandler.m; sourceTree = "<group>"; };
+		3DCFFD08154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxContainerEntryHandler.h; sourceTree = "<group>"; };
+		3DCFFD09154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxContainerEntryHandler.m; sourceTree = "<group>"; };
+		3DD5F9AA153AFDED009A3712 /* IApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IApplicationContext.h; sourceTree = "<group>"; };
+		3DD5F9AB153AFDED009A3712 /* IApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IApplicationContext.m; sourceTree = "<group>"; };
+		3DD5F9AD153AFDED009A3712 /* DictionaryApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryApplicationContext.h; sourceTree = "<group>"; };
+		3DD5F9AE153AFDED009A3712 /* DictionaryApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryApplicationContext.m; sourceTree = "<group>"; };
+		3DD5F9B0153AFDED009A3712 /* XmlApplicationContextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlApplicationContextParser.h; sourceTree = "<group>"; };
+		3DD5F9B1153AFDED009A3712 /* XmlApplicationContextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlApplicationContextParser.m; sourceTree = "<group>"; };
+		3DD5F9B2153AFDED009A3712 /* pListApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pListApplicationContext.h; sourceTree = "<group>"; };
+		3DD5F9B3153AFDED009A3712 /* pListApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pListApplicationContext.m; sourceTree = "<group>"; };
+		3DD5F9B4153AFDED009A3712 /* XmlApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlApplicationContext.h; sourceTree = "<group>"; };
+		3DD5F9B5153AFDED009A3712 /* XmlApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlApplicationContext.m; sourceTree = "<group>"; };
+		3DD5F9B9153AFDED009A3712 /* IObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IObjectFactory.h; sourceTree = "<group>"; };
+		3DD5F9BB153AFDED009A3712 /* UIApplication+FlexOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+FlexOC.h"; sourceTree = "<group>"; };
+		3DD5F9BC153AFDED009A3712 /* UIApplication+FlexOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+FlexOC.m"; sourceTree = "<group>"; };
+		3DD5F9CB153AFFBF009A3712 /* ICache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICache.h; sourceTree = "<group>"; };
+		3DD5F9CD153AFFFD009A3712 /* ICachePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICachePolicy.h; sourceTree = "<group>"; };
+		3DD5F9D0153B0421009A3712 /* MemoryWarningCachePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryWarningCachePolicy.h; sourceTree = "<group>"; };
+		3DD5F9D1153B0421009A3712 /* MemoryWarningCachePolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryWarningCachePolicy.m; sourceTree = "<group>"; };
+		3DD5F9D5153B0977009A3712 /* ReadWriteLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadWriteLock.h; sourceTree = "<group>"; };
+		3DD5F9D6153B0977009A3712 /* ReadWriteLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadWriteLock.m; sourceTree = "<group>"; };
+		3DD5F9DE153B1FB9009A3712 /* DictionaryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryCache.h; sourceTree = "<group>"; };
+		3DD5F9DF153B1FB9009A3712 /* DictionaryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryCache.m; sourceTree = "<group>"; };
+		3DD74EF01548DEAB00CC0BBB /* NestedService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestedService.h; sourceTree = "<group>"; };
+		3DD74EF11548DEAB00CC0BBB /* NestedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestedService.m; sourceTree = "<group>"; };
+		3DDF0663153623A70029C4AB /* Context.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Context.plist; sourceTree = "<group>"; };
+		3DDF06671536245D0029C4AB /* InstanceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceService.h; sourceTree = "<group>"; };
+		3DDF06681536245D0029C4AB /* InstanceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceService.m; sourceTree = "<group>"; };
+		3DDF066B15362D090029C4AB /* InjectionInstanceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InjectionInstanceService.h; sourceTree = "<group>"; };
+		3DDF066C15362D090029C4AB /* InjectionInstanceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InjectionInstanceService.m; sourceTree = "<group>"; };
+		3DDF066E15362D190029C4AB /* IInstanceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IInstanceService.h; sourceTree = "<group>"; };
+		3DE3CCDA153D83070044F5DE /* IXmlApplicationContextParserHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXmlApplicationContextParserHandler.h; sourceTree = "<group>"; };
+		3DE3CCDC153D83CA0044F5DE /* XmlAppCtxRootHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxRootHandler.h; sourceTree = "<group>"; };
+		3DE3CCDD153D83CA0044F5DE /* XmlAppCtxRootHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxRootHandler.m; sourceTree = "<group>"; };
+		3DE3CCE0153D84D80044F5DE /* XmlAppCtxHandlerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxHandlerBase.h; sourceTree = "<group>"; };
+		3DE3CCE1153D84D80044F5DE /* XmlAppCtxHandlerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxHandlerBase.m; sourceTree = "<group>"; };
+		3DE3CCE4153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectsHandler.h; sourceTree = "<group>"; };
+		3DE3CCE5153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectsHandler.m; sourceTree = "<group>"; };
+		3DFC863D1533297400883AD9 /* libFlexOC-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFlexOC-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DFC86401533297400883AD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DFC86441533297400883AD9 /* FlexOC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlexOC-Prefix.pch"; sourceTree = "<group>"; };
+		3DFC864D1533297400883AD9 /* FlexOCTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexOCTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DFC864E1533297400883AD9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3DFC86501533297400883AD9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3DFC86581533297400883AD9 /* FlexOCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlexOCTests-Info.plist"; sourceTree = "<group>"; };
+		3DFC865A1533297400883AD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DFC865C1533297400883AD9 /* FlexOCTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexOCTests.h; sourceTree = "<group>"; };
+		3DFC865D1533297400883AD9 /* FlexOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlexOCTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DFC863A1533297400883AD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFC86411533297400883AD9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DFC86491533297400883AD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFC864F1533297400883AD9 /* SenTestingKit.framework in Frameworks */,
+				3DFC86511533297400883AD9 /* UIKit.framework in Frameworks */,
+				3DFC86521533297400883AD9 /* Foundation.framework in Frameworks */,
+				3DFC86551533297400883AD9 /* libFlexOC-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D27F6A31550487500753582 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				3D27F6A5155048F100753582 /* ObjectProxy.h */,
+				3D27F6A6155048F100753582 /* ObjectProxy.m */,
+				3D27F6A91550512F00753582 /* LazyObjectProxy.h */,
+				3D27F6AA1550512F00753582 /* LazyObjectProxy.m */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		3D713FEF1547970700EB3B1F /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				3D713FF11547972E00EB3B1F /* XmlAppCtxObjectHandler.h */,
+				3D713FF21547972E00EB3B1F /* XmlAppCtxObjectHandler.m */,
+				3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */,
+				3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		3DB6A58B153B6791006F4983 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3DB6A58C153B67DC006F4983 /* ApplicationContextResourceProvider.h */,
+				3DB6A58D153B67DC006F4983 /* ApplicationContextResourceProvider.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3DB809C315514787001303D6 /* AOC */ = {
+			isa = PBXGroup;
+			children = (
+				3DB809CD15514F4C001303D6 /* Support */,
+				3DB809C515514CF0001303D6 /* ITypeFilter.h */,
+				3DB809C715514D19001303D6 /* IMessageMatcher.h */,
+				3DB809C915514E7B001303D6 /* IPointcut.h */,
+				3DB809CB15514F43001303D6 /* IAdvice.h */,
+				3DB809CE15514F69001303D6 /* IAdvisor.h */,
+				3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */,
+			);
+			path = AOC;
+			sourceTree = "<group>";
+		};
+		3DB809CD15514F4C001303D6 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3DCFFD03154B1ED70083386A /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */,
+				3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */,
+				3DCFFD04154B1EF70083386A /* XmlAppCtxDictionayHandler.h */,
+				3DCFFD05154B1EF70083386A /* XmlAppCtxDictionayHandler.m */,
+				3DCFFD08154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h */,
+				3DCFFD09154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		3DD5F9A8153AFDED009A3712 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3D27F6A31550487500753582 /* Proxy */,
+				3DD5F9D4153B086F009A3712 /* Threading */,
+				3DD5F9CA153AFE1F009A3712 /* Caching */,
+				3DD5F9A9153AFDED009A3712 /* Context */,
+				3DD5F9B7153AFDED009A3712 /* Objects */,
+				3DD5F9BA153AFDED009A3712 /* UIKit */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3DD5F9A9153AFDED009A3712 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				3DB6A58B153B6791006F4983 /* Support */,
+				3DD5F9AA153AFDED009A3712 /* IApplicationContext.h */,
+				3DD5F9AB153AFDED009A3712 /* IApplicationContext.m */,
+				3DD5F9AC153AFDED009A3712 /* Implementation */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		3DD5F9AC153AFDED009A3712 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3DD5F9AF153AFDED009A3712 /* Support */,
+				3DD5F9AD153AFDED009A3712 /* DictionaryApplicationContext.h */,
+				3DD5F9AE153AFDED009A3712 /* DictionaryApplicationContext.m */,
+				3DD5F9B2153AFDED009A3712 /* pListApplicationContext.h */,
+				3DD5F9B3153AFDED009A3712 /* pListApplicationContext.m */,
+				3DD5F9B4153AFDED009A3712 /* XmlApplicationContext.h */,
+				3DD5F9B5153AFDED009A3712 /* XmlApplicationContext.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		3DD5F9AF153AFDED009A3712 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3DE3CCD8153D82DE0044F5DE /* Handlers */,
+				3DD5F9B0153AFDED009A3712 /* XmlApplicationContextParser.h */,
+				3DD5F9B1153AFDED009A3712 /* XmlApplicationContextParser.m */,
+				3DE3CCDA153D83070044F5DE /* IXmlApplicationContextParserHandler.h */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3DD5F9B7153AFDED009A3712 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3DD5F9B8153AFDED009A3712 /* Factory */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		3DD5F9B8153AFDED009A3712 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3DD5F9B9153AFDED009A3712 /* IObjectFactory.h */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3DD5F9BA153AFDED009A3712 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3DD5F9BB153AFDED009A3712 /* UIApplication+FlexOC.h */,
+				3DD5F9BC153AFDED009A3712 /* UIApplication+FlexOC.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		3DD5F9CA153AFE1F009A3712 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				3DD5F9CF153B03FA009A3712 /* Policies */,
+				3DD5F9CB153AFFBF009A3712 /* ICache.h */,
+				3DD5F9CD153AFFFD009A3712 /* ICachePolicy.h */,
+				3DD5F9DE153B1FB9009A3712 /* DictionaryCache.h */,
+				3DD5F9DF153B1FB9009A3712 /* DictionaryCache.m */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
+		3DD5F9CF153B03FA009A3712 /* Policies */ = {
+			isa = PBXGroup;
+			children = (
+				3DD5F9D0153B0421009A3712 /* MemoryWarningCachePolicy.h */,
+				3DD5F9D1153B0421009A3712 /* MemoryWarningCachePolicy.m */,
+			);
+			path = Policies;
+			sourceTree = "<group>";
+		};
+		3DD5F9D4153B086F009A3712 /* Threading */ = {
+			isa = PBXGroup;
+			children = (
+				3DD5F9D5153B0977009A3712 /* ReadWriteLock.h */,
+				3DD5F9D6153B0977009A3712 /* ReadWriteLock.m */,
+			);
+			path = Threading;
+			sourceTree = "<group>";
+		};
+		3DE3CCD8153D82DE0044F5DE /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				3DCFFD03154B1ED70083386A /* Containers */,
+				3D713FEF1547970700EB3B1F /* Object */,
+				3DE3CCDC153D83CA0044F5DE /* XmlAppCtxRootHandler.h */,
+				3DE3CCDD153D83CA0044F5DE /* XmlAppCtxRootHandler.m */,
+				3DE3CCE0153D84D80044F5DE /* XmlAppCtxHandlerBase.h */,
+				3DE3CCE1153D84D80044F5DE /* XmlAppCtxHandlerBase.m */,
+				3DE3CCE4153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h */,
+				3DE3CCE5153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		3DFC86321533297400883AD9 = {
+			isa = PBXGroup;
+			children = (
+				3DFC86421533297400883AD9 /* FlexOC */,
+				3DFC86561533297400883AD9 /* FlexOCTests */,
+				3DFC863F1533297400883AD9 /* Frameworks */,
+				3DFC863E1533297400883AD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DFC863E1533297400883AD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC863D1533297400883AD9 /* libFlexOC-iOS.a */,
+				3DFC864D1533297400883AD9 /* FlexOCTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DFC863F1533297400883AD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC86401533297400883AD9 /* Foundation.framework */,
+				3DFC864E1533297400883AD9 /* SenTestingKit.framework */,
+				3DFC86501533297400883AD9 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DFC86421533297400883AD9 /* FlexOC */ = {
+			isa = PBXGroup;
+			children = (
+				3DB809C315514787001303D6 /* AOC */,
+				3DD5F9A8153AFDED009A3712 /* Core */,
+				3DFC86431533297400883AD9 /* Supporting Files */,
+			);
+			path = FlexOC;
+			sourceTree = "<group>";
+		};
+		3DFC86431533297400883AD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC86441533297400883AD9 /* FlexOC-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DFC86561533297400883AD9 /* FlexOCTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DC17BCD153D13C20030FB44 /* context_container.xml */,
+				3DAB67CB153700BB00E7EE16 /* context.xml */,
+				3DC17BC1153D08E10030FB44 /* context_factorytest.xml */,
+				3DFC86571533297400883AD9 /* Supporting Files */,
+				3DA4BE2C153C44820042221C /* Circularcontext.xml */,
+				3D295AA9153680DA00DAF40F /* CircularContext.plist */,
+				3DFC865C1533297400883AD9 /* FlexOCTests.h */,
+				3DFC865D1533297400883AD9 /* FlexOCTests.m */,
+				3DDF0663153623A70029C4AB /* Context.plist */,
+				3DDF06671536245D0029C4AB /* InstanceService.h */,
+				3DDF06681536245D0029C4AB /* InstanceService.m */,
+				3DDF066B15362D090029C4AB /* InjectionInstanceService.h */,
+				3DDF066C15362D090029C4AB /* InjectionInstanceService.m */,
+				3DDF066E15362D190029C4AB /* IInstanceService.h */,
+				3D295AA115367D9900DAF40F /* CircularService1.h */,
+				3D295AA215367D9900DAF40F /* CircularService1.m */,
+				3D295AA615367DC400DAF40F /* CircularService2.h */,
+				3D295AA715367DC400DAF40F /* CircularService2.m */,
+				3DB610AE153C312F0027DCD9 /* FlexOCXmlTest.h */,
+				3DB610AF153C312F0027DCD9 /* FlexOCXmlTest.m */,
+				3DC17BC7153D092E0030FB44 /* FlexOCTestFactory.h */,
+				3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */,
+				3DC17BCA153D0F650030FB44 /* InstanceServiceFactory.h */,
+				3DC17BCB153D0F650030FB44 /* InstanceServiceFactory.m */,
+				3DD74EF01548DEAB00CC0BBB /* NestedService.h */,
+				3DD74EF11548DEAB00CC0BBB /* NestedService.m */,
+				3DAC0C8C154EA48000157D1B /* InstanceContainer.h */,
+				3DAC0C8D154EA48000157D1B /* InstanceContainer.m */,
+			);
+			path = FlexOCTests;
+			sourceTree = "<group>";
+		};
+		3DFC86571533297400883AD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC86581533297400883AD9 /* FlexOCTests-Info.plist */,
+				3DFC86591533297400883AD9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3DFC863B1533297400883AD9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DD5F9BD153AFDED009A3712 /* IApplicationContext.h in Headers */,
+				3DD5F9BF153AFDED009A3712 /* DictionaryApplicationContext.h in Headers */,
+				3DD5F9C1153AFDED009A3712 /* XmlApplicationContextParser.h in Headers */,
+				3DD5F9C3153AFDED009A3712 /* pListApplicationContext.h in Headers */,
+				3DD5F9C5153AFDED009A3712 /* XmlApplicationContext.h in Headers */,
+				3DD5F9C7153AFDED009A3712 /* IObjectFactory.h in Headers */,
+				3DD5F9C8153AFDED009A3712 /* UIApplication+FlexOC.h in Headers */,
+				3DD5F9CC153AFFBF009A3712 /* ICache.h in Headers */,
+				3DD5F9CE153AFFFD009A3712 /* ICachePolicy.h in Headers */,
+				3DD5F9D2153B0421009A3712 /* MemoryWarningCachePolicy.h in Headers */,
+				3DD5F9D7153B0977009A3712 /* ReadWriteLock.h in Headers */,
+				3DD5F9E0153B1FB9009A3712 /* DictionaryCache.h in Headers */,
+				3DB6A58E153B67DC006F4983 /* ApplicationContextResourceProvider.h in Headers */,
+				3DE3CCDB153D83070044F5DE /* IXmlApplicationContextParserHandler.h in Headers */,
+				3DE3CCDE153D83CA0044F5DE /* XmlAppCtxRootHandler.h in Headers */,
+				3DE3CCE2153D84D80044F5DE /* XmlAppCtxHandlerBase.h in Headers */,
+				3DE3CCE6153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h in Headers */,
+				3D713FF31547972E00EB3B1F /* XmlAppCtxObjectHandler.h in Headers */,
+				3D713FF71547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h in Headers */,
+				3DCFFD06154B1EF70083386A /* XmlAppCtxDictionayHandler.h in Headers */,
+				3DCFFD0A154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h in Headers */,
+				3D173E7A154E2090004FCD47 /* XmlAppCtxListHandler.h in Headers */,
+				3D27F6A7155048F100753582 /* ObjectProxy.h in Headers */,
+				3D27F6AB1550512F00753582 /* LazyObjectProxy.h in Headers */,
+				3DB809C615514CF0001303D6 /* ITypeFilter.h in Headers */,
+				3DB809C815514D19001303D6 /* IMessageMatcher.h in Headers */,
+				3DB809CA15514E7B001303D6 /* IPointcut.h in Headers */,
+				3DB809CC15514F43001303D6 /* IAdvice.h in Headers */,
+				3DB809CF15514F69001303D6 /* IAdvisor.h in Headers */,
+				3DB809D115514F8C001303D6 /* IPointcutAdvisor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3DFC863C1533297400883AD9 /* FlexOC-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DFC86611533297400883AD9 /* Build configuration list for PBXNativeTarget "FlexOC-iOS" */;
+			buildPhases = (
+				3DFC86391533297400883AD9 /* Sources */,
+				3DFC863A1533297400883AD9 /* Frameworks */,
+				3DFC863B1533297400883AD9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FlexOC-iOS";
+			productName = FlexOC;
+			productReference = 3DFC863D1533297400883AD9 /* libFlexOC-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3DFC864C1533297400883AD9 /* FlexOCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DFC86641533297400883AD9 /* Build configuration list for PBXNativeTarget "FlexOCTests" */;
+			buildPhases = (
+				3DFC86481533297400883AD9 /* Sources */,
+				3DFC86491533297400883AD9 /* Frameworks */,
+				3DFC864A1533297400883AD9 /* Resources */,
+				3DFC864B1533297400883AD9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DFC86541533297400883AD9 /* PBXTargetDependency */,
+			);
+			name = FlexOCTests;
+			productName = FlexOCTests;
+			productReference = 3DFC864D1533297400883AD9 /* FlexOCTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DFC86341533297400883AD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Tamajii Inc";
+			};
+			buildConfigurationList = 3DFC86371533297400883AD9 /* Build configuration list for PBXProject "FlexOC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3DFC86321533297400883AD9;
+			productRefGroup = 3DFC863E1533297400883AD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DFC863C1533297400883AD9 /* FlexOC-iOS */,
+				3DFC864C1533297400883AD9 /* FlexOCTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DFC864A1533297400883AD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFC865B1533297400883AD9 /* InfoPlist.strings in Resources */,
+				3DDF0664153623A70029C4AB /* Context.plist in Resources */,
+				3D295AAA153680DA00DAF40F /* CircularContext.plist in Resources */,
+				3DAB67CC153700BB00E7EE16 /* context.xml in Resources */,
+				3DA4BE2D153C44820042221C /* Circularcontext.xml in Resources */,
+				3DC17BC2153D08E10030FB44 /* context_factorytest.xml in Resources */,
+				3DC17BCE153D13C20030FB44 /* context_container.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DFC864B1533297400883AD9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DFC86391533297400883AD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DD5F9BE153AFDED009A3712 /* IApplicationContext.m in Sources */,
+				3DD5F9C0153AFDED009A3712 /* DictionaryApplicationContext.m in Sources */,
+				3DD5F9C2153AFDED009A3712 /* XmlApplicationContextParser.m in Sources */,
+				3DD5F9C4153AFDED009A3712 /* pListApplicationContext.m in Sources */,
+				3DD5F9C6153AFDED009A3712 /* XmlApplicationContext.m in Sources */,
+				3DD5F9C9153AFDED009A3712 /* UIApplication+FlexOC.m in Sources */,
+				3DD5F9D3153B0421009A3712 /* MemoryWarningCachePolicy.m in Sources */,
+				3DD5F9D8153B0977009A3712 /* ReadWriteLock.m in Sources */,
+				3DD5F9E1153B1FB9009A3712 /* DictionaryCache.m in Sources */,
+				3DB6A58F153B67DC006F4983 /* ApplicationContextResourceProvider.m in Sources */,
+				3DE3CCDF153D83CA0044F5DE /* XmlAppCtxRootHandler.m in Sources */,
+				3DE3CCE3153D84D80044F5DE /* XmlAppCtxHandlerBase.m in Sources */,
+				3DE3CCE7153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m in Sources */,
+				3D713FF41547972E00EB3B1F /* XmlAppCtxObjectHandler.m in Sources */,
+				3D713FF81547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m in Sources */,
+				3DCFFD07154B1EF70083386A /* XmlAppCtxDictionayHandler.m in Sources */,
+				3DCFFD0B154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m in Sources */,
+				3D173E7B154E2090004FCD47 /* XmlAppCtxListHandler.m in Sources */,
+				3D27F6A8155048F100753582 /* ObjectProxy.m in Sources */,
+				3D27F6AC1550512F00753582 /* LazyObjectProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DFC86481533297400883AD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DFC865E1533297400883AD9 /* FlexOCTests.m in Sources */,
+				3DDF06691536245D0029C4AB /* InstanceService.m in Sources */,
+				3DDF066D15362D090029C4AB /* InjectionInstanceService.m in Sources */,
+				3D295AA315367D9900DAF40F /* CircularService1.m in Sources */,
+				3D295AA815367DC400DAF40F /* CircularService2.m in Sources */,
+				3DB610B0153C312F0027DCD9 /* FlexOCXmlTest.m in Sources */,
+				3DC17BC9153D092E0030FB44 /* FlexOCTestFactory.m in Sources */,
+				3DC17BCC153D0F650030FB44 /* InstanceServiceFactory.m in Sources */,
+				3DD74EF21548DEAB00CC0BBB /* NestedService.m in Sources */,
+				3DAC0C8E154EA48000157D1B /* InstanceContainer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DFC86541533297400883AD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DFC863C1533297400883AD9 /* FlexOC-iOS */;
+			targetProxy = 3DFC86531533297400883AD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DFC86591533297400883AD9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DFC865A1533297400883AD9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DFC865F1533297400883AD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3DFC86601533297400883AD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DFC86621533297400883AD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				DSTROOT = /tmp/FlexOC.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlexOC/FlexOC-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../Tools/\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3DFC86631533297400883AD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				DSTROOT = /tmp/FlexOC.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlexOC/FlexOC-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/\"",
+					"\"$(SRCROOT)/../Tools/\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3DFC86651533297400883AD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlexOC/FlexOC-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/\"";
+				INFOPLIST_FILE = "FlexOCTests/FlexOCTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3DFC86661533297400883AD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlexOC/FlexOC-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/\"";
+				INFOPLIST_FILE = "FlexOCTests/FlexOCTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DFC86371533297400883AD9 /* Build configuration list for PBXProject "FlexOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFC865F1533297400883AD9 /* Debug */,
+				3DFC86601533297400883AD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DFC86611533297400883AD9 /* Build configuration list for PBXNativeTarget "FlexOC-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFC86621533297400883AD9 /* Debug */,
+				3DFC86631533297400883AD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DFC86641533297400883AD9 /* Build configuration list for PBXNativeTarget "FlexOCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFC86651533297400883AD9 /* Debug */,
+				3DFC86661533297400883AD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DFC86341533297400883AD9 /* Project object */;
+}

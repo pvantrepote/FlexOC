@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flexoccontext>
+	<objects>
+		
+		<object id="instanceService" type="InstanceService">
+			<property name="stringFromContext" value="A value from context" />
+		</object>
+		
+		<object id="lazyInstanceService" type="InstanceService" lazy="YES">
+			<property name="stringFromContext" value="A value from context" />
+		</object>
+		
+		<object id="instanceServiceConstructor" type="InstanceService">
+			<init selector="initWithValue:andString:">
+				<argument value="5" />
+				<argument>
+					<object type="NSString">
+						<init selector="initWithString:">
+							<argument value="A value from context" />
+						</init>
+					</object>
+				</argument>
+			</init>
+		</object>
+		
+		<object id="singletonInstanceService" type="InstanceService" singleton="YES">
+			<property name="stringFromContext" value="A value from context" />
+		</object>
+
+		<object id="instanceInjectionService" type="InjectionInstanceService">
+			<property name="anInstanceService" ref="instanceService" />
+		</object>
+		
+		<object id="instanceSingletonInjectionService" type="InjectionInstanceService" >
+			<property name="anInstanceService" ref="singletonInstanceService" />
+		</object>
+		
+		<object id="circularService2" type="CircularService2">
+			<property name="service" ref="circularService1" />
+		</object>
+			
+		<object id="circularService1" type="CircularService1">
+			<property name="service" ref="circularService2" />
+		</object>
+		
+		<object id="nestedService" type="CircularService2">
+			<property name="service">
+				<object type="InstanceService">
+					<property name="stringFromContext" value="A value from context" />
+				</object>
+			</property>
+		</object>
+		
+		<object id="refString" type="NSString" >
+			<init selector="initWithString:">
+				<argument value="one" />
+			</init>
+		</object>
+		
+		<object id="dictionary" type="NSDictionary">
+			<init selector="initWithDictionary:">
+				<argument>
+					<dictionary>
+						<entry key="one" ref="refString" />
+						<entry key="two" value="two" />						
+						<entry key="three">
+							<object type="NSString" >
+								<init selector="initWithString:">
+									<argument value="three" />
+								</init>
+							</object>							
+						</entry>
+					</dictionary>
+				</argument>
+			</init>
+		</object>
+
+		<object id="list" type="NSArray">
+			<init selector="initWithArray:">
+				<argument>
+					<list>
+						<entry ref="refString" />
+						<entry value="two" />						
+						<entry>
+							<object type="NSString" >
+								<init selector="initWithString:">
+									<argument value="three" />
+								</init>
+							</object>
+						</entry>
+					</list>
+				</argument>
+			</init>
+		</object>
+
+		<object id="instanceContainer" type="InstanceContainer">
+			<property name="dictionary">
+				<dictionary>
+					<entry key="one" ref="refString" />
+					<entry key="two" value="two" />						
+					<entry key="three">
+						<object type="NSString" >
+							<init selector="initWithString:">
+								<argument value="three" />
+							</init>
+						</object>							
+					</entry>
+				</dictionary>
+			</property>
+			<property name="list">
+				<list>
+					<entry value="one" />
+					<entry value="two" />						
+					<entry>
+						<object type="NSString" >
+							<init selector="initWithString:">
+								<argument value="three" />
+							</init>
+						</object>
+					</entry>
+				</list>
+			</property>			
+		</object>
+		
+	</objects>
+</flexoccontext>

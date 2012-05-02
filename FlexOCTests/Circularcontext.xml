@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flexoccontext allowCircularDependencies="YES" >
+	<objects>
+		
+		<object id="circularService2" type="CircularService2">
+			<property name="service" ref="circularService1" />
+		</object>
+			
+		<object id="circularService1" type="CircularService1">
+			<property name="service" ref="circularService2" />
+		</object>			
+		
+	</objects>
+</flexoccontext>
