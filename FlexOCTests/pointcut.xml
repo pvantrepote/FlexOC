@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flexoccontext>
+	<objects>
+		
+		<object id="pointcut" type="RegExMessagePointcut">
+			<property name="patterns">
+				<list>
+					<entry value="^string." />
+				</list>
+			</property>
+		</object>
+		
+		<object id="instanceService" type="AOPProxy">
+			<property name="target" ref="instanceServiceTarget" />
+			<property name="interceptors">
+				<list>
+					<entry ref="pointcut" />
+				</list>
+			</property>
+		</object>
+		
+		<object id="instanceServiceTarget" type="InstanceService">
+			<property name="stringFromContext" value="A value from context" />
+		</object>
+		
+		<object id="lazyInstanceService" type="InstanceService" lazy="YES">
+			<property name="stringFromContext" value="A value from context" />
+		</object>
+				
+	</objects>
+</flexoccontext>
