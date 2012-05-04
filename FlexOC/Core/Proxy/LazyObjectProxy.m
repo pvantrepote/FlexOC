@@ -22,10 +22,11 @@
 	
 	objectDefinition = nil;
 	if (objectDefinition_) {
+		/// TODO find a better way than mutable copy and remove the lazy aspect if it
 		NSMutableDictionary* def = [objectDefinition_ mutableCopy];
 		[def removeObjectForKey:DictionaryApplicationContextKeywords[ObjectLazy]];
 		objectDefinition = def;
-	}
+	} 
 }
 
 -(NSObject*) objectInstance {

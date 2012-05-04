@@ -73,6 +73,7 @@
 		3DE3CCE3153D84D80044F5DE /* XmlAppCtxHandlerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCE1153D84D80044F5DE /* XmlAppCtxHandlerBase.m */; };
 		3DE3CCE6153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCE4153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h */; };
 		3DE3CCE7153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCE5153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m */; };
+		3DE9007E1553F53700A24BF5 /* FlexOCAOPTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */; };
 		3DEF83F31552AAE200C3D934 /* AOPProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEF83F11552AAE200C3D934 /* AOPProxy.h */; };
 		3DEF83F41552AAE200C3D934 /* AOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF83F21552AAE200C3D934 /* AOPProxy.m */; };
 		3DFC86411533297400883AD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC86401533297400883AD9 /* Foundation.framework */; };
@@ -171,6 +172,8 @@
 		3DE3CCE1153D84D80044F5DE /* XmlAppCtxHandlerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxHandlerBase.m; sourceTree = "<group>"; };
 		3DE3CCE4153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectsHandler.h; sourceTree = "<group>"; };
 		3DE3CCE5153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectsHandler.m; sourceTree = "<group>"; };
+		3DE9007C1553F53700A24BF5 /* FlexOCAOPTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexOCAOPTest.h; sourceTree = "<group>"; };
+		3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCAOPTest.m; sourceTree = "<group>"; };
 		3DEF83F11552AAE200C3D934 /* AOPProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPProxy.h; sourceTree = "<group>"; };
 		3DEF83F21552AAE200C3D934 /* AOPProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPProxy.m; sourceTree = "<group>"; };
 		3DFC863D1533297400883AD9 /* libFlexOC-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFlexOC-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -473,6 +476,8 @@
 				3DAC0C8C154EA48000157D1B /* InstanceContainer.h */,
 				3DAC0C8D154EA48000157D1B /* InstanceContainer.m */,
 				3DB040FB1552143F000FA19F /* pointcut.xml */,
+				3DE9007C1553F53700A24BF5 /* FlexOCAOPTest.h */,
+				3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */,
 			);
 			path = FlexOCTests;
 			sourceTree = "<group>";
@@ -670,6 +675,7 @@
 				3DC17BCC153D0F650030FB44 /* InstanceServiceFactory.m in Sources */,
 				3DD74EF21548DEAB00CC0BBB /* NestedService.m in Sources */,
 				3DAC0C8E154EA48000157D1B /* InstanceContainer.m in Sources */,
+				3DE9007E1553F53700A24BF5 /* FlexOCAOPTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

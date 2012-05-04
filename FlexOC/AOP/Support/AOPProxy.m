@@ -10,4 +10,15 @@
 
 @implementation AOPProxy
 
+#pragma mark - Override
+
+-(void)forwardInvocation:(NSInvocation *)anInvocation {
+	[super forwardInvocation:anInvocation];
+}
+
+-(id)forwardingTargetForSelector:(SEL)aSelector {
+	/// Force the system to call forwardInvocation
+	return nil;
+}
+
 @end
