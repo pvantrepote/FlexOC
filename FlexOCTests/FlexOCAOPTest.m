@@ -23,6 +23,9 @@
 -(void) testArray {
 	id<IInstanceService> srv = [context getObjectWithName:@"instanceService"];
 	STAssertNotNil(srv, @"Service should not be nil");
+	STAssertTrue([srv.stringFromContext isEqualToString:@"A value from context"], @"stringFromContext should be equal to A value from context");
+	
+	
 }
 
 @end

@@ -29,17 +29,17 @@
 	} 
 }
 
--(NSObject*) objectInstance {
-	if (!super.objectInstance) {
+-(NSObject*) target {
+	if (!super.target) {
 		@synchronized(self) {
-			if (!super.objectInstance) {
-				super.objectInstance = [context getObjectWithName:objectName 
-													andDefinition:objectDefinition];
+			if (!super.target) {
+				super.target = [context getObjectWithName:objectName 
+											andDefinition:objectDefinition];
 			}
 		}
 	}
 
-	return super.objectInstance;
+	return super.target;
 }
 
 #pragma mark - Init/Dealloc

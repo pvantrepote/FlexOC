@@ -12,27 +12,27 @@
 
 #pragma mark - Properties
 
-@synthesize objectInstance;
+@synthesize target;
 
 #pragma mark - NSObject override
 
--(void)forwardInvocation:(NSInvocation *)anInvocation {
-	if ([self.objectInstance respondsToSelector:anInvocation.selector]) {
-		[anInvocation invokeWithTarget:self.objectInstance];
+-(void) forwardInvocation:(NSInvocation *)anInvocation {
+	if ([self.target respondsToSelector:anInvocation.selector]) {
+		[anInvocation invokeWithTarget:self.target];
 	}
 	else {
 		[self doesNotRecognizeSelector:anInvocation.selector];
 	}
 }
 
--(NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-	return [self.objectInstance methodSignatureForSelector:aSelector];
+-(NSMethodSignature *) methodSignatureForSelector:(SEL)aSelector {
+	return [self.target methodSignatureForSelector:aSelector];
 }
 
-- (id)forwardingTargetForSelector:(SEL)aSelector {
+-(id) forwardingTargetForSelector:(SEL)aSelector {
 	
-	if ([self.objectInstance respondsToSelector:aSelector]) {
-		return self.objectInstance;
+	if ([self.target respondsToSelector:aSelector]) {
+		return self.target;
 	}
 	else {
 		[self doesNotRecognizeSelector:aSelector];
@@ -41,8 +41,8 @@
 	return nil;
 }
 
--(id)replacementObjectForCoder:(NSCoder *)aCoder {
-	return self.objectInstance;
+-(id) replacementObjectForCoder:(NSCoder *)aCoder {
+	return self.target;
 }
 
 @end

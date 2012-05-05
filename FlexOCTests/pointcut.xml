@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <flexoccontext>
 	<objects>
-		
-		<object id="pointcut" type="RegExMessagePointcut">
-			<property name="patterns">
-				<list>
-					<entry value="^string." />
-				</list>
+				
+		<object id="pointcutadvisor" type="TestAfterBeforAdvisor">
+			<property name="pointcut">
+				<object type="TruePointcut">
+				</object>
 			</property>
 		</object>
 		
@@ -14,7 +13,7 @@
 			<property name="target" ref="instanceServiceTarget" />
 			<property name="interceptors">
 				<list>
-					<entry ref="pointcut" />
+					<entry ref="pointcutadvisor" />
 				</list>
 			</property>
 		</object>

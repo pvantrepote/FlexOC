@@ -6,8 +6,15 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import <FlexOC/Core/Proxy/LazyObjectProxy.h>
+#import <FlexOC/Core/Proxy/ObjectProxy.h>
 
-@interface AOPProxy : LazyObjectProxy
+@interface AOPProxy : ObjectProxy {
+	@private
+	NSMutableArray* before;
+	NSMutableArray* after;
+	NSMutableArray* exceptions;
+}
+
+@property (nonatomic, retain) NSMutableArray* interceptors;
 
 @end

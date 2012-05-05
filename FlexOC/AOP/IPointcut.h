@@ -8,12 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol ITypeFilter;
-@protocol IMessageMatcher;
+#import <FlexOC/AOP/IMessageMatcher.h>
 
-@protocol IPointcut <NSObject>
-
-@property (nonatomic, retain) id<ITypeFilter> typeFilter;
-@property (nonatomic, retain) id<IMessageMatcher> messageMatcher;
+@protocol IPointcut <IMessageMatcher>
 
 @end

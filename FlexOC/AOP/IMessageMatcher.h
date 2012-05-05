@@ -10,7 +10,6 @@
 
 @protocol IMessageMatcher <NSObject>
 
--(BOOL) isMatchesSelector:(SEL) selector;
--(BOOL) isMatchesInvocation:(NSInvocation*) invocation;
+-(BOOL) matchesSelector:(NSString*) selector forInvocation:(NSInvocation*) invocation;
 
 @end

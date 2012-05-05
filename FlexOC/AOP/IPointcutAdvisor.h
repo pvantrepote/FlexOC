@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <FlexOC/AOC/IAdvisor.h>
+#import <FlexOC/AOP/IAdvisor.h>
 @protocol IPointcut;
 
 @protocol IPointcutAdvisor <IAdvisor>

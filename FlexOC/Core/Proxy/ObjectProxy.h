@@ -10,6 +10,6 @@
 
 @interface ObjectProxy : NSObject
 
-@property (nonatomic, retain) NSObject* objectInstance;
+@property (nonatomic, retain) NSObject* target;
 
 @end
