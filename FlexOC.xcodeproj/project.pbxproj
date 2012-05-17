@@ -11,7 +11,7 @@
 		3D173E7B154E2090004FCD47 /* XmlAppCtxListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */; };
 		3D27CBE0155546F500D7432F /* IMessageBeforeAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBDE155546F500D7432F /* IMessageBeforeAdvice.h */; };
 		3D27CBE31555478900D7432F /* IMessageAfterAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBE21555478900D7432F /* IMessageAfterAdvice.h */; };
-		3D27CBE51555480A00D7432F /* IExceptionAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBE41555480A00D7432F /* IExceptionAdvice.h */; };
+		3D27CBE51555480A00D7432F /* IMessageExceptionAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBE41555480A00D7432F /* IMessageExceptionAdvice.h */; };
 		3D27CBFC15554E2D00D7432F /* TruePointcut.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBFA15554E2C00D7432F /* TruePointcut.h */; };
 		3D27CBFD15554E2D00D7432F /* TruePointcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27CBFB15554E2C00D7432F /* TruePointcut.m */; };
 		3D27CC0015554EC900D7432F /* TestAfterBeforAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27CBFF15554EC900D7432F /* TestAfterBeforAdvisor.m */; };
@@ -42,6 +42,8 @@
 		3DB809D115514F8C001303D6 /* IPointcutAdvisor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */; };
 		3DB8BE6D15657E8D0049CDDD /* DependencyTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */; };
 		3DB8BE6E15657E8D0049CDDD /* DependencyTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */; };
+		3DBD78561565A24500B3EB9C /* TestExceptionAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBD78551565A24500B3EB9C /* TestExceptionAdvisor.m */; };
+		3DBD785A1565A36500B3EB9C /* FailedInstanceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBD78591565A36500B3EB9C /* FailedInstanceService.m */; };
 		3DC17BC2153D08E10030FB44 /* context_factorytest.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DC17BC1153D08E10030FB44 /* context_factorytest.xml */; };
 		3DC17BC9153D092E0030FB44 /* FlexOCTestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */; };
 		3DC17BCC153D0F650030FB44 /* InstanceServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC17BCB153D0F650030FB44 /* InstanceServiceFactory.m */; };
@@ -109,7 +111,7 @@
 		3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxListHandler.m; sourceTree = "<group>"; };
 		3D27CBDE155546F500D7432F /* IMessageBeforeAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageBeforeAdvice.h; sourceTree = "<group>"; };
 		3D27CBE21555478900D7432F /* IMessageAfterAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageAfterAdvice.h; sourceTree = "<group>"; };
-		3D27CBE41555480A00D7432F /* IExceptionAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IExceptionAdvice.h; sourceTree = "<group>"; };
+		3D27CBE41555480A00D7432F /* IMessageExceptionAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageExceptionAdvice.h; sourceTree = "<group>"; };
 		3D27CBFA15554E2C00D7432F /* TruePointcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TruePointcut.h; sourceTree = "<group>"; };
 		3D27CBFB15554E2C00D7432F /* TruePointcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TruePointcut.m; sourceTree = "<group>"; };
 		3D27CBFE15554EC900D7432F /* TestAfterBeforAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAfterBeforAdvisor.h; sourceTree = "<group>"; };
@@ -143,6 +145,10 @@
 		3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPointcutAdvisor.h; sourceTree = "<group>"; };
 		3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependencyTree.h; sourceTree = "<group>"; };
 		3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependencyTree.m; sourceTree = "<group>"; };
+		3DBD78541565A24500B3EB9C /* TestExceptionAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExceptionAdvisor.h; sourceTree = "<group>"; };
+		3DBD78551565A24500B3EB9C /* TestExceptionAdvisor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestExceptionAdvisor.m; sourceTree = "<group>"; };
+		3DBD78581565A36500B3EB9C /* FailedInstanceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedInstanceService.h; sourceTree = "<group>"; };
+		3DBD78591565A36500B3EB9C /* FailedInstanceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedInstanceService.m; sourceTree = "<group>"; };
 		3DC17BC1153D08E10030FB44 /* context_factorytest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_factorytest.xml; sourceTree = "<group>"; };
 		3DC17BC7153D092E0030FB44 /* FlexOCTestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexOCTestFactory.h; sourceTree = "<group>"; };
 		3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCTestFactory.m; sourceTree = "<group>"; };
@@ -270,7 +276,7 @@
 				3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */,
 				3D27CBDE155546F500D7432F /* IMessageBeforeAdvice.h */,
 				3D27CBE21555478900D7432F /* IMessageAfterAdvice.h */,
-				3D27CBE41555480A00D7432F /* IExceptionAdvice.h */,
+				3D27CBE41555480A00D7432F /* IMessageExceptionAdvice.h */,
 				3D27CBFA15554E2C00D7432F /* TruePointcut.h */,
 				3D27CBFB15554E2C00D7432F /* TruePointcut.m */,
 			);
@@ -304,6 +310,8 @@
 				3D295AA215367D9900DAF40F /* CircularService1.m */,
 				3D295AA615367DC400DAF40F /* CircularService2.h */,
 				3D295AA715367DC400DAF40F /* CircularService2.m */,
+				3DBD78581565A36500B3EB9C /* FailedInstanceService.h */,
+				3DBD78591565A36500B3EB9C /* FailedInstanceService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -313,6 +321,8 @@
 			children = (
 				3D27CBFE15554EC900D7432F /* TestAfterBeforAdvisor.h */,
 				3D27CBFF15554EC900D7432F /* TestAfterBeforAdvisor.m */,
+				3DBD78541565A24500B3EB9C /* TestExceptionAdvisor.h */,
+				3DBD78551565A24500B3EB9C /* TestExceptionAdvisor.m */,
 			);
 			name = AOP;
 			sourceTree = "<group>";
@@ -571,7 +581,7 @@
 				3DEF83F31552AAE200C3D934 /* AOPProxy.h in Headers */,
 				3D27CBE0155546F500D7432F /* IMessageBeforeAdvice.h in Headers */,
 				3D27CBE31555478900D7432F /* IMessageAfterAdvice.h in Headers */,
-				3D27CBE51555480A00D7432F /* IExceptionAdvice.h in Headers */,
+				3D27CBE51555480A00D7432F /* IMessageExceptionAdvice.h in Headers */,
 				3D27CBFC15554E2D00D7432F /* TruePointcut.h in Headers */,
 				3DB8BE6D15657E8D0049CDDD /* DependencyTree.h in Headers */,
 			);
@@ -726,6 +736,8 @@
 				3D27CC0015554EC900D7432F /* TestAfterBeforAdvisor.m in Sources */,
 				3D5B8CF7155550D0008FDD0A /* AOPProxy.m in Sources */,
 				3D5B8CFA1555521B008FDD0A /* TruePointcut.m in Sources */,
+				3DBD78561565A24500B3EB9C /* TestExceptionAdvisor.m in Sources */,
+				3DBD785A1565A36500B3EB9C /* FailedInstanceService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

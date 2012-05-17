@@ -9,6 +9,7 @@
 			</property>
 		</object>
 		
+		<!-- Proxy definition -->
 		<object id="instanceService" type="AOPProxy">
 			<property name="target" ref="instanceServiceTarget" />
 			<property name="interceptors">
@@ -22,9 +23,40 @@
 			<property name="stringFromContext" value="A value from context" />
 		</object>
 		
-		<object id="lazyInstanceService" type="InstanceService" lazy="YES">
+		<!-- Proxy definition -->
+		<object id="lazyInstanceService" type="AOPProxy">
+			<property name="target" ref="lazyInstanceServiceTarget" />
+			<property name="interceptors">
+				<list>
+					<entry ref="pointcutadvisor" />
+				</list>
+			</property>
+		</object>
+		
+		<object id="lazyInstanceServiceTarget" type="InstanceService" lazy="YES" >
 			<property name="stringFromContext" value="A value from context" />
 		</object>
-				
+
+		<!-- Proxy definition -->
+		<object id="exceptionPointcutadvisor" type="TestExceptionAdvisor">
+			<property name="pointcut">
+				<object type="TruePointcut">
+				</object>
+			</property>
+		</object>
+		
+		<object id="exceptionInstanceService" type="AOPProxy">
+			<property name="target" ref="exceptionInstanceServiceTarget" />
+			<property name="interceptors">
+				<list>
+					<entry ref="exceptionPointcutadvisor" />
+				</list>
+			</property>
+		</object>
+		
+		<object id="exceptionInstanceServiceTarget" type="FailedInstanceService" lazy="YES" >
+			<property name="stringFromContext" value="A value from context" />
+		</object>		
+		
 	</objects>
 </flexoccontext>

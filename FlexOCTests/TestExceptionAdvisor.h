@@ -6,8 +6,11 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <FlexOC/AOP/IPointcutAdvisor.h>
+#import <FlexOC/AOP/IMessageExceptionAdvice.h>
 
-@interface TestExceptionAdvisor : NSObject<IPointcutAdvisor, IMessageAfterAdvice, IMessageBeforeAdvice>
+@interface TestExceptionAdvisor : NSObject<IPointcutAdvisor, IMessageExceptionAdvice>
+
+@property (nonatomic, retain) NSException* exception;
 
 @end

@@ -10,4 +10,14 @@
 
 @implementation TestExceptionAdvisor
 
+@synthesize exception, advice, pointcut;
+
+-(id<IAdvice>)advice {
+	return self;
+}
+
+-(void)exception:(NSException *)exception_ duringInvocation:(NSInvocation *)invocation withTarget:(id)target {
+	self.exception = exception_;
+}
+
 @end

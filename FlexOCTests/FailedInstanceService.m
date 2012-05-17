@@ -10,4 +10,12 @@
 
 @implementation FailedInstanceService
 
+-(NSString *)stringFromContext {
+	@throw [NSException exceptionWithName:@"FailedInstanceService" reason:@"stringFromContext" userInfo:nil];
+}
+
+-(NSNumber *)valueFromContext {
+	@throw [NSException exceptionWithName:@"FailedInstanceService" reason:@"valueFromContext" userInfo:nil];
+}
+
 @end

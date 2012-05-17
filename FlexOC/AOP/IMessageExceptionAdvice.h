@@ -1,5 +1,5 @@
 //
-//  IExceptionAdvice.h
+//  IMessageExceptionAdvice.h
 //  FlexOC
 //
 //  Created by Pascal Vantrepote on 12-05-05.
@@ -8,7 +8,7 @@
 
 #import <FlexOC/AOP/IAdvice.h>
 
-@protocol IExceptionAdvice <IAdvice>
+@protocol IMessageExceptionAdvice <IAdvice>
 
 -(void) exception:(NSException*) exception duringInvocation:(NSInvocation*) invocation withTarget:(id) target;
 

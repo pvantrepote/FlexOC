@@ -8,6 +8,8 @@
 
 #import "ObjectProxy.h"
 
+#import "LazyObjectProxy.h"
+
 @implementation ObjectProxy
 
 #pragma mark - Properties
@@ -17,6 +19,12 @@
 #pragma mark - NSObject override
 
 -(void) forwardInvocation:(NSInvocation *)anInvocation {
+	
+	if ([self.target isKindOfClass:[LazyObjectProxy class]]) {
+		/// Its a lazy object
+		self.target = ((LazyObjectProxy*)self.target).target;
+	}
+	
 	if ([self.target respondsToSelector:anInvocation.selector]) {
 		[anInvocation invokeWithTarget:self.target];
 	}

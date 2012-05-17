@@ -13,7 +13,7 @@
 #import "IMessageMatcher.h"
 #import "IMessageBeforeAdvice.h"
 #import "IMessageAfterAdvice.h"
-#import "IExceptionAdvice.h"
+#import "IMessageExceptionAdvice.h"
 
 @implementation AOPProxy
 
@@ -57,6 +57,9 @@
 #pragma mark - Init/Dealloc
 
 -(void) dealloc {
+	before = nil;
+	after = nil;
+	exceptions = nil;
     self.interceptors = nil;
 }
 
@@ -89,12 +92,12 @@
 	}
 	@catch (NSException *exception) {
 		/// Exception advice
-		for (id<IPointcutAdvisor> advisor in after) {
+		for (id<IPointcutAdvisor> advisor in exceptions) {
 			if ([advisor.pointcut matchesSelector:aStringSelector 
 									forInvocation:anInvocation]) {
-				[((id<IExceptionAdvice>)advisor.advice) exception:exception 
-												 duringInvocation:anInvocation 
-													   withTarget:self.target];
+				[((id<IMessageExceptionAdvice>)advisor.advice) exception:exception 
+														duringInvocation:anInvocation 
+															  withTarget:self.target];
 			}
 		}
 	}
