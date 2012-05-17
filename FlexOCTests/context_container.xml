@@ -13,8 +13,7 @@
 				<argument value="Hello stringRef2" />
 			</init>
 		</object>
-		
-<!--	
+			
 		<object id="dictionary" type="NSDictionary">
 			<init selector="initWithDictionary">
 				<argument>
@@ -38,6 +37,6 @@
 				</argument>
 			</init>
 		</object>
--->
+		
 	</objects>
 </flexoccontext>

@@ -12,8 +12,7 @@
 #import "DictionaryCache.h"
 #import "ApplicationContextResourceProvider.h"
 #import "LazyObjectProxy.h"
-
-#define DAC_APPCTX_TLS	@"DictionaryApplicationContext"
+#import "DependencyTree.h"
 
 const NSString* DictionaryApplicationContextKeywords[] = { 
 	@"flexoccontext",
@@ -141,33 +140,15 @@ const NSString* DictionaryApplicationContextKeywords[] = {
 -(id) getObjectWithName:(NSString*) objectName andDefinition:(NSDictionary*) objectDefinition {
 	if (!objectsCfg) return nil;
 	
-	/// No name has been specifier, generate one from the hash of the definition
+	/// No name has been specified, generate one from the hash of the definition
 	if (!objectName) {
 		objectName = [NSString stringWithFormat:@"%d", objectDefinition.hash];
 	}
 	
-	/// Use the thread local to store the allocated object
-	BOOL clearContext = NO;
-	NSMutableDictionary* __weak threadContext = [[[NSThread currentThread] threadDictionary] objectForKey:DAC_APPCTX_TLS];
-	if (!threadContext) {
-		clearContext = YES;
-		[[[NSThread currentThread] threadDictionary] setObject:[NSMutableDictionary dictionary] 
-														forKey:DAC_APPCTX_TLS];
-		threadContext = [[[NSThread currentThread] threadDictionary] objectForKey:DAC_APPCTX_TLS];
-	}
-	
 	/// First we check if the object already exists in the context to avoid circular dependency
-	if ([threadContext objectForKey:objectName]) {
-		if (!allowCircularDependencies) {
-			if (clearContext) {
-				/// Clear the context
-				[[[NSThread currentThread] threadDictionary] removeObjectForKey:DAC_APPCTX_TLS];			
-			}
-			return nil;			
-		}
-		else {
-			return [threadContext objectForKey:objectName];
-		}
+	id instance = [DependencyTree hasCircularDependencyForObjectName:objectName];
+	if (instance) {
+		return (!allowCircularDependencies) ? nil : instance;
 	}
 	
 	/// Check if its a singleton
@@ -182,11 +163,6 @@ const NSString* DictionaryApplicationContextKeywords[] = {
 		/// Just create a new instance
 		objectInstance = [self createObject:objectName 
 						  withConfiguration:objectDefinition];
-	}
-	
-	if (clearContext) {
-		/// Clear the context
-		[[[NSThread currentThread] threadDictionary] removeObjectForKey:DAC_APPCTX_TLS];			
 	}
 	
 	return objectInstance;
@@ -290,61 +266,63 @@ const NSString* DictionaryApplicationContextKeywords[] = {
 	
 	Class c = NSClassFromString(classType);
 	if (!c) return nil;
-	
+
+	BOOL initialized = NO;
+	id __strong objectInstance = nil;
+
 	/// Check if its a lazy object
 	BOOL lazy = [[objectConfiguration objectForKey:DictionaryApplicationContextKeywords[ObjectLazy]] boolValue];
 	if (lazy) {
-		return [[LazyObjectProxy alloc] initWithObjectDefinition:objectConfiguration 
-															name:objectName
-													  andContext:self];
-	}
-	
-	BOOL initialized = NO;
-	id __strong objectInstance = nil;
-	NSString* factoryMethod = [objectConfiguration objectForKey:DictionaryApplicationContextKeywords[ObjectFactoryMethod]];
-	if (factoryMethod) {
-		SEL factoryMethodSelector = NSSelectorFromString(factoryMethod);
-		NSInvocation* invocation = nil;
-		id target;
-		
-		NSString* factoryObject = [objectConfiguration objectForKey:DictionaryApplicationContextKeywords[ObjectFactoryObject]];
-		if (!factoryObject) {
-			NSMethodSignature* signature = [c methodSignatureForSelector:factoryMethodSelector];
-			if (!signature) return nil;
-			
-			invocation = [NSInvocation invocationWithMethodSignature:signature];
-			target = c;
-		}
-		else {
-			Class objectFactory = NSClassFromString(factoryObject);
-			if (!objectFactory) {
-				return nil;
-			}
-			
-			NSMethodSignature* signature = [objectFactory methodSignatureForSelector:factoryMethodSelector];
-			if (!signature) return nil;
-			
-			invocation = [NSInvocation invocationWithMethodSignature:signature];
-			target = objectFactory;
-		}
-		
-		invocation.selector = factoryMethodSelector;
-		[invocation invokeWithTarget:target];
-		
-		__unsafe_unretained NSObject* returnedObject = nil;
-		[invocation getReturnValue:&returnedObject];
-		objectInstance = returnedObject;
-		
+		objectInstance = [[LazyObjectProxy alloc] initWithObjectDefinition:objectConfiguration 
+																	  name:objectName
+																andContext:self];
 		initialized = YES;
 	}
 	else {
-		objectInstance = [c alloc];
+		NSString* factoryMethod = [objectConfiguration objectForKey:DictionaryApplicationContextKeywords[ObjectFactoryMethod]];
+		if (factoryMethod) {
+			SEL factoryMethodSelector = NSSelectorFromString(factoryMethod);
+			NSInvocation* invocation = nil;
+			id target;
+			
+			NSString* factoryObject = [objectConfiguration objectForKey:DictionaryApplicationContextKeywords[ObjectFactoryObject]];
+			if (!factoryObject) {
+				NSMethodSignature* signature = [c methodSignatureForSelector:factoryMethodSelector];
+				if (!signature) return nil;
+				
+				invocation = [NSInvocation invocationWithMethodSignature:signature];
+				target = c;
+			}
+			else {
+				Class objectFactory = NSClassFromString(factoryObject);
+				if (!objectFactory) {
+					return nil;
+				}
+				
+				NSMethodSignature* signature = [objectFactory methodSignatureForSelector:factoryMethodSelector];
+				if (!signature) return nil;
+				
+				invocation = [NSInvocation invocationWithMethodSignature:signature];
+				target = objectFactory;
+			}
+			
+			invocation.selector = factoryMethodSelector;
+			[invocation invokeWithTarget:target];
+			
+			__unsafe_unretained NSObject* returnedObject = nil;
+			[invocation getReturnValue:&returnedObject];
+			objectInstance = returnedObject;
+			
+			initialized = YES;
+		}
+		else {
+			objectInstance = [c alloc];
+		}		
 	}
-	
+		
 	/// Add to the context
-	NSMutableDictionary* threadContext = [[[NSThread currentThread] threadDictionary] objectForKey:DAC_APPCTX_TLS];
-	[threadContext setObject:objectInstance 
-					  forKey:objectName];
+	[DependencyTree pushInstance:objectInstance 
+				   forObjectName:objectName];
 	
 	if (!initialized) {
 		/// Initialization
@@ -359,7 +337,10 @@ const NSString* DictionaryApplicationContextKeywords[] = {
 			
 			if (selector) {
 				NSMethodSignature* signature = [objectInstance methodSignatureForSelector:selector];
-				if (!signature) return nil;
+				if (!signature) {
+					[DependencyTree pop];
+					return nil;
+				}
 				
 				NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:signature];
 				
@@ -387,24 +368,22 @@ const NSString* DictionaryApplicationContextKeywords[] = {
 		}
 	}
 	
-	if (!objectInstance) {
-		/// No instance, return nil
-		return nil;
+	if (objectInstance && !lazy) {
+				/// Configure
+		NSDictionary* objProperties = [objectConfiguration objectForKey:DictionaryApplicationContextKeywords[ObjectProperties]];
+		if ((objProperties) && ![self configureObject:objectInstance 
+											 withName:objectName 
+									 andConfiguration:objProperties]) {
+			objectInstance = nil;
+		}
 	}
 	
-	/// Configure
-	NSDictionary* objProperties = [objectConfiguration objectForKey:DictionaryApplicationContextKeywords[ObjectProperties]];
-	if ((objProperties) && ![self configureObject:objectInstance 
-										 withName:objectName 
-								 andConfiguration:objProperties]) {
-		objectInstance = nil;
-		[threadContext removeObjectForKey:objectName];
-	}
-	
+	[DependencyTree pop];
+
 	return objectInstance;
 }
 
--(id)cache:(id<ICache>)cache requestInstanceForKey:(NSString*) objectName {
+-(id) cache:(id<ICache>)cache requestInstanceForKey:(NSString*) objectName {
 	/// Get the object configuration
 	NSDictionary* objectCfg = [objectsCfg objectForKey:objectName];
 	if (!objectCfg) return nil;

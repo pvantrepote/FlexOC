@@ -8,6 +8,9 @@
 
 #import <FlexOC/Core/Caching/ICachePolicy.h>
 
+/**
+	Memory warning cache policy.
+ 	Clear the cache when receive a memory UIApplicationDidReceiveMemoryWarningNotification.
+ */
 @interface MemoryWarningCachePolicy : NSObject<ICachePolicy>
-
 @end

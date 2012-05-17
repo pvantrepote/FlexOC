@@ -105,6 +105,7 @@
 							</init>
 						</object>							
 					</entry>
+					<entry key="four" ref="refString" />
 				</dictionary>
 			</property>
 			<property name="list">

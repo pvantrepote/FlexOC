@@ -9,6 +9,8 @@
 #import "FlexOCAOPTest.h"
 
 #import "InstanceService.h"
+#import "TestAfterBeforAdvisor.h"
+#import <FlexOC/AOP/Support/AOPProxy.h>
 
 @implementation FlexOCAOPTest
 
@@ -22,10 +24,19 @@
 
 -(void) testArray {
 	id<IInstanceService> srv = [context getObjectWithName:@"instanceService"];
+	AOPProxy* concreteSrv = (AOPProxy*) srv;
+	TestAfterBeforAdvisor* advisor = [concreteSrv.interceptors objectAtIndex:0];
+
+	STAssertFalse(advisor.didBefore, @"didBefore should be false for the advisor");
+	STAssertFalse(advisor.didAfter, @"didAfter should be false for the advisor");
+
 	STAssertNotNil(srv, @"Service should not be nil");
 	STAssertTrue([srv.stringFromContext isEqualToString:@"A value from context"], @"stringFromContext should be equal to A value from context");
 	
-	
+
+	STAssertTrue(advisor.didBefore, @"didBefore should be true for the advisor");
+	STAssertTrue(advisor.didAfter, @"didAfter should be true for the advisor");
+
 }
 
 @end

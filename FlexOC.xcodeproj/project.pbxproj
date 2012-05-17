@@ -40,6 +40,8 @@
 		3DB809CC15514F43001303D6 /* IAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809CB15514F43001303D6 /* IAdvice.h */; };
 		3DB809CF15514F69001303D6 /* IAdvisor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809CE15514F69001303D6 /* IAdvisor.h */; };
 		3DB809D115514F8C001303D6 /* IPointcutAdvisor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */; };
+		3DB8BE6D15657E8D0049CDDD /* DependencyTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */; };
+		3DB8BE6E15657E8D0049CDDD /* DependencyTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */; };
 		3DC17BC2153D08E10030FB44 /* context_factorytest.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DC17BC1153D08E10030FB44 /* context_factorytest.xml */; };
 		3DC17BC9153D092E0030FB44 /* FlexOCTestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */; };
 		3DC17BCC153D0F650030FB44 /* InstanceServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC17BCB153D0F650030FB44 /* InstanceServiceFactory.m */; };
@@ -139,6 +141,8 @@
 		3DB809CB15514F43001303D6 /* IAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdvice.h; sourceTree = "<group>"; };
 		3DB809CE15514F69001303D6 /* IAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdvisor.h; sourceTree = "<group>"; };
 		3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPointcutAdvisor.h; sourceTree = "<group>"; };
+		3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependencyTree.h; sourceTree = "<group>"; };
+		3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependencyTree.m; sourceTree = "<group>"; };
 		3DC17BC1153D08E10030FB44 /* context_factorytest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_factorytest.xml; sourceTree = "<group>"; };
 		3DC17BC7153D092E0030FB44 /* FlexOCTestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexOCTestFactory.h; sourceTree = "<group>"; };
 		3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCTestFactory.m; sourceTree = "<group>"; };
@@ -282,6 +286,37 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		3DB8BE7115658BCF0049CDDD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3DC17BCA153D0F650030FB44 /* InstanceServiceFactory.h */,
+				3DC17BCB153D0F650030FB44 /* InstanceServiceFactory.m */,
+				3DD74EF01548DEAB00CC0BBB /* NestedService.h */,
+				3DD74EF11548DEAB00CC0BBB /* NestedService.m */,
+				3DAC0C8C154EA48000157D1B /* InstanceContainer.h */,
+				3DAC0C8D154EA48000157D1B /* InstanceContainer.m */,
+				3DDF06671536245D0029C4AB /* InstanceService.h */,
+				3DDF06681536245D0029C4AB /* InstanceService.m */,
+				3DDF066B15362D090029C4AB /* InjectionInstanceService.h */,
+				3DDF066C15362D090029C4AB /* InjectionInstanceService.m */,
+				3DDF066E15362D190029C4AB /* IInstanceService.h */,
+				3D295AA115367D9900DAF40F /* CircularService1.h */,
+				3D295AA215367D9900DAF40F /* CircularService1.m */,
+				3D295AA615367DC400DAF40F /* CircularService2.h */,
+				3D295AA715367DC400DAF40F /* CircularService2.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		3DB8BE7215658BF80049CDDD /* AOP */ = {
+			isa = PBXGroup;
+			children = (
+				3D27CBFE15554EC900D7432F /* TestAfterBeforAdvisor.h */,
+				3D27CBFF15554EC900D7432F /* TestAfterBeforAdvisor.m */,
+			);
+			name = AOP;
+			sourceTree = "<group>";
+		};
 		3DCFFD03154B1ED70083386A /* Containers */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +375,8 @@
 				3DD5F9B0153AFDED009A3712 /* XmlApplicationContextParser.h */,
 				3DD5F9B1153AFDED009A3712 /* XmlApplicationContextParser.m */,
 				3DE3CCDA153D83070044F5DE /* IXmlApplicationContextParserHandler.h */,
+				3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */,
+				3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -464,6 +501,8 @@
 		3DFC86561533297400883AD9 /* FlexOCTests */ = {
 			isa = PBXGroup;
 			children = (
+				3DB8BE7215658BF80049CDDD /* AOP */,
+				3DB8BE7115658BCF0049CDDD /* Services */,
 				3DC17BCD153D13C20030FB44 /* context_container.xml */,
 				3DAB67CB153700BB00E7EE16 /* context.xml */,
 				3DC17BC1153D08E10030FB44 /* context_factorytest.xml */,
@@ -473,30 +512,13 @@
 				3DFC865D1533297400883AD9 /* FlexOCTests.m */,
 				3DFC865C1533297400883AD9 /* FlexOCTests.h */,
 				3DDF0663153623A70029C4AB /* Context.plist */,
-				3DDF06671536245D0029C4AB /* InstanceService.h */,
-				3DDF06681536245D0029C4AB /* InstanceService.m */,
-				3DDF066B15362D090029C4AB /* InjectionInstanceService.h */,
-				3DDF066C15362D090029C4AB /* InjectionInstanceService.m */,
-				3DDF066E15362D190029C4AB /* IInstanceService.h */,
-				3D295AA115367D9900DAF40F /* CircularService1.h */,
-				3D295AA215367D9900DAF40F /* CircularService1.m */,
-				3D295AA615367DC400DAF40F /* CircularService2.h */,
-				3D295AA715367DC400DAF40F /* CircularService2.m */,
 				3DB610AE153C312F0027DCD9 /* FlexOCXmlTest.h */,
 				3DB610AF153C312F0027DCD9 /* FlexOCXmlTest.m */,
 				3DC17BC7153D092E0030FB44 /* FlexOCTestFactory.h */,
 				3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */,
-				3DC17BCA153D0F650030FB44 /* InstanceServiceFactory.h */,
-				3DC17BCB153D0F650030FB44 /* InstanceServiceFactory.m */,
-				3DD74EF01548DEAB00CC0BBB /* NestedService.h */,
-				3DD74EF11548DEAB00CC0BBB /* NestedService.m */,
-				3DAC0C8C154EA48000157D1B /* InstanceContainer.h */,
-				3DAC0C8D154EA48000157D1B /* InstanceContainer.m */,
 				3DB040FB1552143F000FA19F /* pointcut.xml */,
 				3DE9007C1553F53700A24BF5 /* FlexOCAOPTest.h */,
 				3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */,
-				3D27CBFE15554EC900D7432F /* TestAfterBeforAdvisor.h */,
-				3D27CBFF15554EC900D7432F /* TestAfterBeforAdvisor.m */,
 			);
 			path = FlexOCTests;
 			sourceTree = "<group>";
@@ -551,6 +573,7 @@
 				3D27CBE31555478900D7432F /* IMessageAfterAdvice.h in Headers */,
 				3D27CBE51555480A00D7432F /* IExceptionAdvice.h in Headers */,
 				3D27CBFC15554E2D00D7432F /* TruePointcut.h in Headers */,
+				3DB8BE6D15657E8D0049CDDD /* DependencyTree.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +704,7 @@
 				3D27F6AC1550512F00753582 /* LazyObjectProxy.m in Sources */,
 				3DEF83F41552AAE200C3D934 /* AOPProxy.m in Sources */,
 				3D27CBFD15554E2D00D7432F /* TruePointcut.m in Sources */,
+				3DB8BE6E15657E8D0049CDDD /* DependencyTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
