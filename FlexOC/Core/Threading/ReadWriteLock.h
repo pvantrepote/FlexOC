@@ -13,8 +13,8 @@
 	pthread_rwlock_t lock;
 }
 
--(void) lockForWriting;
+-(void) writeLock;
 -(BOOL) tryLock;
--(BOOL) tryLockForWriting;
+-(BOOL) tryWriteLock;
 
 @end

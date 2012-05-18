@@ -10,11 +10,11 @@
 
 @implementation ReadWriteLock
 
-#pragma mark -
-#pragma mark Init/Dealloc
+#pragma mark - Init/Dealloc
 
 -(id) init {
-	if ((self = [super init]) != nil) {
+	self = [super init];
+	if (self) {
 		pthread_rwlock_init(&lock, NULL);
 	}
 	
@@ -25,8 +25,7 @@
 	pthread_rwlock_destroy(&lock);
 }
 
-#pragma mark -
-#pragma mark Public methods
+#pragma mark - Public methods
 
 -(void) lock {
 	pthread_rwlock_rdlock(&lock);
@@ -36,7 +35,7 @@
 	pthread_rwlock_unlock(&lock);
 }
 
--(void) lockForWriting {
+-(void) writeLock {
 	pthread_rwlock_wrlock(&lock);
 }
 
@@ -44,7 +43,7 @@
 	return (pthread_rwlock_tryrdlock(&lock) == 0);
 }
 
--(BOOL) tryLockForWriting {
+-(BOOL) tryWriteLock {
 	return (pthread_rwlock_trywrlock(&lock) == 0);
 }
 
