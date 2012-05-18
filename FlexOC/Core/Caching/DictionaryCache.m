@@ -90,24 +90,31 @@
 -(id) elementForKey:(id) key {
 	id element = nil;
 	[lock lock];
-	element = [elements objectForKey:key];
-	[lock unlock];
+	@try {
+		element = [elements objectForKey:key];		
+	}
+	@finally {
+		[lock unlock];
+	}
 	
 	if (!element) {
-		[lock lockForWriting];
+		[lock writeLock];
 		
-		element = [elements objectForKey:key];
-		if (!element) {
-			element = [delegate cache:self requestInstanceForKey:key];
-			if (element) {
-				/// ACK policy that an element was added
-				element = [policy cache:self willAddElement:element forKey:key];
-				
-				[elements setObject:element forKey:key];
+		@try {
+			element = [elements objectForKey:key];
+			if (!element) {
+				element = [delegate cache:self requestInstanceForKey:key];
+				if (element) {
+					/// ACK policy that an element was added
+					element = [policy cache:self willAddElement:element forKey:key];
+					
+					[elements setObject:element forKey:key];
+				}
 			}
+		}		
+		@finally {
+			[lock unlock];
 		}
-		
-		[lock unlock];
 	}
 	
 	/// ACK policy that an element was accessed
@@ -119,48 +126,55 @@
 }
 
 -(void) removeElementForKey:(id) key {
-	[lock lockForWriting];
+	[lock writeLock];
 	
-	id element = [elements objectForKey:key];
-	if (element) {
-		if ([delegate respondsToSelector:@selector(cache:shouldRemoveElementForKey:)]) {
-			if ([delegate cache:self shouldRemoveElementForKey:key]) {
+	@try {
+		id element = [elements objectForKey:key];
+		if (element) {
+			if ([delegate respondsToSelector:@selector(cache:shouldRemoveElementForKey:)]) {
+				if ([delegate cache:self shouldRemoveElementForKey:key]) {
+					/// ACK policy that an element was deleteded
+					element = [policy cache:self willRemoveElement:element forKey:key];
+					
+					[elements removeObjectForKey:key];
+				}
+			}
+			else {
 				/// ACK policy that an element was deleteded
 				element = [policy cache:self willRemoveElement:element forKey:key];
 				
 				[elements removeObjectForKey:key];
 			}
-		}
-		else {
-			/// ACK policy that an element was deleteded
-			element = [policy cache:self willRemoveElement:element forKey:key];
-			
-			[elements removeObjectForKey:key];
-		}
+		}	
+	}
+	@finally {
+		[lock unlock];
 	}
 	
-	[lock unlock];
 }
 
 -(void) removeAllElements {
-	[lock lockForWriting];
+	[lock writeLock];
 	
-	if ([delegate respondsToSelector:@selector(cacheShouldRemoveAllElements:)]) {
-		if ([delegate cacheShouldRemoveAllElements:self]) {
+	@try {
+		if ([delegate respondsToSelector:@selector(cacheShouldRemoveAllElements:)]) {
+			if ([delegate cacheShouldRemoveAllElements:self]) {
+				/// ACK policy that we will remove all elements
+				[policy cacheWillRemoveAllElements:self];
+				
+				[elements removeAllObjects];
+			}
+		}
+		else {
 			/// ACK policy that we will remove all elements
 			[policy cacheWillRemoveAllElements:self];
 			
 			[elements removeAllObjects];
-		}
+		}		
 	}
-	else {
-		/// ACK policy that we will remove all elements
-		[policy cacheWillRemoveAllElements:self];
-		
-		[elements removeAllObjects];
-	}
-	
-	[lock unlock];
+	@finally {
+		[lock unlock];
+	}	
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
