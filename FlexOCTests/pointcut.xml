@@ -56,7 +56,30 @@
 		
 		<object id="exceptionInstanceServiceTarget" type="FailedInstanceService" lazy="YES" >
 			<property name="stringFromContext" value="A value from context" />
-		</object>		
+		</object>
+		
+		<!-- Proxy definition -->
+		<object id="regExPointcutadvisor" type="TestAfterBeforAdvisor">
+			<property name="pointcut">
+				<object type="RegExPointcut">
+					<property name="pattern" value="^string.+$" />
+				</object>
+			</property>
+		</object>
+		
+		<object id="regExInstanceService" type="AOPProxy">
+			<property name="target" ref="regExInstanceServiceTarget" />
+			<property name="interceptors">
+				<list>
+					<entry ref="regExPointcutadvisor" />
+				</list>
+			</property>
+		</object>
+		
+		<object id="regExInstanceServiceTarget" type="InstanceService">
+			<property name="stringFromContext" value="A value from context" />
+			<property name="valueFromContext" value="5" />
+		</object>
 		
 	</objects>
 </flexoccontext>

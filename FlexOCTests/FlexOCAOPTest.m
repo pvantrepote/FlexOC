@@ -14,7 +14,17 @@
 #import <FlexOC/AOP/Support/AOPProxy.h>
 #import <FlexOC/Core/Proxy/LazyObjectProxy.h>
 
+#import <FlexOC/AOP/TruePointcut.h>
+#import <FlexOC/AOP/RegExPointcut.h>
+
 @implementation FlexOCAOPTest
+
++(void)load {
+	[super load];
+	
+	[TruePointcut version];
+	[RegExPointcut version];
+}
 
 - (void)setUp {
     [super setUp];
@@ -69,6 +79,27 @@
 	
 	STAssertNotNil(advisor.exception, @"Exception should not be nil");
 	STAssertTrue([advisor.exception.reason isEqualToString:@"stringFromContext"], @"Reason should be stringFromContext");
+}
+
+-(void) testRegex {
+	id<IInstanceService> srv = [context getObjectWithName:@"regExInstanceService"];
+	AOPProxy* concreteSrv = (AOPProxy*) srv;
+	TestAfterBeforAdvisor* advisor = [concreteSrv.interceptors objectAtIndex:0];
+	
+	STAssertFalse(advisor.didBefore, @"didBefore should be false for the advisor");
+	STAssertFalse(advisor.didAfter, @"didAfter should be false for the advisor");
+	
+	STAssertNotNil(srv, @"Service should not be nil");
+
+	STAssertTrue(srv.valueFromContext.intValue == 5, @"Value should be 5");
+	
+	STAssertFalse(advisor.didBefore, @"didBefore should be false for the advisor");
+	STAssertFalse(advisor.didAfter, @"didAfter should be false for the advisor");
+
+	STAssertTrue([srv.stringFromContext isEqualToString:@"A value from context"], @"stringFromContext should be equal to A value from context");
+	
+	STAssertTrue(advisor.didBefore, @"didBefore should be true for the advisor");
+	STAssertTrue(advisor.didAfter, @"didAfter should be true for the advisor");
 }
 
 @end

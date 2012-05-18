@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D173E7A154E2090004FCD47 /* XmlAppCtxListHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */; };
 		3D173E7B154E2090004FCD47 /* XmlAppCtxListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */; };
+		3D24E0941565E3CA006301B9 /* RegExPointcut.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D24E0921565E3CA006301B9 /* RegExPointcut.h */; };
+		3D24E0951565E3CA006301B9 /* RegExPointcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D24E0931565E3CA006301B9 /* RegExPointcut.m */; };
 		3D27CBE0155546F500D7432F /* IMessageBeforeAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBDE155546F500D7432F /* IMessageBeforeAdvice.h */; };
 		3D27CBE31555478900D7432F /* IMessageAfterAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBE21555478900D7432F /* IMessageAfterAdvice.h */; };
 		3D27CBE51555480A00D7432F /* IMessageExceptionAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBE41555480A00D7432F /* IMessageExceptionAdvice.h */; };
@@ -109,6 +111,8 @@
 /* Begin PBXFileReference section */
 		3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxListHandler.h; sourceTree = "<group>"; };
 		3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxListHandler.m; sourceTree = "<group>"; };
+		3D24E0921565E3CA006301B9 /* RegExPointcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegExPointcut.h; sourceTree = "<group>"; };
+		3D24E0931565E3CA006301B9 /* RegExPointcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegExPointcut.m; sourceTree = "<group>"; };
 		3D27CBDE155546F500D7432F /* IMessageBeforeAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageBeforeAdvice.h; sourceTree = "<group>"; };
 		3D27CBE21555478900D7432F /* IMessageAfterAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageAfterAdvice.h; sourceTree = "<group>"; };
 		3D27CBE41555480A00D7432F /* IMessageExceptionAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageExceptionAdvice.h; sourceTree = "<group>"; };
@@ -279,6 +283,8 @@
 				3D27CBE41555480A00D7432F /* IMessageExceptionAdvice.h */,
 				3D27CBFA15554E2C00D7432F /* TruePointcut.h */,
 				3D27CBFB15554E2C00D7432F /* TruePointcut.m */,
+				3D24E0921565E3CA006301B9 /* RegExPointcut.h */,
+				3D24E0931565E3CA006301B9 /* RegExPointcut.m */,
 			);
 			path = AOP;
 			sourceTree = "<group>";
@@ -584,6 +590,7 @@
 				3D27CBE51555480A00D7432F /* IMessageExceptionAdvice.h in Headers */,
 				3D27CBFC15554E2D00D7432F /* TruePointcut.h in Headers */,
 				3DB8BE6D15657E8D0049CDDD /* DependencyTree.h in Headers */,
+				3D24E0941565E3CA006301B9 /* RegExPointcut.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +722,7 @@
 				3DEF83F41552AAE200C3D934 /* AOPProxy.m in Sources */,
 				3D27CBFD15554E2D00D7432F /* TruePointcut.m in Sources */,
 				3DB8BE6E15657E8D0049CDDD /* DependencyTree.m in Sources */,
+				3D24E0951565E3CA006301B9 /* RegExPointcut.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
