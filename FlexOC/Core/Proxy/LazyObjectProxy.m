@@ -17,24 +17,14 @@
 
 @synthesize objectDefinition, context, objectName;
 
--(void) setObjectDefinition:(NSDictionary *)objectDefinition_ {
-	if (objectDefinition == objectDefinition_) return;
-	
-	objectDefinition = nil;
-	if (objectDefinition_) {
-		/// TODO find a better way than mutable copy and remove the lazy aspect if it
-		NSMutableDictionary* def = [objectDefinition_ mutableCopy];
-		[def removeObjectForKey:DictionaryApplicationContextKeywords[ObjectLazy]];
-		objectDefinition = def;
-	} 
-}
-
 -(NSObject*) target {
 	if (!super.target) {
 		@synchronized(self) {
 			if (!super.target) {
+				objectDefinition.isLazy = NO;
 				super.target = [context getObjectWithName:objectName 
 											andDefinition:objectDefinition];
+				objectDefinition.isLazy = YES;
 			}
 		}
 	}
@@ -44,10 +34,10 @@
 
 #pragma mark - Init/Dealloc
 
--(id) initWithObjectDefinition:(NSDictionary*) definition_ name:(NSString*) name_ andContext:(id<IApplicationContext>)context_ {
+-(id) initWithObjectDefinition:(id<IObjectDefinition>) objectDefinition_ name:(NSString*) name_ andContext:(id<IApplicationContext>)context_ {
 	self = [super init];
 	if (self) {
-		self.objectDefinition = definition_;
+		self.objectDefinition = objectDefinition_;
 		self.context = context_;
 		self.objectName = name_;
 	}

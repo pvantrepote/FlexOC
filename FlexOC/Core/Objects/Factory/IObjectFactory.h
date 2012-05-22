@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol IObjectDefinition;
+
 @protocol IObjectFactory <NSObject>
 
 -(BOOL) configureObject:(id<NSObject>) object withName:(NSString*) objectName;
--(id) getObjectWithName:(NSString*) objectName andDefinition:(NSDictionary*) objectDefinition;
+-(id) getObjectWithName:(NSString*) objectName andDefinition:(id<IObjectDefinition>) objectDefinition;
 -(id) getObjectWithName:(NSString*) objectName;
 
 @end

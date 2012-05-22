@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#ifdef FLEXOC_STATIC_LIB
 #import <FlexOC/Core/Objects/Factory/IObjectFactory.h>
+#else
+#import <FlexOC/FlexOC.h>
+#endif
 
 @protocol IApplicationContext <IObjectFactory>
 
@@ -20,7 +24,7 @@
 
 @interface IApplicationContext : NSObject
 
-+(id<IApplicationContext>) ApplicationContextFromFilepath:(NSString*) filepath;
++(id<IApplicationContext>) ApplicationContextFromLocation:(NSString*) location;
 +(id<IApplicationContext>) sharedApplicationContext;
 
 @end

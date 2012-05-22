@@ -6,7 +6,11 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
+#ifdef FLEXOC_STATIC_LIB
 #import <FlexOC/Core/Proxy/ObjectProxy.h>
+#else
+#import <FlexOC/FlexOC.h>
+#endif
 
 @interface AOPProxy : ObjectProxy {
 	@private

@@ -15,15 +15,15 @@
 
 #pragma mark - Public methods
 
-+(id<IApplicationContext>) ApplicationContextFromFilepath:(NSString*) filepath {
++(id<IApplicationContext>) ApplicationContextFromLocation:(NSString*) location {
 	id<IApplicationContext> context = nil;
 	
-	NSString* extension = [filepath pathExtension];
+	NSString* extension = [location pathExtension];
 	if ([extension caseInsensitiveCompare:@"xml"] == NSOrderedSame) {
-		context = [[XmlApplicationContext alloc] initWithXmlAtFilepath:filepath];
+		context = [[XmlApplicationContext alloc] initWithXmlAtFilepath:location];
 	}
 	else if ([extension caseInsensitiveCompare:@"plist"] == NSOrderedSame) {
-		context = [[pListApplicationContext alloc] initWithPListAtPath:filepath];
+		context = [[pListApplicationContext alloc] initWithPListAtPath:location];
 	}
 	
 	return context;

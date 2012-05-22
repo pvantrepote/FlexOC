@@ -8,7 +8,7 @@
 
 #import "DictionaryCache.h"
 
-#import <FlexOC/Core/Threading/ReadWriteLock.h>
+#import "ReadWriteLock.h"
 #import "ICachePolicy.h"
 #import "MemoryWarningCachePolicy.h"
 

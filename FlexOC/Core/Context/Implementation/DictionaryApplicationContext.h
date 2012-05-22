@@ -6,10 +6,11 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-#import <FlexOC/Core/Context/IApplicationContext.h>
-#import <FlexOC/Core/Caching/ICache.h>
+#ifdef FLEXOC_STATIC_LIB
+#import <FlexOC/Core/Context/Implementation/ApplicationContext.h>
+#else
+#import <FlexOC/FlexOC.h>
+#endif
 
 extern const NSString* DictionaryApplicationContextKeywords[];
 
@@ -36,13 +37,7 @@ typedef enum {
 	ObjectInitArgumentValue = ObjectPropertyValue,
 } DictionaryApplicationContextKeywordIDS;
 
-@interface DictionaryApplicationContext : NSObject<IApplicationContext> {
-	@private
-	NSMutableDictionary* objectsCfg;
-	
-	id<ICache> singletons;
-	
-	BOOL allowCircularDependencies;
+@interface DictionaryApplicationContext : ApplicationContext {
 }
 
 -(id) initWithDictionary:(NSDictionary*) configuration;

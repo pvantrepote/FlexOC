@@ -6,7 +6,11 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
+#ifdef FLEXOC_STATIC_LIB
 #import <FlexOC/Core/Caching/ICache.h>
+#else
+#import <FlexOC/FlexOC.h>
+#endif
 
 @class ReadWriteLock;
 

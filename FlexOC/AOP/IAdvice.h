@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @protocol IAdvice <NSObject>
 
 @end
