@@ -17,8 +17,7 @@
 @protocol IApplicationContext <IObjectFactory>
 
 @property (nonatomic, assign) BOOL allowCircularDependencies;
-
--(void) mergeWithContext:(id<IApplicationContext>) context;
+@property (nonatomic, retain) NSMutableDictionary* objects;
 
 @end
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flexoccontext>
+	<resources>
+		<include name="file://./context_resource.xml" />
+		<include name="bundle://context_resource_bundle.xml" />
+	</resources>
+	<objects>
+		
+		<list name="sampleList" >
+			<entry ref="stringRef1" />
+			<entry ref="stringRef2" />
+		</list>
+		
+	</objects>
+</flexoccontext>

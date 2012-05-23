@@ -10,6 +10,7 @@
 
 #import "DictionaryApplicationContext.h"
 #import "XmlAppCtxObjectsHandler.h"
+#import "XmlAppCtxResourcesHandler.h"
 
 @implementation XmlAppCtxRootHandler
 
@@ -27,7 +28,8 @@
 
 -(NSDictionary *) supportedElements {
 	return [NSDictionary dictionaryWithObjectsAndKeys:[XmlAppCtxObjectsHandler class], @"objects", 
-													  [XmlAppCtxRootHandler class], @"flexoccontext", nil];
+													  [XmlAppCtxRootHandler class], @"flexoccontext", 
+													  [XmlAppCtxResourcesHandler class], @"resources", nil];
 }
 
 -(void)willBeginHandlingElement:(NSString *)elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser *)parser withHandler:(id<IXmlApplicationContextParserHandler>)handler {
@@ -50,6 +52,11 @@
 -(void)didEndHandlingElement:(NSString *)elementName forParser:(NSXMLParser *)parser withHandler:(id<IXmlApplicationContextParserHandler>)handler {
 	if ([handler isKindOfClass:[XmlAppCtxObjectsHandler class]]) {
 		[context.objects addEntriesFromDictionary:((XmlAppCtxObjectsHandler*)handler).objects];		
+	}
+	else if ([handler isKindOfClass:[XmlAppCtxResourcesHandler class]]) {
+		for (id<IApplicationContext> includedContext in ((XmlAppCtxResourcesHandler*)handler).includes) {
+			[context.objects addEntriesFromDictionary:includedContext.objects];	
+		}
 	}
 }
 

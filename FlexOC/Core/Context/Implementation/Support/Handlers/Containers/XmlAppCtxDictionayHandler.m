@@ -40,7 +40,10 @@
 -(BOOL)beginHandlingElement:(NSString *)elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser *)parser {
 	NSString* objectID = [attributeDict objectForKey:@"id"];
 	if (!objectID) {
-		objectID = [attributeDict objectForKey:@""];
+		objectID = [attributeDict objectForKey:@"name"];
+	}
+	
+	if (!objectID) {
 		if (((![self.parent isKindOfClass:[XmlAppCtxObjectPropertyHandler class]]) && 
 			 (![self.parent isKindOfClass:[XmlAppCtxObjectArgumentHandler class]])) ||
 			([self.parent isKindOfClass:[XmlAppCtxObjectsHandler class]])) {

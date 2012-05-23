@@ -20,7 +20,7 @@
 	id<ICache> singletons;
 }
 
-@property (nonatomic, readonly) NSMutableDictionary* objects;
+@property (nonatomic, retain) NSMutableDictionary* objects;
 @property (nonatomic, assign) BOOL allowCircularDependencies;
 
 -(void) addObject:(NSString*) objectName withDefinition:(id<IObjectDefinition>) objectDefinition;

@@ -37,7 +37,6 @@
 			<property name="stringFromContext" value="A value from context" />
 		</object>
 
-		<!-- Proxy definition -->
 		<object id="exceptionPointcutadvisor" type="TestExceptionAdvisor">
 			<property name="pointcut">
 				<object type="TruePointcut">
@@ -45,6 +44,7 @@
 			</property>
 		</object>
 		
+		<!-- Proxy definition -->
 		<object id="exceptionInstanceService" type="AOPProxy">
 			<property name="target" ref="exceptionInstanceServiceTarget" />
 			<property name="interceptors">
@@ -58,7 +58,6 @@
 			<property name="stringFromContext" value="A value from context" />
 		</object>
 		
-		<!-- Proxy definition -->
 		<object id="regExPointcutadvisor" type="TestAfterBeforAdvisor">
 			<property name="pointcut">
 				<object type="RegExPointcut">
@@ -67,6 +66,7 @@
 			</property>
 		</object>
 		
+		<!-- Proxy definition -->
 		<object id="regExInstanceService" type="AOPProxy">
 			<property name="target" ref="regExInstanceServiceTarget" />
 			<property name="interceptors">

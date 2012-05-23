@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flexoccontext>
+	<objects>
+		
+		<object id="stringRef1" type="NSString">
+			<init selector="initWithString:">
+				<argument value="Hello stringRef1" />
+			</init>
+		</object>
+				
+	</objects>
+</flexoccontext>

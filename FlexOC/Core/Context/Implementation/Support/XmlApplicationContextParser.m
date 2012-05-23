@@ -42,7 +42,15 @@
 @implementation XmlApplicationContextParser (Private)
 
 -(XmlAppCtxRootHandler*) parseWithXMLFilepath:(NSString*) path andSetAppContext:(XmlApplicationContext*) appContext {
-	return [self parseWithXMLURL:[NSURL fileURLWithPath:path] andSetAppContext:appContext];
+	
+	NSString* currentDirectory = [[NSFileManager defaultManager] currentDirectoryPath];
+	[[NSFileManager defaultManager] changeCurrentDirectoryPath:[path stringByDeletingLastPathComponent]];
+	
+	XmlAppCtxRootHandler* handler = [self parseWithXMLURL:[NSURL fileURLWithPath:path] andSetAppContext:appContext];
+	
+	[[NSFileManager defaultManager] changeCurrentDirectoryPath:currentDirectory];
+	
+	return handler;
 }
 
 -(XmlAppCtxRootHandler*) parseWithXMLURL:(NSURL *)url andSetAppContext:(XmlApplicationContext*) appContext {

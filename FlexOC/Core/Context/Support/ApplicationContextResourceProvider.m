@@ -11,31 +11,43 @@
 @implementation ApplicationContextResourceProvider
 
 +(NSString*) resolveFilepath:(NSString*) filepath {
-	if ([filepath isAbsolutePath]) 
-		return filepath;
 	
-	NSBundle* mainBundle = [NSBundle mainBundle];
-	if (mainBundle) {
-		NSString* path = [[mainBundle bundlePath] stringByAppendingPathComponent:filepath];
-		if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-			return path;
+	/// Check if its a bundle
+	if ([filepath hasPrefix:@"bundle://"]) {
+		filepath = [filepath substringFromIndex:9];
+		
+		NSBundle* mainBundle = [NSBundle mainBundle];
+		if (mainBundle) {
+			NSString* path = [[mainBundle bundlePath] stringByAppendingPathComponent:filepath];
+			if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+				return path;
+			}
+		}
+		
+		mainBundle = [NSBundle bundleForClass:[self class]];
+		if (mainBundle) {
+			NSString* path = [[mainBundle bundlePath] stringByAppendingPathComponent:filepath];
+			if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+				return path;
+			}
 		}
 	}
-	
-	mainBundle = [NSBundle bundleForClass:[self class]];
-	if (mainBundle) {
-		NSString* path = [[mainBundle bundlePath] stringByAppendingPathComponent:filepath];
-		if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-			return path;
-		}
-	}
+	else if ([filepath hasPrefix:@"file://"]) {
+		/// Its a file
 
-	NSString* path = [[[NSFileManager defaultManager] currentDirectoryPath] stringByAppendingPathComponent:filepath];
-	if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-		return path;
+		filepath = [filepath substringFromIndex:7];
+		
+		/// Its an absolute file, no need to do anything
+		if ([filepath isAbsolutePath]) 
+			return filepath;
+		
+		NSString* path = [[[NSFileManager defaultManager] currentDirectoryPath] stringByAppendingPathComponent:filepath];
+		if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+			return path;
+		}
 	}
-	
-	return filepath;
+		
+	return nil;
 }
 
 +(NSURL*) resolveURL:(NSURL*) url {

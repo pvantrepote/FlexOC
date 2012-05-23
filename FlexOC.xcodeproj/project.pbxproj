@@ -55,6 +55,9 @@
 		3D295AA315367D9900DAF40F /* CircularService1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D295AA215367D9900DAF40F /* CircularService1.m */; };
 		3D295AA815367DC400DAF40F /* CircularService2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D295AA715367DC400DAF40F /* CircularService2.m */; };
 		3D295AAA153680DA00DAF40F /* CircularContext.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D295AA9153680DA00DAF40F /* CircularContext.plist */; };
+		3D3D8FAA156D8BA7004DF21C /* context_rcsTest.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D8FA9156D8BA7004DF21C /* context_rcsTest.xml */; };
+		3D3D8FAD156D8BB8004DF21C /* context_resource.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D8FAC156D8BB8004DF21C /* context_resource.xml */; };
+		3D3D8FAF156D8BED004DF21C /* context_resource_bundle.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D8FAE156D8BED004DF21C /* context_resource_bundle.xml */; };
 		3D4F8D2E1566AD0100D73BA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F8D2C1566AD0100D73BA9 /* InfoPlist.strings */; };
 		3D4F8D341566ADEA00D73BA9 /* AOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF83F21552AAE200C3D934 /* AOPProxy.m */; };
 		3D4F8D351566ADEA00D73BA9 /* TruePointcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27CBFB15554E2C00D7432F /* TruePointcut.m */; };
@@ -121,6 +124,11 @@
 		3D713FF71547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */; };
 		3D713FF81547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */; };
 		3DA4BE2D153C44820042221C /* Circularcontext.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DA4BE2C153C44820042221C /* Circularcontext.xml */; };
+		3DA5F672156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA5F670156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h */; };
+		3DA5F673156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA5F670156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h */; };
+		3DA5F674156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5F671156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m */; };
+		3DA5F675156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5F671156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m */; };
+		3DA5F678156D98D1009DAF07 /* FlexOCXMLResourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5F677156D98D1009DAF07 /* FlexOCXMLResourceTest.m */; };
 		3DAB67CC153700BB00E7EE16 /* context.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB67CB153700BB00E7EE16 /* context.xml */; };
 		3DAC0C8E154EA48000157D1B /* InstanceContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC0C8D154EA48000157D1B /* InstanceContainer.m */; };
 		3DB040FC1552143F000FA19F /* pointcut.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DB040FB1552143F000FA19F /* pointcut.xml */; };
@@ -243,6 +251,9 @@
 		3D295AA615367DC400DAF40F /* CircularService2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularService2.h; sourceTree = "<group>"; };
 		3D295AA715367DC400DAF40F /* CircularService2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularService2.m; sourceTree = "<group>"; };
 		3D295AA9153680DA00DAF40F /* CircularContext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CircularContext.plist; sourceTree = "<group>"; };
+		3D3D8FA9156D8BA7004DF21C /* context_rcsTest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_rcsTest.xml; sourceTree = "<group>"; };
+		3D3D8FAC156D8BB8004DF21C /* context_resource.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_resource.xml; sourceTree = "<group>"; };
+		3D3D8FAE156D8BED004DF21C /* context_resource_bundle.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_resource_bundle.xml; sourceTree = "<group>"; };
 		3D4F8D261566AD0100D73BA9 /* FlexOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4F8D271566AD0100D73BA9 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		3D4F8D2B1566AD0100D73BA9 /* iOSFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSFramework-Info.plist"; sourceTree = "<group>"; };
@@ -253,6 +264,10 @@
 		3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectPropertyHandler.h; sourceTree = "<group>"; };
 		3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectPropertyHandler.m; sourceTree = "<group>"; };
 		3DA4BE2C153C44820042221C /* Circularcontext.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Circularcontext.xml; sourceTree = "<group>"; };
+		3DA5F670156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxResourcesHandler.h; sourceTree = "<group>"; };
+		3DA5F671156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxResourcesHandler.m; sourceTree = "<group>"; };
+		3DA5F676156D98D1009DAF07 /* FlexOCXMLResourceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexOCXMLResourceTest.h; sourceTree = "<group>"; };
+		3DA5F677156D98D1009DAF07 /* FlexOCXMLResourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCXMLResourceTest.m; sourceTree = "<group>"; };
 		3DAB67CB153700BB00E7EE16 /* context.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context.xml; sourceTree = "<group>"; };
 		3DAC0C8C154EA48000157D1B /* InstanceContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceContainer.h; sourceTree = "<group>"; };
 		3DAC0C8D154EA48000157D1B /* InstanceContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceContainer.m; sourceTree = "<group>"; };
@@ -437,6 +452,15 @@
 				3DF8582B156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.m */,
 			);
 			path = Object;
+			sourceTree = "<group>";
+		};
+		3DA5F66E156D9482009DAF07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3DA5F670156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h */,
+				3DA5F671156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3DB6A58B153B6791006F4983 /* Support */ = {
@@ -637,6 +661,7 @@
 		3DE3CCD8153D82DE0044F5DE /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				3DA5F66E156D9482009DAF07 /* Resources */,
 				3DCFFD03154B1ED70083386A /* Containers */,
 				3D713FEF1547970700EB3B1F /* Object */,
 				3DE3CCDC153D83CA0044F5DE /* XmlAppCtxRootHandler.h */,
@@ -721,6 +746,11 @@
 				3DB040FB1552143F000FA19F /* pointcut.xml */,
 				3DE9007C1553F53700A24BF5 /* FlexOCAOPTest.h */,
 				3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */,
+				3D3D8FA9156D8BA7004DF21C /* context_rcsTest.xml */,
+				3D3D8FAC156D8BB8004DF21C /* context_resource.xml */,
+				3D3D8FAE156D8BED004DF21C /* context_resource_bundle.xml */,
+				3DA5F676156D98D1009DAF07 /* FlexOCXMLResourceTest.h */,
+				3DA5F677156D98D1009DAF07 /* FlexOCXMLResourceTest.m */,
 			);
 			path = FlexOCTests;
 			sourceTree = "<group>";
@@ -788,6 +818,7 @@
 				3D23CDD3156B9FD900598189 /* ObjectValueDefinition.h in Headers */,
 				3DB826D3156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */,
 				3DF8582D156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */,
+				3DA5F673156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,6 +874,7 @@
 				3D23CDD2156B9FD900598189 /* ObjectValueDefinition.h in Headers */,
 				3DB826D2156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */,
 				3DF8582C156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */,
+				3DA5F672156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +984,9 @@
 				3DC17BC2153D08E10030FB44 /* context_factorytest.xml in Resources */,
 				3DC17BCE153D13C20030FB44 /* context_container.xml in Resources */,
 				3DB040FC1552143F000FA19F /* pointcut.xml in Resources */,
+				3D3D8FAA156D8BA7004DF21C /* context_rcsTest.xml in Resources */,
+				3D3D8FAD156D8BB8004DF21C /* context_resource.xml in Resources */,
+				3D3D8FAF156D8BED004DF21C /* context_resource_bundle.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1044,7 @@
 				3D23CDD5156B9FD900598189 /* ObjectValueDefinition.m in Sources */,
 				3DB826D5156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */,
 				3DF8582F156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */,
+				3DA5F675156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1047,6 +1083,7 @@
 				3D23CDD4156B9FD900598189 /* ObjectValueDefinition.m in Sources */,
 				3DB826D4156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */,
 				3DF8582E156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */,
+				3DA5F674156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1071,6 +1108,7 @@
 				3DBD78561565A24500B3EB9C /* TestExceptionAdvisor.m in Sources */,
 				3DBD785A1565A36500B3EB9C /* FailedInstanceService.m in Sources */,
 				3DD63CFC156ADBA800D557BE /* ApplicationContext.m in Sources */,
+				3DA5F678156D98D1009DAF07 /* FlexOCXMLResourceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
