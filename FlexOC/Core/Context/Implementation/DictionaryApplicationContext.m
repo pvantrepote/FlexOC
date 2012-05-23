@@ -74,6 +74,7 @@ const NSString* DictionaryApplicationContextKeywords[] = {
 			NSDictionary* objectDefinition = [objects objectForKey:objectName];
 			
 			id<IObjectDefinition> definition = [[ObjectDefinition alloc] init];
+			definition.name = objectName;
 			
 			if ([self setObjectDefinition:definition withDictionary:objectDefinition]) {
 				[self addObject:objectName withDefinition:definition];
