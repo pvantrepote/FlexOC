@@ -13,32 +13,44 @@
 
 @implementation XmlAppCtxRootHandler
 
-- (id)init {
-    self = [super init];
-    if (self) {
-    }
-	
-    return self;
+#pragma mark - Properties
+
+@synthesize context;
+
+#pragma mark - Init/Dealloc
+
+-(void)dealloc {
+	context = nil;
 }
 
 #pragma mark - Override
 
 -(NSDictionary *) supportedElements {
-	return [NSDictionary dictionaryWithObjectsAndKeys:[XmlAppCtxObjectsHandler class], @"objects", nil];
+	return [NSDictionary dictionaryWithObjectsAndKeys:[XmlAppCtxObjectsHandler class], @"objects", 
+													  [XmlAppCtxRootHandler class], @"flexoccontext", nil];
+}
+
+-(void)willBeginHandlingElement:(NSString *)elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser *)parser withHandler:(id<IXmlApplicationContextParserHandler>)handler {
+	if ([handler isKindOfClass:[XmlAppCtxRootHandler class]]) {
+		((XmlAppCtxRootHandler*)handler).context = context;
+	}
 }
 
 -(BOOL)beginHandlingElement:(NSString *)elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser *)parser {
-	
-	[self pushNewContextForKey:DictionaryApplicationContextKeywords[ApplicationContextKey]];
-
-	NSString* allowCircularDependencies = [attributeDict objectForKey:@"allowCircularDependencies"];
-	if (allowCircularDependencies) {
-		[self.context setObject:[NSNumber numberWithBool:[allowCircularDependencies boolValue]] 
-						 forKey:DictionaryApplicationContextKeywords[ApplicationContextCircularFlag]];
+	NSString* strAllowCircularDependencies = [attributeDict objectForKey:@"allowCircularDependencies"];
+	if (strAllowCircularDependencies) {
+		context.allowCircularDependencies = [strAllowCircularDependencies boolValue];
 	}
 	
 	return [super beginHandlingElement:elementName 
 						 withAttribute:attributeDict 
 							 forParser:parser];
 }
+
+-(void)didEndHandlingElement:(NSString *)elementName forParser:(NSXMLParser *)parser withHandler:(id<IXmlApplicationContextParserHandler>)handler {
+	if ([handler isKindOfClass:[XmlAppCtxObjectsHandler class]]) {
+		[context.objects addEntriesFromDictionary:((XmlAppCtxObjectsHandler*)handler).objects];		
+	}
+}
+
 @end

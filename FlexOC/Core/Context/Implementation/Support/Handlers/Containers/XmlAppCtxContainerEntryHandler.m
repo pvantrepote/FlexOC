@@ -17,48 +17,30 @@
 
 #pragma mark - Properties
 
+@synthesize key;
+
+#pragma mark - Init/Dealloc
+
+-(void)dealloc {
+	key = nil;
+}
+
+#pragma mark - Override
+
 -(NSDictionary *)supportedElements {
 	return [NSDictionary dictionaryWithObjectsAndKeys:[XmlAppCtxObjectHandler class], @"object", 
+													  [XmlAppCtxDictionayHandler class], @"dictionary", 
+													  [XmlAppCtxListHandler class], @"list",
 													  nil];
 }
 
 -(BOOL)beginHandlingElement:(NSString *)elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser *)parser {
 	
 	BOOL needaKey = [super.parent isKindOfClass:[XmlAppCtxDictionayHandler class]];
-	NSString* value = [attributeDict objectForKey:@"value"];
-	NSString* ref = nil;
-	if (!value) ref = [attributeDict objectForKey:@"ref"];
-	
 	if (needaKey) {
-		NSString* key = [attributeDict objectForKey:@"key"];
+		key = [attributeDict objectForKey:@"key"];
 		if (!key) {
 			return NO;
-		}
-		
-		if (value || ref) {
-			if (ref || [value hasPrefix:@"%@"]) {
-				value = [NSString stringWithFormat:@"@%@", (ref) ? ref : value];
-			}
-			
-			[self.context setObject:value 
-							 forKey:key];
-		}
-		else {
-			[self pushNewContextForKey:key];
-		}
-	}
-	else {
-		XmlAppCtxListHandler* listHandler = self.parent;
-		if (value || ref) {
-			if (ref || [value hasPrefix:@"%@"]) {
-				value = [NSString stringWithFormat:@"@%@", (ref) ? ref : value];
-			}
-			
-			[listHandler.list addObject:value];
-		}
-		else {
-			[listHandler.list addObject:[NSMutableDictionary dictionary]];
-			self.context = [listHandler.list lastObject];
 		}
 	}
 	

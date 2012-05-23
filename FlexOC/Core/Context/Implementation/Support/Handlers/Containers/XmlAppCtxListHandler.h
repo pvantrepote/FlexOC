@@ -6,13 +6,17 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import "XmlAppCtxHandlerBase.h"
+#import <FlexOC/Core/Context/Implementation/Support/Handlers/XmlAppCtxHandlerBase.h>
+
+@protocol IObjectDefinition;
 
 @interface XmlAppCtxListHandler : XmlAppCtxHandlerBase {
 	@private
 	NSMutableArray* list;
+	id<IObjectDefinition> objectDefinition;
 }
 
 @property (nonatomic, readonly) NSMutableArray* list;
+@property (nonatomic, readonly) id<IObjectDefinition> objectDefinition;
 
 @end

@@ -132,6 +132,10 @@
 		3DB809CC15514F43001303D6 /* IAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809CB15514F43001303D6 /* IAdvice.h */; };
 		3DB809CF15514F69001303D6 /* IAdvisor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809CE15514F69001303D6 /* IAdvisor.h */; };
 		3DB809D115514F8C001303D6 /* IPointcutAdvisor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */; };
+		3DB826D2156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB826D0156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h */; };
+		3DB826D3156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB826D0156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h */; };
+		3DB826D4156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB826D1156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m */; };
+		3DB826D5156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB826D1156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m */; };
 		3DB8BE6D15657E8D0049CDDD /* DependencyTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */; };
 		3DB8BE6E15657E8D0049CDDD /* DependencyTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */; };
 		3DBD78561565A24500B3EB9C /* TestExceptionAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBD78551565A24500B3EB9C /* TestExceptionAdvisor.m */; };
@@ -180,6 +184,10 @@
 		3DE9007E1553F53700A24BF5 /* FlexOCAOPTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */; };
 		3DEF83F31552AAE200C3D934 /* AOPProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEF83F11552AAE200C3D934 /* AOPProxy.h */; };
 		3DEF83F41552AAE200C3D934 /* AOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF83F21552AAE200C3D934 /* AOPProxy.m */; };
+		3DF8582C156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF8582A156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.h */; };
+		3DF8582D156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF8582A156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.h */; };
+		3DF8582E156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8582B156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.m */; };
+		3DF8582F156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8582B156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.m */; };
 		3DFC86411533297400883AD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC86401533297400883AD9 /* Foundation.framework */; };
 		3DFC864F1533297400883AD9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC864E1533297400883AD9 /* SenTestingKit.framework */; };
 		3DFC86511533297400883AD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC86501533297400883AD9 /* UIKit.framework */; };
@@ -258,6 +266,8 @@
 		3DB809CB15514F43001303D6 /* IAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdvice.h; sourceTree = "<group>"; };
 		3DB809CE15514F69001303D6 /* IAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdvisor.h; sourceTree = "<group>"; };
 		3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPointcutAdvisor.h; sourceTree = "<group>"; };
+		3DB826D0156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectInitHandler.h; sourceTree = "<group>"; };
+		3DB826D1156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectInitHandler.m; sourceTree = "<group>"; };
 		3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependencyTree.h; sourceTree = "<group>"; };
 		3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependencyTree.m; sourceTree = "<group>"; };
 		3DBD78541565A24500B3EB9C /* TestExceptionAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExceptionAdvisor.h; sourceTree = "<group>"; };
@@ -314,6 +324,8 @@
 		3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCAOPTest.m; sourceTree = "<group>"; };
 		3DEF83F11552AAE200C3D934 /* AOPProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPProxy.h; sourceTree = "<group>"; };
 		3DEF83F21552AAE200C3D934 /* AOPProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPProxy.m; sourceTree = "<group>"; };
+		3DF8582A156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectArgumentHandler.h; sourceTree = "<group>"; };
+		3DF8582B156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectArgumentHandler.m; sourceTree = "<group>"; };
 		3DFC863D1533297400883AD9 /* libFlexOC-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFlexOC-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFC86401533297400883AD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DFC86441533297400883AD9 /* FlexOC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlexOC-Prefix.pch"; sourceTree = "<group>"; };
@@ -419,6 +431,10 @@
 				3D713FF21547972E00EB3B1F /* XmlAppCtxObjectHandler.m */,
 				3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */,
 				3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */,
+				3DB826D0156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h */,
+				3DB826D1156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m */,
+				3DF8582A156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.h */,
+				3DF8582B156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -770,6 +786,8 @@
 				3D2887B515680DB900CD8813 /* ObjectDefinition.h in Headers */,
 				3D264152156A7ECA00CDA69D /* ObjectInitDefinition.h in Headers */,
 				3D23CDD3156B9FD900598189 /* ObjectValueDefinition.h in Headers */,
+				3DB826D3156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */,
+				3DF8582D156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +841,8 @@
 				3D2887B415680DB900CD8813 /* ObjectDefinition.h in Headers */,
 				3D264151156A7ECA00CDA69D /* ObjectInitDefinition.h in Headers */,
 				3D23CDD2156B9FD900598189 /* ObjectValueDefinition.h in Headers */,
+				3DB826D2156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */,
+				3DF8582C156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,6 +1007,8 @@
 				3D2887B715680DB900CD8813 /* ObjectDefinition.m in Sources */,
 				3D264154156A7ECA00CDA69D /* ObjectInitDefinition.m in Sources */,
 				3D23CDD5156B9FD900598189 /* ObjectValueDefinition.m in Sources */,
+				3DB826D5156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */,
+				3DF8582F156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,6 +1045,8 @@
 				3D2887B615680DB900CD8813 /* ObjectDefinition.m in Sources */,
 				3D264153156A7ECA00CDA69D /* ObjectInitDefinition.m in Sources */,
 				3D23CDD4156B9FD900598189 /* ObjectValueDefinition.m in Sources */,
+				3DB826D4156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */,
+				3DF8582E156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

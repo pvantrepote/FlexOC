@@ -9,63 +9,54 @@
 #import "XmlApplicationContextParser.h"
 
 #import "DictionaryApplicationContext.h"
-#import "XmlAppCtxHandlerBase.h"
+#import "XmlAppCtxRootHandler.h"
+#import "XmlApplicationContext.h"
+
+@interface XmlApplicationContextParser (Private)
+
+-(XmlAppCtxRootHandler*) parseWithXMLFilepath:(NSString*) path andSetAppContext:(XmlApplicationContext*) appContext;
+-(XmlAppCtxRootHandler*) parseWithXMLURL:(NSURL*) url andSetAppContext:(XmlApplicationContext*) appContext;
+
+@end
 
 @implementation XmlApplicationContextParser
 
-#pragma mark - Properties
-
-@synthesize configuration;
-
-#pragma mark - Init/Dealloc
-
--(id) init {
-	self = [super init];
-	if (self) {
-		configuration = [[NSMutableDictionary alloc] init];
-	}
-	
-	return self;
-}
-
-- (void)dealloc {
-	configuration = nil;
-	context = nil;	
-}
-
 #pragma mark - Public methods
 
-+(NSDictionary*) ParseWithXMLFilepath:(NSString*) path {
++(BOOL) ParseWithXMLFilepath:(NSString*) path andSetAppContext:(XmlApplicationContext*) appContext {
 	XmlApplicationContextParser* parser = [[[self class] alloc] init];
-	if ([parser parseWithXMLFilepath:path]) {
-		return parser.configuration;
-	}
+	XmlAppCtxRootHandler* handler = [parser parseWithXMLFilepath:path andSetAppContext:appContext];
 	
-	return nil;
+	return (handler != nil);
 }
 
-+(NSDictionary *)ParseWithXMLURL:(NSURL *)url {
++(BOOL)ParseWithXMLURL:(NSURL *)url andSetAppContext:(XmlApplicationContext*) appContext {
 	XmlApplicationContextParser* parser = [[[self class] alloc] init];
-	if ([parser parseWithXMLURL:url]) {
-		return parser.configuration;
-	}
-	
-	return nil;
+	XmlAppCtxRootHandler* handler = [parser parseWithXMLURL:url andSetAppContext:appContext];
+
+	return (handler != nil);
 }
 
--(BOOL) parseWithXMLFilepath:(NSString*) path {
-	return [self parseWithXMLURL:[NSURL fileURLWithPath:path]];
+@end
+
+@implementation XmlApplicationContextParser (Private)
+
+-(XmlAppCtxRootHandler*) parseWithXMLFilepath:(NSString*) path andSetAppContext:(XmlApplicationContext*) appContext {
+	return [self parseWithXMLURL:[NSURL fileURLWithPath:path] andSetAppContext:appContext];
 }
 
--(BOOL)parseWithXMLURL:(NSURL *)url {
-	XmlAppCtxHandlerBase* handler = [[XmlAppCtxHandlerBase alloc] init];
-	handler.context = configuration;
+-(XmlAppCtxRootHandler*) parseWithXMLURL:(NSURL *)url andSetAppContext:(XmlApplicationContext*) appContext {
+	XmlAppCtxRootHandler* handler = [[XmlAppCtxRootHandler alloc] init];
+	handler.context = appContext;
 	
 	NSXMLParser* parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
 	parser.delegate = handler;
 	[parser parse];
 	
-	return ([parser parserError] == nil);
+	if ([parser parserError]) 
+		return nil;
+	
+	return handler;
 }
 
 @end

@@ -20,7 +20,7 @@
 
 #pragma mark - Properties
 
-@synthesize  context, parent, elements, children;
+@synthesize  parent, elements, children;
 
 -(NSDictionary *)supportedElements {
 	return [NSDictionary dictionaryWithObject:[XmlAppCtxRootHandler class]
@@ -37,8 +37,6 @@
 	if (parent_) {
 		parent = parent_;
 		[parent.children addObject:self];
-		
-		self.context = parent_.context;
 	}
 	else {
 		parent = nil;
@@ -52,7 +50,6 @@
     if (self) {
         self.elements = self.supportedElements;
 		children = [NSMutableArray array];
-		stack = [NSMutableArray array];
     }
     return self;
 }
@@ -61,22 +58,25 @@
     self.elements = nil;
 	self.parent = nil;
 	children = nil;
-	stack = nil;
 }
 
 #pragma mark - Public methods
 
 -(BOOL) beginHandlingElement:(NSString*) elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser*) parser {
 	parser.delegate = self;
-	
 	return YES;
 }
 
 -(void) endHandlingElement:(NSString*) elementName forParser:(NSXMLParser*) parser {
 	parser.delegate = self.parent;
-	
-	while ([self popContext]) {}
 }
+
+-(void) willBeginHandlingElement:(NSString*) elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser*) parser withHandler:(id<IXmlApplicationContextParserHandler>) handler {
+}
+
+-(void) didEndHandlingElement:(NSString*) elementName forParser:(NSXMLParser*) parser withHandler:(id<IXmlApplicationContextParserHandler>) handler {
+}
+
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
 	Class handlerClass = [elements objectForKey:elementName];
@@ -84,8 +84,14 @@
 	
 	id<IXmlApplicationContextParserHandler> handler = [[handlerClass alloc] init];
 	if (!handler) return;
-	
 	handler.parent = self;
+	
+	///
+	[self willBeginHandlingElement:elementName 
+					 withAttribute:attributeDict 
+						 forParser:parser 
+					   withHandler:handler];
+	
 	if (![handler beginHandlingElement:elementName 
 						 withAttribute:attributeDict 
 							 forParser:parser]) {
@@ -95,28 +101,10 @@
 
 -(void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
 	[self endHandlingElement:elementName forParser:parser];
-}
-
--(void)pushNewContextForKey:(const NSString *)key {
-	[self.context setObject:[NSMutableDictionary dictionary] 
-							forKey:key];
-	self.context = [self.context objectForKey:key];
 	
-	[stack addObject:self.context];
-}
-
--(BOOL) popContext {
-	if ([stack count]) {
-		[stack removeLastObject];
-		if ([stack count]) {
-			self.context = [stack lastObject];
-		}
-		else {
-			self.context = self.parent.context;
-		}
-	}
-	
-	return ([stack count] != 0);
+	[self.parent didEndHandlingElement:elementName 
+							 forParser:parser 
+						   withHandler:self];
 }
 
 @end

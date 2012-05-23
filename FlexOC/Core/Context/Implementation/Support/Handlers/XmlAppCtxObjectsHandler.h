@@ -8,6 +8,11 @@
 
 #import "XmlAppCtxHandlerBase.h"
 
-@interface XmlAppCtxObjectsHandler : XmlAppCtxHandlerBase
+@interface XmlAppCtxObjectsHandler : XmlAppCtxHandlerBase {
+	@private
+	NSMutableDictionary* objects;
+}
+
+@property (nonatomic, readonly) NSMutableDictionary* objects;
 
 @end

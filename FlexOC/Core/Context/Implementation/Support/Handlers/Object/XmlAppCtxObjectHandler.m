@@ -13,8 +13,29 @@
 #import "XmlAppCtxDictionayHandler.h"
 #import "XmlAppCtxListHandler.h"
 #import "XmlAppCtxContainerEntryHandler.h"
+#import "XmlAppCtxObjectInitHandler.h"
+#import "ObjectDefinition.h"
+#import "ObjectFactoryDefinition.h"
 
 @implementation XmlAppCtxObjectHandler
+
+#pragma mark - Properties
+
+@synthesize objectDefinition;
+
+#pragma mark - Init/Dealloc
+
+-(id)init {
+	self = [super init];
+	if (self) {
+	}
+	
+	return self;
+}
+
+-(void)dealloc {
+	self.objectDefinition = nil;
+}
 
 #pragma mark - Override
 
@@ -26,111 +47,63 @@
 -(BOOL)beginHandlingElement:(NSString *)elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser *)parser {
 	NSString* objectID = [attributeDict objectForKey:@"id"];
 	if (!objectID) {
+		objectID = [attributeDict objectForKey:@"name"];
+	}
+
+	if (!objectID) {
 		if ((![self.parent isKindOfClass:[XmlAppCtxObjectPropertyHandler class]]) && 
-			(![self.parent isKindOfClass:[XmlAppCtxObjectInitArgumentHandler class]]) &&
+			(![self.parent isKindOfClass:[XmlAppCtxObjectArgumentHandler class]]) &&
 			(![self.parent isKindOfClass:[XmlAppCtxContainerEntryHandler class]])) {
 			return NO;
 		}
-		
-		objectID = (NSString*)DictionaryApplicationContextKeywords[ObjectPropertyNestedObject];
-		if ([self.parent isKindOfClass:[XmlAppCtxObjectPropertyHandler class]]) {
-			[self pushNewContextForKey:((XmlAppCtxObjectPropertyHandler*)self.parent).name];
-		}
-		else if ([self.parent isKindOfClass:[XmlAppCtxObjectInitArgumentHandler class]]) {
-			NSMutableArray* args = [self.context objectForKey:DictionaryApplicationContextKeywords[ObjectInitArguments]];
-			[args addObject:[NSMutableDictionary dictionary]];
-			self.context = [args lastObject];
-		}
 	}
-	
+		
 	NSString* type = [attributeDict objectForKey:@"type"];
 	if (!type) return NO;
 	
-	[self pushNewContextForKey:objectID];
+	objectDefinition = [[ObjectDefinition alloc] init];
+	objectDefinition.name = objectID;
+	objectDefinition.type = type;
 	
-	[self.context setObject:type 
-					 forKey:DictionaryApplicationContextKeywords[ObjectType]];
-	[self.context setObject:[NSMutableDictionary dictionary] 
-					 forKey:DictionaryApplicationContextKeywords[ObjectProperties]];
 	NSString* singleton = [attributeDict objectForKey:@"singleton"];
 	if (singleton) {
-		[self.context  setObject:[NSNumber numberWithBool:[singleton boolValue]] 
-						  forKey:DictionaryApplicationContextKeywords[ObjectSingleton]];
-	}
-	NSString* lazy = [attributeDict objectForKey:@"lazy"];
-	if (lazy) {
-		[self.context  setObject:[NSNumber numberWithBool:[lazy boolValue]] 
-						  forKey:DictionaryApplicationContextKeywords[ObjectLazy]];		
+		objectDefinition.isSingleton = [singleton boolValue];
 	}
 	
+	NSString* lazy = [attributeDict objectForKey:@"lazy"];
+	if (lazy) {
+		objectDefinition.isLazy = [lazy boolValue];
+	}
+
 	NSString* factoryMethod = [attributeDict objectForKey:@"factory-method"];
 	if (factoryMethod) {
-		[self.context  setObject:factoryMethod 
-						  forKey:DictionaryApplicationContextKeywords[ObjectFactoryMethod]];
-		NSString* factoryObject = [attributeDict 
-								   objectForKey:@"factory-object"];
+		NSString* factoryObject = [attributeDict objectForKey:@"factory-object"];
+
+		objectDefinition.factory = [[ObjectFactoryDefinition alloc] init];
+		
+		objectDefinition.factory.factoryMethod = factoryMethod;
 		if (factoryObject) {
-			[self.context  setObject:factoryObject 
-							  forKey:DictionaryApplicationContextKeywords[ObjectFactoryObject]];
+			objectDefinition.factory.factoryObject = factoryObject;
 		}
 	}
 	
 	return [super beginHandlingElement:elementName withAttribute:attributeDict forParser:parser];	
 }
 
-
-@end
-
-@implementation XmlAppCtxObjectInitHandler
-
-#pragma mark - Override
-
--(NSDictionary *)supportedElements {
-	return [NSDictionary dictionaryWithObjectsAndKeys:[XmlAppCtxObjectInitArgumentHandler class], @"argument", nil];
-}
-
--(BOOL)beginHandlingElement:(NSString *)elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser *)parser {
-	
-	[self pushNewContextForKey:DictionaryApplicationContextKeywords[ObjectInitSection]];
-	
-	NSString* selector = [attributeDict objectForKey:@"selector"];
-	if (selector) {
-		[self.context setObject:selector 
-						forKey:DictionaryApplicationContextKeywords[ObjectInitSelector]];
+-(void)didEndHandlingElement:(NSString *)elementName forParser:(NSXMLParser *)parser withHandler:(id<IXmlApplicationContextParserHandler>)handler {
+	if ([handler isKindOfClass:[XmlAppCtxObjectPropertyHandler class]]) {
+		if (!objectDefinition.properties) {
+			objectDefinition.properties = [NSMutableDictionary dictionary];
+		}
+		
+		XmlAppCtxObjectPropertyHandler* prop = (XmlAppCtxObjectPropertyHandler*) handler;
+		[objectDefinition.properties setObject:prop.valueDefinition
+										forKey:prop.name];
 	}
-	
-	return [super beginHandlingElement:elementName withAttribute:attributeDict forParser:parser];
-}
-
-@end
-
-@implementation XmlAppCtxObjectInitArgumentHandler 
-
-#pragma mark - Override
-
--(NSDictionary *)supportedElements {
-	return [NSDictionary dictionaryWithObjectsAndKeys:[XmlAppCtxObjectHandler class], @"object", 
-													  [XmlAppCtxListHandler class], @"list",
-													  [XmlAppCtxDictionayHandler class], @"dictionary", nil];
-}
-
--(BOOL)beginHandlingElement:(NSString *)elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser *)parser {
-	
-	NSString* value = [attributeDict objectForKey:@"value"];
-	NSString* ref = [attributeDict objectForKey:@"ref"];	
-	
-	NSMutableArray* args = [self.context objectForKey:DictionaryApplicationContextKeywords[ObjectInitArguments]];
-	if (!args) {
-		args = [NSMutableArray array];
-		[self.context setObject:args forKey:DictionaryApplicationContextKeywords[ObjectInitArguments]];
+	else if ([handler isKindOfClass:[XmlAppCtxObjectInitHandler class]]) {
+		XmlAppCtxObjectInitHandler* prop = (XmlAppCtxObjectInitHandler*) handler;
+		objectDefinition.initializer = prop.initDefinition;
 	}
-	
-	if (value || ref) {
-		NSString* arg = (ref || [value hasPrefix:@"@"]) ? [NSString stringWithFormat:@"@%@", (ref) ? ref : value] : value;
-		[args addObject:arg];
-	}
-	
-	return [super beginHandlingElement:elementName withAttribute:attributeDict forParser:parser];
 }
 
 @end

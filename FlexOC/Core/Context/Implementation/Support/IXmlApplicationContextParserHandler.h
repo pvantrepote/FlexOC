@@ -12,9 +12,12 @@
 
 @property (nonatomic, weak) id<IXmlApplicationContextParserHandler> parent;
 @property (nonatomic, readonly) NSMutableArray* children;;
-@property (nonatomic, retain) NSMutableDictionary* context;
 
 -(BOOL) beginHandlingElement:(NSString*) elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser*) parser;
 -(void) endHandlingElement:(NSString*) elementName forParser:(NSXMLParser*) parser;
+
+-(void) willBeginHandlingElement:(NSString*) elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser*) parser withHandler:(id<IXmlApplicationContextParserHandler>) handler;
+-(void) didEndHandlingElement:(NSString*) elementName forParser:(NSXMLParser*) parser withHandler:(id<IXmlApplicationContextParserHandler>) handler;
+
 
 @end

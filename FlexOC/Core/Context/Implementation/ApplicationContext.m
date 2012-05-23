@@ -316,23 +316,27 @@
 			break;
 		case ObjectValueTypeList: {
 			NSArray* cfg = (NSArray*) valueDefinition.value;
-			NSMutableArray* value = [NSMutableArray array];
+			NSMutableArray* values = [NSMutableArray array];
 			for (id val in cfg) {
-				[value addObject:[self getValue:val]];
+				id value = [self getValue:val];
+				if (!value) return nil;
+				[values addObject:value];
 			}
 			
-			result = value;
+			result = values;
 		}
 			break;
 		case ObjectValueTypeDictionary: {
 			NSDictionary* cfg = (NSDictionary*) valueDefinition.value;
-			NSMutableDictionary* value = [NSMutableDictionary dictionary];
+			NSMutableDictionary* values = [NSMutableDictionary dictionary];
 			for (NSString* key in cfg) {
-				[value setObject:[self getValue:[cfg objectForKey:key]] 
+				id value = [self getValue:[cfg objectForKey:key]];
+				if (!value) return nil;
+				[values setObject:value 
 						  forKey:key];
 			}
 			
-			result = value;
+			result = values;
 		}
 			break;
 	}

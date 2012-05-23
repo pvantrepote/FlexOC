@@ -6,16 +6,15 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import "XmlAppCtxHandlerBase.h"
+#import <FlexOC/Core/Context/Implementation/Support/Handlers/XmlAppCtxHandlerBase.h>
 
-@interface XmlAppCtxObjectHandler : XmlAppCtxHandlerBase
+@protocol IObjectDefinition;
 
-@end
+@interface XmlAppCtxObjectHandler : XmlAppCtxHandlerBase {
+	@private
+	id<IObjectDefinition> objectDefinition;
+}
 
-@interface XmlAppCtxObjectInitHandler : XmlAppCtxHandlerBase
-
-@end
-
-@interface XmlAppCtxObjectInitArgumentHandler : XmlAppCtxHandlerBase
+@property (nonatomic, retain) id<IObjectDefinition> objectDefinition;
 
 @end

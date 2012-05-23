@@ -6,8 +6,17 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import "XmlAppCtxHandlerBase.h"
+#import <FlexOC/Core/Context/Implementation/Support/Handlers/XmlAppCtxHandlerBase.h>
 
-@interface XmlAppCtxDictionayHandler : XmlAppCtxHandlerBase
+@protocol IObjectDefinition;
+
+@interface XmlAppCtxDictionayHandler : XmlAppCtxHandlerBase {
+	@private
+	NSMutableDictionary* dictionary;
+	id<IObjectDefinition> objectDefinition;
+}
+
+@property (nonatomic, readonly) NSMutableDictionary* dictionary;
+@property (nonatomic, readonly) id<IObjectDefinition> objectDefinition;
 
 @end

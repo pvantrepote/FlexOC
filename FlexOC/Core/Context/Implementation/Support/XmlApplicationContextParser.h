@@ -9,26 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @protocol IXmlApplicationContextParserHandler;
+@class XmlApplicationContext;
 
-@interface XmlApplicationContextParser : NSObject {
-@private
-	NSMutableDictionary* configuration;
+@interface XmlApplicationContextParser : NSObject 
 
-	NSMutableDictionary* context;
-	NSMutableDictionary* objects;
-
-	NSMutableDictionary* currentObject;
-	NSMutableDictionary* currentInit;
-	
-	id<IXmlApplicationContextParserHandler> currentHandler;
-}
-
-@property (nonatomic, readonly) NSDictionary* configuration;
-
--(BOOL) parseWithXMLFilepath:(NSString*) path;
--(BOOL) parseWithXMLURL:(NSURL*) url;
-
-+(NSDictionary*) ParseWithXMLFilepath:(NSString*) path;
-+(NSDictionary*) ParseWithXMLURL:(NSURL*) url;
++(BOOL) ParseWithXMLFilepath:(NSString*) path andSetAppContext:(XmlApplicationContext*) appContext;
++(BOOL) ParseWithXMLURL:(NSURL *)url andSetAppContext:(XmlApplicationContext*) appContext;
 
 @end

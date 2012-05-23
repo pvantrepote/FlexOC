@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 #import <FlexOC/Core/Context/Implementation/Support/Handlers/XmlAppCtxHandlerBase.h>
+@class ApplicationContext;
 
 @interface XmlAppCtxRootHandler : XmlAppCtxHandlerBase {
 	@private
-	NSMutableDictionary* rootElement;
+	ApplicationContext* context;
 }
+
+@property (nonatomic, retain) ApplicationContext* context;
 
 @end

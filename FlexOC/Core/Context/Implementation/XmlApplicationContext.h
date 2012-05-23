@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import <FlexOC/Core/Context/Implementation/DictionaryApplicationContext.h>
-#import <FlexOC/Core/Context/IApplicationContext.h>
-@class XmlApplicationContextParser;
+#ifdef FLEXOC_STATIC_LIB
+#import <FlexOC/Core/Context/Implementation/ApplicationContext.h>
+#else
+#import <FlexOC/FlexOC.h>
+#endif
 
-@interface XmlApplicationContext : DictionaryApplicationContext 
+@interface XmlApplicationContext : ApplicationContext 
 
 -(id) initWithXmlAtFilepath:(NSString*) filepath;
 -(id) initWithXmlAtURL:(NSURL*) url;

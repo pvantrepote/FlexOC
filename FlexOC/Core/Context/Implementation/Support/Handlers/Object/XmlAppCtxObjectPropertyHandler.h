@@ -6,9 +6,11 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import "XmlAppCtxHandlerBase.h"
+#import <FlexOC/Core/Context/Implementation/Support/Handlers/Object/XmlAppCtxObjectArgumentHandler.h>
 
-@interface XmlAppCtxObjectPropertyHandler : XmlAppCtxHandlerBase {
+@protocol IObjectValueDefinition;
+
+@interface XmlAppCtxObjectPropertyHandler : XmlAppCtxObjectArgumentHandler {
 	@private
 	NSString* name;
 }

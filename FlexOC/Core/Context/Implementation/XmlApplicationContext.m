@@ -15,18 +15,22 @@
 #pragma mark - Init/Dealloc
 
 -(id) initWithXmlAtFilepath:(NSString*) filepath {
-	self = [super initWithDictionary:[XmlApplicationContextParser ParseWithXMLFilepath:filepath]];
+	self = [super init];
 	if (self) {
-		
+		if (![XmlApplicationContextParser ParseWithXMLFilepath:filepath andSetAppContext:self]) {
+			return nil;
+		}
 	}
 	
 	return self;
 }
 
 -(id) initWithXmlAtURL:(NSURL*) url {
-	self = [super initWithDictionary:[XmlApplicationContextParser ParseWithXMLURL:url]];
+	self = [super init];
 	if (self) {
-		
+		if (![XmlApplicationContextParser ParseWithXMLURL:url andSetAppContext:self]) {
+			return nil;
+		}
 	}
 	
 	return self;

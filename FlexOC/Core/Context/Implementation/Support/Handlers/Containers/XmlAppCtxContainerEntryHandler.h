@@ -6,8 +6,13 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import "XmlAppCtxHandlerBase.h"
+#import <FlexOC/Core/Context/Implementation/Support/Handlers/Object/XmlAppCtxObjectArgumentHandler.h>
 
-@interface XmlAppCtxContainerEntryHandler : XmlAppCtxHandlerBase
+@interface XmlAppCtxContainerEntryHandler : XmlAppCtxObjectArgumentHandler {
+	@private
+	NSString* key;
+}
+
+@property (nonatomic, readonly) NSString* key;
 
 @end

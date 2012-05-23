@@ -12,55 +12,58 @@
 #import "XmlAppCtxObjectPropertyHandler.h"
 #import "XmlAppCtxObjectHandler.h"
 #import "XmlAppCtxContainerEntryHandler.h"
+#import "XmlAppCtxObjectsHandler.h"
+
+#import "ObjectDefinition.h"
+#import "ObjectInitDefinition.h"
+#import "ObjectValueDefinition.h"
 
 @implementation XmlAppCtxListHandler
 
 #pragma mark - Properties
 
-@synthesize list;
+@synthesize list, objectDefinition;
+
+#pragma mark - Init/Dealloc
+
+-(void)dealloc {
+	list = nil;
+	objectDefinition = nil;
+}
 
 #pragma mark - Override
 
 -(NSDictionary *)supportedElements {
-	return [NSDictionary dictionaryWithObjectsAndKeys:[XmlAppCtxContainerEntryHandler class], @"entry", 
-													  [XmlAppCtxObjectInitHandler class], @"init", nil];
+	return [NSDictionary dictionaryWithObjectsAndKeys:[XmlAppCtxContainerEntryHandler class], @"entry", nil];
 }
-
 
 -(BOOL)beginHandlingElement:(NSString *)elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser *)parser {
 	NSString* objectID = [attributeDict objectForKey:@"id"];
-	BOOL needAType = YES;
 	if (!objectID) {
-		if ((![self.parent isKindOfClass:[XmlAppCtxObjectPropertyHandler class]]) && 
-			(![self.parent isKindOfClass:[XmlAppCtxObjectInitArgumentHandler class]])) {
+		if (((![self.parent isKindOfClass:[XmlAppCtxObjectPropertyHandler class]]) && 
+			 (![self.parent isKindOfClass:[XmlAppCtxObjectArgumentHandler class]])) ||
+			([self.parent isKindOfClass:[XmlAppCtxObjectsHandler class]])) {
 			return NO;
 		}
 		
-		objectID = (NSString*)DictionaryApplicationContextKeywords[ObjectPropertyNestedDictionary];
-		needAType = NO;
-		
-		if ([self.parent isKindOfClass:[XmlAppCtxObjectInitArgumentHandler class]]) {
-			NSMutableArray* args = [self.context objectForKey:DictionaryApplicationContextKeywords[ObjectInitArguments]];
-			[args addObject:[NSMutableArray array]];
-			list = [args lastObject];
-		}
-		else {
-			[self.context setObject:[NSMutableArray array] 
-							 forKey:((XmlAppCtxObjectPropertyHandler*)self.parent).name];
-			list = [self.context objectForKey:((XmlAppCtxObjectPropertyHandler*)self.parent).name];
-		}
+		list = [NSMutableArray array];
 	}
 	else {
-		[self pushNewContextForKey:objectID];		
-	}
-	
-	if (needAType) {
-		[self.context setObject:NSStringFromClass([NSArray class]) 
-						 forKey:DictionaryApplicationContextKeywords[ObjectType]];		
-		[self pushNewContextForKey:DictionaryApplicationContextKeywords[ObjectInitSection]];
-		[self.context setObject:@"initWithArray:" 
-						 forKey:DictionaryApplicationContextKeywords[ObjectInitSelector]];
+		list = [NSMutableArray array];
+
+		objectDefinition = [[ObjectDefinition alloc] init];
 		
+		objectDefinition.name = objectID;
+		objectDefinition.type = NSStringFromClass([NSArray class]);
+		objectDefinition.initializer = [[ObjectInitDefinition alloc] init];
+		objectDefinition.initializer.selector = @"initWithArray:";
+		
+		
+		ObjectValueDefinition* initArg = [[ObjectValueDefinition alloc] init];
+		initArg.type = ObjectValueTypeList;
+		initArg.value = list;
+		
+		[objectDefinition.initializer.arguments addObject:initArg];
 	}
 	
 	return [super beginHandlingElement:elementName 
@@ -68,5 +71,8 @@
 							 forParser:parser];
 }
 
+-(void)didEndHandlingElement:(NSString *)elementName forParser:(NSXMLParser *)parser withHandler:(XmlAppCtxContainerEntryHandler*)handler {
+	[list addObject:handler.valueDefinition];
+}
 
 @end
