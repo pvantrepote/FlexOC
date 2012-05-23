@@ -18,6 +18,29 @@
 #import "ObjectInitDefinition.h"
 #import "ObjectValueDefinition.h"
 
+typedef enum {
+	ApplicationContextKey,
+	ApplicationContextIncludes,
+	ApplicationContextCircularFlag,
+	ApplicationContextObjectsSection,
+	ApplicationContextResourceSection,
+	ObjectType,
+	ObjectSingleton,
+	ObjectLazy,
+	ObjectProperties,
+	ObjectPropertyReference,
+	ObjectPropertyValue,
+	ObjectPropertyNestedObject,
+	ObjectPropertyNestedDictionary,	
+	ObjectFactoryMethod,
+	ObjectFactoryObject,
+	ObjectInitSection,
+	ObjectInitSelector,
+	ObjectInitArguments,
+	ObjectInitArgumentReference = ObjectPropertyReference,
+	ObjectInitArgumentValue = ObjectPropertyValue,
+} DictionaryApplicationContextKeywordIDS;
+
 const NSString* DictionaryApplicationContextKeywords[] = { 
 	@"flexoccontext",
 	@"includes",
