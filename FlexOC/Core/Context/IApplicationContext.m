@@ -29,8 +29,9 @@
 	return context;
 }
 
-static DictionaryApplicationContext* gApplicationContext;
 +(id<IApplicationContext>) sharedApplicationContext {
+	static DictionaryApplicationContext* gApplicationContext;
+
 	if (!gApplicationContext) {
 		@synchronized(self) {
 			if (!gApplicationContext) {

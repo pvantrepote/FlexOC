@@ -48,6 +48,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+		self.parent = nil;
         self.elements = self.supportedElements;
 		children = [NSMutableArray array];
     }
@@ -63,12 +64,10 @@
 #pragma mark - Public methods
 
 -(BOOL) beginHandlingElement:(NSString*) elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser*) parser {
-	parser.delegate = self;
 	return YES;
 }
 
 -(void) endHandlingElement:(NSString*) elementName forParser:(NSXMLParser*) parser {
-	parser.delegate = self.parent;
 }
 
 -(void) willBeginHandlingElement:(NSString*) elementName withAttribute:(NSDictionary *)attributeDict forParser:(NSXMLParser*) parser withHandler:(id<IXmlApplicationContextParserHandler>) handler {
@@ -97,6 +96,7 @@
 							 forParser:parser]) {
 		[parser abortParsing];
 	}
+	parser.delegate = handler;
 }
 
 -(void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
@@ -105,6 +105,9 @@
 	[self.parent didEndHandlingElement:elementName 
 							 forParser:parser 
 						   withHandler:self];
+
+	parser.delegate = self.parent;
+	self.parent = nil;
 }
 
 @end

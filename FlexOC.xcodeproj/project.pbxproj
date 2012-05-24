@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3D26EC46156E476E009C95CE /* BuildiOSFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3D26EC47156E476E009C95CE /* Build configuration list for PBXAggregateTarget "BuildiOSFramework" */;
+			buildPhases = (
+				3D26EC4A156E4775009C95CE /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = BuildiOSFramework;
+			productName = BuildiOSFramework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3D173E7A154E2090004FCD47 /* XmlAppCtxListHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */; };
 		3D173E7B154E2090004FCD47 /* XmlAppCtxListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */; };
@@ -34,7 +48,7 @@
 		3D27F6AB1550512F00753582 /* LazyObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27F6A91550512F00753582 /* LazyObjectProxy.h */; };
 		3D27F6AC1550512F00753582 /* LazyObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27F6AA1550512F00753582 /* LazyObjectProxy.m */; };
 		3D28876C1567BAA800CD8813 /* FlexOC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D28876B1567BAA800CD8813 /* FlexOC.h */; };
-		3D28876D1567BAA800CD8813 /* FlexOC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D28876B1567BAA800CD8813 /* FlexOC.h */; };
+		3D28876D1567BAA800CD8813 /* FlexOC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D28876B1567BAA800CD8813 /* FlexOC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D28877D1567C16200CD8813 /* IObjectFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B9153AFDED009A3712 /* IObjectFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D2887951567E50400CD8813 /* IObjectDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887901567E50400CD8813 /* IObjectDefinition.h */; };
 		3D2887961567E50400CD8813 /* IObjectDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887901567E50400CD8813 /* IObjectDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,7 +63,7 @@
 		3D2887A41567F0A700CD8813 /* ObjectFactoryDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887A11567F0A700CD8813 /* ObjectFactoryDefinition.m */; };
 		3D2887A51567F0A700CD8813 /* ObjectFactoryDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887A11567F0A700CD8813 /* ObjectFactoryDefinition.m */; };
 		3D2887AB1567F2F500CD8813 /* ApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887A91567F2F400CD8813 /* ApplicationContext.h */; };
-		3D2887AC1567F2F500CD8813 /* ApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887A91567F2F400CD8813 /* ApplicationContext.h */; };
+		3D2887AC1567F2F500CD8813 /* ApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887A91567F2F400CD8813 /* ApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D2887AD1567F2F500CD8813 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887AA1567F2F500CD8813 /* ApplicationContext.m */; };
 		3D2887AE1567F2F500CD8813 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887AA1567F2F500CD8813 /* ApplicationContext.m */; };
 		3D2887B415680DB900CD8813 /* ObjectDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887B215680DB800CD8813 /* ObjectDefinition.h */; };
@@ -989,6 +1003,7 @@
 				3DFC863C1533297400883AD9 /* FlexOC-iOS */,
 				3DFC864C1533297400883AD9 /* FlexOCTests */,
 				3D4F8D251566AD0100D73BA9 /* iOSFramework */,
+				3D26EC46156E476E009C95CE /* BuildiOSFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -1026,6 +1041,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3D26EC4A156E4775009C95CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\nFMK_NAME=FlexOC\nFMK_TARGET=iOSFramework\nFMK_VERSION=A\n\n#DOXYGEN=/Applications/Doxygen.app/Contents/Resources/doxygen \n#DOC_CONFIG_DIR=${SRCROOT}/Documents\n#DOC_CONFIG_FILE=Doxyfile\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\nDOC_INSTALL_DIR=${SRCROOT}/Products/Documentation\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_TARGET}\" -sdk iphoneos -project \"${FMK_NAME}.xcodeproj\"\nxcodebuild -configuration \"Release\" -target \"${FMK_TARGET}\" -sdk iphonesimulator -project \"${FMK_NAME}.xcodeproj\"\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n# Creates and renews the final product folder.\nmkdir -p \"${INSTALL_DIR}\"\nmkdir -p \"${INSTALL_DIR}/Versions\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources\"\nmkdir -p \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Headers\"\n\n# Creates the internal links.\n# It MUST uses relative path, otherwise will not work when the folder is copied/moved.\nln -s \"${FMK_VERSION}\" \"${INSTALL_DIR}/Versions/Current\"\nln -s \"Versions/Current/Headers\" \"${INSTALL_DIR}/Headers\"\nln -s \"Versions/Current/Resources\" \"${INSTALL_DIR}/Resources\"\nln -s \"Versions/Current/${FMK_NAME}\" \"${INSTALL_DIR}/${FMK_NAME}\"\n\n# Copies the headers and resources files to the final product folder.\ncp -R \"${DEVICE_DIR}/Headers/\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Headers/\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/\"\n\n# Removes the binary and header from the resources folder.\nrm -r \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/Headers\" \"${INSTALL_DIR}/Versions/${FMK_VERSION}/Resources/${FMK_NAME}\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/Versions/${FMK_VERSION}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"\n\n# Doxygen\n#rm -rf \"${DOC_INSTALL_DIR}\"\n#cd \"${DOC_CONFIG_DIR}\"\n#${DOXYGEN} \"${DOC_CONFIG_FILE}\"";
+		};
 		3DFC864B1533297400883AD9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1176,6 +1204,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3D26EC48156E476E009C95CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3D26EC49156E476E009C95CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3D4F8D301566AD0100D73BA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1186,11 +1228,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSFramework/iOSFramework-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				INFOPLIST_FILE = "iOSFramework/iOSFramework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = FlexOC;
 				SDKROOT = iphoneos;
@@ -1210,11 +1254,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSFramework/iOSFramework-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				INFOPLIST_FILE = "iOSFramework/iOSFramework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = FlexOC;
 				SDKROOT = iphoneos;
@@ -1350,6 +1396,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3D26EC47156E476E009C95CE /* Build configuration list for PBXAggregateTarget "BuildiOSFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D26EC48156E476E009C95CE /* Debug */,
+				3D26EC49156E476E009C95CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3D4F8D321566AD0100D73BA9 /* Build configuration list for PBXNativeTarget "iOSFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

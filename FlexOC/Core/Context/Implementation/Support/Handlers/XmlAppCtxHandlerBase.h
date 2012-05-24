@@ -13,10 +13,10 @@
 @interface XmlAppCtxHandlerBase : NSObject<IXmlApplicationContextParserHandler, NSXMLParserDelegate> {
 	@private
 	NSMutableArray* children;
-	__weak id<IXmlApplicationContextParserHandler> parent;
+	id<IXmlApplicationContextParserHandler> parent;
 }
 
-@property (nonatomic, weak) id<IXmlApplicationContextParserHandler> parent;
+@property (nonatomic, retain) id<IXmlApplicationContextParserHandler> parent;
 @property (nonatomic, readonly) NSDictionary* supportedElements;
 
 @end
