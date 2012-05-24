@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>flexoccontext</key>
+	<dict>
+		<key>resources</key>
+		<dict>
+			<key>includes</key>
+			<array>
+				<string>bundle://context_resource_bundle.plist</string>
+				<string>file://./context_resource.xml</string>
+			</array>
+		</dict>
+		<key>objects</key>
+		<dict>
+			<key>sampleList</key>
+			<dict>
+				<key>init</key>
+				<dict>
+					<key>arguments</key>
+					<array>
+						<array>
+							<string>@stringRef1</string>
+							<string>@stringRef2</string>
+						</array>
+					</array>
+					<key>selector</key>
+					<string>initWithArray:</string>
+				</dict>
+				<key>type</key>
+				<string>NSArray</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

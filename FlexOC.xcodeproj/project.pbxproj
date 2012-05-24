@@ -19,6 +19,10 @@
 		3D264152156A7ECA00CDA69D /* ObjectInitDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D26414F156A7ECA00CDA69D /* ObjectInitDefinition.h */; };
 		3D264153156A7ECA00CDA69D /* ObjectInitDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D264150156A7ECA00CDA69D /* ObjectInitDefinition.m */; };
 		3D264154156A7ECA00CDA69D /* ObjectInitDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D264150156A7ECA00CDA69D /* ObjectInitDefinition.m */; };
+		3D26EC2A156E3608009C95CE /* context_rcsTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D26EC29156E3608009C95CE /* context_rcsTest.plist */; };
+		3D26EC2D156E3615009C95CE /* context_resource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D26EC2C156E3615009C95CE /* context_resource.plist */; };
+		3D26EC2F156E3620009C95CE /* context_resource_bundle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D26EC2E156E3620009C95CE /* context_resource_bundle.plist */; };
+		3D26EC34156E3812009C95CE /* FlexOCpListResourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D26EC33156E3812009C95CE /* FlexOCpListResourceTest.m */; };
 		3D27CBE0155546F500D7432F /* IMessageBeforeAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBDE155546F500D7432F /* IMessageBeforeAdvice.h */; };
 		3D27CBE31555478900D7432F /* IMessageAfterAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBE21555478900D7432F /* IMessageAfterAdvice.h */; };
 		3D27CBE51555480A00D7432F /* IMessageExceptionAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27CBE41555480A00D7432F /* IMessageExceptionAdvice.h */; };
@@ -224,6 +228,11 @@
 		3D24E0931565E3CA006301B9 /* RegExPointcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegExPointcut.m; sourceTree = "<group>"; };
 		3D26414F156A7ECA00CDA69D /* ObjectInitDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectInitDefinition.h; sourceTree = "<group>"; };
 		3D264150156A7ECA00CDA69D /* ObjectInitDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectInitDefinition.m; sourceTree = "<group>"; };
+		3D26EC29156E3608009C95CE /* context_rcsTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = context_rcsTest.plist; sourceTree = "<group>"; };
+		3D26EC2C156E3615009C95CE /* context_resource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = context_resource.plist; sourceTree = "<group>"; };
+		3D26EC2E156E3620009C95CE /* context_resource_bundle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = context_resource_bundle.plist; sourceTree = "<group>"; };
+		3D26EC32156E3812009C95CE /* FlexOCpListResourceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexOCpListResourceTest.h; sourceTree = "<group>"; };
+		3D26EC33156E3812009C95CE /* FlexOCpListResourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCpListResourceTest.m; sourceTree = "<group>"; };
 		3D27CBDE155546F500D7432F /* IMessageBeforeAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageBeforeAdvice.h; sourceTree = "<group>"; };
 		3D27CBE21555478900D7432F /* IMessageAfterAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageAfterAdvice.h; sourceTree = "<group>"; };
 		3D27CBE41555480A00D7432F /* IMessageExceptionAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageExceptionAdvice.h; sourceTree = "<group>"; };
@@ -383,6 +392,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D26EC30156E37BE009C95CE /* XMLTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DA4BE2C153C44820042221C /* Circularcontext.xml */,
+				3DB610AE153C312F0027DCD9 /* FlexOCXmlTest.h */,
+				3DB610AF153C312F0027DCD9 /* FlexOCXmlTest.m */,
+				3DB040FB1552143F000FA19F /* pointcut.xml */,
+				3DE9007C1553F53700A24BF5 /* FlexOCAOPTest.h */,
+				3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */,
+				3D3D8FA9156D8BA7004DF21C /* context_rcsTest.xml */,
+				3D3D8FAC156D8BB8004DF21C /* context_resource.xml */,
+				3D3D8FAE156D8BED004DF21C /* context_resource_bundle.xml */,
+				3DA5F676156D98D1009DAF07 /* FlexOCXMLResourceTest.h */,
+				3DA5F677156D98D1009DAF07 /* FlexOCXMLResourceTest.m */,
+				3DC17BCD153D13C20030FB44 /* context_container.xml */,
+				3DAB67CB153700BB00E7EE16 /* context.xml */,
+				3DC17BC1153D08E10030FB44 /* context_factorytest.xml */,
+			);
+			name = XMLTests;
+			sourceTree = "<group>";
+		};
+		3D26EC31156E37C5009C95CE /* pListTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D295AA9153680DA00DAF40F /* CircularContext.plist */,
+				3DFC865D1533297400883AD9 /* FlexOCTests.m */,
+				3DFC865C1533297400883AD9 /* FlexOCTests.h */,
+				3DDF0663153623A70029C4AB /* Context.plist */,
+				3DC17BC7153D092E0030FB44 /* FlexOCTestFactory.h */,
+				3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */,
+				3D26EC29156E3608009C95CE /* context_rcsTest.plist */,
+				3D26EC2C156E3615009C95CE /* context_resource.plist */,
+				3D26EC2E156E3620009C95CE /* context_resource_bundle.plist */,
+				3D26EC32156E3812009C95CE /* FlexOCpListResourceTest.h */,
+				3D26EC33156E3812009C95CE /* FlexOCpListResourceTest.m */,
+			);
+			name = pListTests;
+			sourceTree = "<group>";
+		};
 		3D27F6A31550487500753582 /* Proxy */ = {
 			isa = PBXGroup;
 			children = (
@@ -728,29 +776,11 @@
 		3DFC86561533297400883AD9 /* FlexOCTests */ = {
 			isa = PBXGroup;
 			children = (
+				3D26EC31156E37C5009C95CE /* pListTests */,
+				3D26EC30156E37BE009C95CE /* XMLTests */,
 				3DB8BE7215658BF80049CDDD /* AOP */,
 				3DB8BE7115658BCF0049CDDD /* Services */,
-				3DC17BCD153D13C20030FB44 /* context_container.xml */,
-				3DAB67CB153700BB00E7EE16 /* context.xml */,
-				3DC17BC1153D08E10030FB44 /* context_factorytest.xml */,
 				3DFC86571533297400883AD9 /* Supporting Files */,
-				3DA4BE2C153C44820042221C /* Circularcontext.xml */,
-				3D295AA9153680DA00DAF40F /* CircularContext.plist */,
-				3DFC865D1533297400883AD9 /* FlexOCTests.m */,
-				3DFC865C1533297400883AD9 /* FlexOCTests.h */,
-				3DDF0663153623A70029C4AB /* Context.plist */,
-				3DB610AE153C312F0027DCD9 /* FlexOCXmlTest.h */,
-				3DB610AF153C312F0027DCD9 /* FlexOCXmlTest.m */,
-				3DC17BC7153D092E0030FB44 /* FlexOCTestFactory.h */,
-				3DC17BC8153D092E0030FB44 /* FlexOCTestFactory.m */,
-				3DB040FB1552143F000FA19F /* pointcut.xml */,
-				3DE9007C1553F53700A24BF5 /* FlexOCAOPTest.h */,
-				3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */,
-				3D3D8FA9156D8BA7004DF21C /* context_rcsTest.xml */,
-				3D3D8FAC156D8BB8004DF21C /* context_resource.xml */,
-				3D3D8FAE156D8BED004DF21C /* context_resource_bundle.xml */,
-				3DA5F676156D98D1009DAF07 /* FlexOCXMLResourceTest.h */,
-				3DA5F677156D98D1009DAF07 /* FlexOCXMLResourceTest.m */,
 			);
 			path = FlexOCTests;
 			sourceTree = "<group>";
@@ -987,6 +1017,9 @@
 				3D3D8FAA156D8BA7004DF21C /* context_rcsTest.xml in Resources */,
 				3D3D8FAD156D8BB8004DF21C /* context_resource.xml in Resources */,
 				3D3D8FAF156D8BED004DF21C /* context_resource_bundle.xml in Resources */,
+				3D26EC2A156E3608009C95CE /* context_rcsTest.plist in Resources */,
+				3D26EC2D156E3615009C95CE /* context_resource.plist in Resources */,
+				3D26EC2F156E3620009C95CE /* context_resource_bundle.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,6 +1142,7 @@
 				3DBD785A1565A36500B3EB9C /* FailedInstanceService.m in Sources */,
 				3DD63CFC156ADBA800D557BE /* ApplicationContext.m in Sources */,
 				3DA5F678156D98D1009DAF07 /* FlexOCXMLResourceTest.m in Sources */,
+				3D26EC34156E3812009C95CE /* FlexOCpListResourceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

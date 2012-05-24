@@ -18,9 +18,14 @@
 		return nil;
 	}
 	
+	NSString* currentDirectory = [[NSFileManager defaultManager] currentDirectoryPath];
+	[[NSFileManager defaultManager] changeCurrentDirectoryPath:[path stringByDeletingLastPathComponent]];
+	
 	self = [super initWithDictionary:dictionary];
 	if (self) {
 	}
+	
+	[[NSFileManager defaultManager] changeCurrentDirectoryPath:currentDirectory];
 	
 	return self;
 }

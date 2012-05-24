@@ -245,16 +245,16 @@ const NSString* DictionaryApplicationContextKeywords[] = {
 }
 
 -(void) setResources:(NSDictionary*) resources {
-//	NSArray* includes = [resources objectForKey:DictionaryApplicationContextKeywords[ApplicationContextIncludes]];
-//	if (includes) {
-//		for (NSString* include in includes) {
-//			NSString* resolved = [ApplicationContextResourceProvider resolveFilepath:include];
-//			if (resolved) {
-//				id<IApplicationContext> ctx = [IApplicationContext ApplicationContextFromLocation:resolved];
-//				if (ctx) [self mergeWithContext:ctx];
-//			}
-//		}
-//	}
+	NSArray* includes = [resources objectForKey:DictionaryApplicationContextKeywords[ApplicationContextIncludes]];
+	if (includes) {
+		for (NSString* include in includes) {
+			NSString* resolved = [ApplicationContextResourceProvider resolveFilepath:include];
+			if (resolved) {
+				id<IApplicationContext> ctx = [IApplicationContext ApplicationContextFromLocation:resolved];
+				[self.objects addEntriesFromDictionary:ctx.objects];
+			}
+		}
+	}
 }
 
 @end
