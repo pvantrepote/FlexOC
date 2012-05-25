@@ -27,6 +27,8 @@
 #import <FlexOC/Core/Objects/Definition/IObjectInitDefinition.h>
 #import <FlexOC/Core/Objects/Definition/IObjectValueDefinition.h>
 
+#import <FlexOC/Application/iOS/FlexOCApplication.h>
+
 #else
 
 #import <FlexOC/IMessageMatcher.h>
@@ -48,5 +50,7 @@
 #import <FlexOC/IObjectFactoryDefinition.h>
 #import <FlexOC/IObjectInitDefinition.h>
 #import <FlexOC/IObjectValueDefinition.h>
+
+#import <FlexOC/FlexOCApplication.h>
 
 #endif

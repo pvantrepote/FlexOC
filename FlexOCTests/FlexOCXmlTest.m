@@ -15,6 +15,8 @@
 #import "NestedService.h"
 #import "InstanceContainer.h"
 #import <FlexOC/Core/Proxy/LazyObjectProxy.h>
+#import <FlexOC/Core/Objects/Factory/IObjectNameAware.h>
+#import <FlexOC/Core/Context/IApplicationContextAware.h>
 
 @implementation FlexOCXmlTest
 
@@ -177,6 +179,20 @@
 	
 	STAssertTrue(otherService.anInstanceService == service.anInstanceService, @"Service should be equal");
 	STAssertFalse(otherService == service, @"Service should not be equal");
+}
+
+-(void) testObjectNameAware {
+	id<IInstanceService, IObjectNameAware> service = [context getObjectWithName:@"instanceServiceNameAware"];
+	STAssertNotNil(service, @"Service should not be nil");
+	STAssertTrue([service.stringFromContext isEqualToString:@"A value from context"], @"stringFromContext should be equal to A value from context");
+	STAssertTrue([service.name isEqualToString:@"instanceServiceNameAware"], @"name should be equal to instanceServiceNameAware");
+}
+
+-(void) testApplicationContextAware {
+	id<IInstanceService, IApplicationContextAware> service = [context getObjectWithName:@"instanceServiceContextAware"];
+	STAssertNotNil(service, @"Service should not be nil");
+	STAssertTrue([service.stringFromContext isEqualToString:@"A value from context"], @"stringFromContext should be equal to A value from context");
+	STAssertTrue([service.context isEqual:context], @"contexts should be equal");
 }
 
 @end

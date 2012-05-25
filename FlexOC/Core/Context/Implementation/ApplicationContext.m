@@ -15,14 +15,14 @@
 #import "DependencyTree.h"
 #import "LazyObjectProxy.h"
 #import "DictionaryCache.h"
-
+#import "IApplicationContextAware.h"
+#import "IObjectNameAware.h"
 
 @interface ApplicationContext (Private) <CacheDelegate>
 
 -(id) createObject:(NSString*) objectName withDefinition:(id<IObjectDefinition>) objectDefinition;
--(BOOL) configureObject:(NSObject* )object withName:(const NSString *)objectName andDefinition:(id<IObjectDefinition>) objectDefinition;
+-(BOOL) configureObject:(NSObject* )object withName:(NSString *)objectName andDefinition:(id<IObjectDefinition>) objectDefinition;
 -(id) getValue:(id<IObjectValueDefinition>) value;
--(void) setResources:(NSDictionary*) resources;
 
 @end
 
@@ -247,8 +247,8 @@
 		}
 	}
 	
-	if (objectInstance && !objectDefinition.isLazy && objectDefinition.properties) {
-		/// Configure
+	if (objectInstance && !objectDefinition.isLazy) {
+		/// Setup the object if its not a lazy one
 		BOOL configured = [self configureObject:objectInstance 
 									   withName:objectName 
 								  andDefinition:objectDefinition];
@@ -262,26 +262,25 @@
 	return objectInstance;
 }
 
--(void) setResources:(NSDictionary*) resources {
-//	NSArray* includes = [resources objectForKey:DictionaryApplicationContextKeywords[ApplicationContextIncludes]];
-//	if (includes) {
-//		for (NSString* include in includes) {
-//			NSString* resolved = [ApplicationContextResourceProvider resolveFilepath:include];
-//			if (resolved) {
-//				id<IApplicationContext> ctx = [IApplicationContext ApplicationContextFromLocation:resolved];
-//				if (ctx) [self mergeWithContext:ctx];
-//			}
-//		}
-//	}
-}
+-(BOOL) configureObject:(NSObject* )objectInstance withName:(NSString *)objectName andDefinition:(id<IObjectDefinition>) objectDefinition {
+	
+	/// Assign the context of the instance is comform to IApplicationContextAware
+	if ([objectInstance conformsToProtocol:@protocol(IApplicationContextAware)]) {
+		((id<IApplicationContextAware>)objectInstance).context = self;
+	}
+	
+	/// Assign the name of the instance is comform to IObjectNameAware
+	if ([objectInstance conformsToProtocol:@protocol(IObjectNameAware)]) {
+		((id<IObjectNameAware>)objectInstance).name = objectName;
+	}			
 
--(BOOL) configureObject:(NSObject* )objectInstance withName:(const NSString *)objectName andDefinition:(id<IObjectDefinition>) objectDefinition {
 	NSMutableDictionary* properties = objectDefinition.properties;
 	if (!properties || ![properties count]) {
 		/// Nothing to do, just return YES
 		return YES;
 	}
 		
+	/// Assign all properties
 	NSMutableDictionary* keyValues = [NSMutableDictionary dictionary];
 	for (NSString* key in [properties allKeys]) {
 		id<IObjectValueDefinition> value = [self getValue:[properties objectForKey:key]];
@@ -291,7 +290,6 @@
 		}
 	}
 	
-	/// Now configure the left over
 	[objectInstance setValuesForKeysWithDictionary:keyValues];
 	
 	return YES;

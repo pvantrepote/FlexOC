@@ -2,6 +2,14 @@
 <flexoccontext>
 	<objects>
 		
+		<object id="instanceServiceNameAware" type="InstanceServiceNameAware">
+			<property name="stringFromContext" value="A value from context" />
+		</object>
+		
+		<object id="instanceServiceContextAware" type="InstanceServiceContextAware">
+			<property name="stringFromContext" value="A value from context" />
+		</object>
+		
 		<object id="instanceService" type="InstanceService">
 			<property name="stringFromContext" value="A value from context" />
 		</object>

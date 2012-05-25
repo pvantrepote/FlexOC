@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flexoccontext>
+	<objects>
+		
+		<object id="FlexOCApplication" type="FlexOCApplication">
+			<property name="applicationDelegate">
+				<object type="AppDelegate" />
+			</property>
+		</object>
+				
+	</objects>
+</flexoccontext>

@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D2C8FC5156E8EAB005F6555 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2C8FC4156E8EAB005F6555 /* UIKit.framework */; };
+		3D2C8FC7156E8EAB005F6555 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2C8FC6156E8EAB005F6555 /* Foundation.framework */; };
+		3D2C8FC9156E8EAB005F6555 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2C8FC8156E8EAB005F6555 /* CoreGraphics.framework */; };
+		3D2C8FCF156E8EAB005F6555 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D2C8FCD156E8EAB005F6555 /* InfoPlist.strings */; };
+		3D2C8FD1156E8EAB005F6555 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C8FD0156E8EAB005F6555 /* main.m */; };
+		3D2C8FD5156E8EAB005F6555 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C8FD4156E8EAB005F6555 /* AppDelegate.m */; };
+		3D2C8FD8156E8EAB005F6555 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C8FD7156E8EAB005F6555 /* ViewController.m */; };
+		3D2C8FDB156E8EAB005F6555 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D2C8FD9156E8EAB005F6555 /* ViewController.xib */; };
+		3D2C8FE4156E9C6C005F6555 /* context.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3D2C8FE3156E9C6C005F6555 /* context.xml */; };
+		3DBF7608156F9BE400C317D6 /* libFlexOC-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBF7601156F9B3E00C317D6 /* libFlexOC-iOS.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DBF7600156F9B3E00C317D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF75F6156F9B3E00C317D6 /* FlexOC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DFC863D1533297400883AD9;
+			remoteInfo = "FlexOC-iOS";
+		};
+		3DBF7602156F9B3E00C317D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF75F6156F9B3E00C317D6 /* FlexOC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DFC864D1533297400883AD9;
+			remoteInfo = FlexOCTests;
+		};
+		3DBF7604156F9B3E00C317D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF75F6156F9B3E00C317D6 /* FlexOC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D4F8D261566AD0100D73BA9;
+			remoteInfo = iOSFramework;
+		};
+		3DBF7606156F9B4500C317D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF75F6156F9B3E00C317D6 /* FlexOC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DFC863C1533297400883AD9;
+			remoteInfo = "FlexOC-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D2C8FC0156E8EAB005F6555 /* UIInjection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIInjection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D2C8FC4156E8EAB005F6555 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D2C8FC6156E8EAB005F6555 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D2C8FC8156E8EAB005F6555 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D2C8FCC156E8EAB005F6555 /* UIInjection-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIInjection-Info.plist"; sourceTree = "<group>"; };
+		3D2C8FCE156E8EAB005F6555 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D2C8FD0156E8EAB005F6555 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D2C8FD2156E8EAB005F6555 /* UIInjection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIInjection-Prefix.pch"; sourceTree = "<group>"; };
+		3D2C8FD3156E8EAB005F6555 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D2C8FD4156E8EAB005F6555 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3D2C8FD6156E8EAB005F6555 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3D2C8FD7156E8EAB005F6555 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3D2C8FDA156E8EAB005F6555 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		3D2C8FE3156E9C6C005F6555 /* context.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context.xml; sourceTree = "<group>"; };
+		3DBF75F6156F9B3E00C317D6 /* FlexOC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FlexOC.xcodeproj; path = ../../../FlexOC.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D2C8FBD156E8EAB005F6555 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DBF7608156F9BE400C317D6 /* libFlexOC-iOS.a in Frameworks */,
+				3D2C8FC5156E8EAB005F6555 /* UIKit.framework in Frameworks */,
+				3D2C8FC7156E8EAB005F6555 /* Foundation.framework in Frameworks */,
+				3D2C8FC9156E8EAB005F6555 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D2C8FB5156E8EAB005F6555 = {
+			isa = PBXGroup;
+			children = (
+				3DBF75F6156F9B3E00C317D6 /* FlexOC.xcodeproj */,
+				3D2C8FCA156E8EAB005F6555 /* UIInjection */,
+				3D2C8FC3156E8EAB005F6555 /* Frameworks */,
+				3D2C8FC1156E8EAB005F6555 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D2C8FC1156E8EAB005F6555 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D2C8FC0156E8EAB005F6555 /* UIInjection.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D2C8FC3156E8EAB005F6555 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D2C8FC4156E8EAB005F6555 /* UIKit.framework */,
+				3D2C8FC6156E8EAB005F6555 /* Foundation.framework */,
+				3D2C8FC8156E8EAB005F6555 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D2C8FCA156E8EAB005F6555 /* UIInjection */ = {
+			isa = PBXGroup;
+			children = (
+				3D2C8FD3156E8EAB005F6555 /* AppDelegate.h */,
+				3D2C8FD4156E8EAB005F6555 /* AppDelegate.m */,
+				3D2C8FD6156E8EAB005F6555 /* ViewController.h */,
+				3D2C8FD7156E8EAB005F6555 /* ViewController.m */,
+				3D2C8FD9156E8EAB005F6555 /* ViewController.xib */,
+				3D2C8FCB156E8EAB005F6555 /* Supporting Files */,
+			);
+			path = UIInjection;
+			sourceTree = "<group>";
+		};
+		3D2C8FCB156E8EAB005F6555 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D2C8FCC156E8EAB005F6555 /* UIInjection-Info.plist */,
+				3D2C8FCD156E8EAB005F6555 /* InfoPlist.strings */,
+				3D2C8FD0156E8EAB005F6555 /* main.m */,
+				3D2C8FD2156E8EAB005F6555 /* UIInjection-Prefix.pch */,
+				3D2C8FE3156E9C6C005F6555 /* context.xml */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DBF75F7156F9B3E00C317D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF7601156F9B3E00C317D6 /* libFlexOC-iOS.a */,
+				3DBF7603156F9B3E00C317D6 /* FlexOCTests.octest */,
+				3DBF7605156F9B3E00C317D6 /* FlexOC.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D2C8FBF156E8EAB005F6555 /* UIInjection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D2C8FDE156E8EAB005F6555 /* Build configuration list for PBXNativeTarget "UIInjection" */;
+			buildPhases = (
+				3D2C8FBC156E8EAB005F6555 /* Sources */,
+				3D2C8FBD156E8EAB005F6555 /* Frameworks */,
+				3D2C8FBE156E8EAB005F6555 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DBF7607156F9B4500C317D6 /* PBXTargetDependency */,
+			);
+			name = UIInjection;
+			productName = UIInjection;
+			productReference = 3D2C8FC0156E8EAB005F6555 /* UIInjection.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D2C8FB7156E8EAB005F6555 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Tamajii Inc";
+			};
+			buildConfigurationList = 3D2C8FBA156E8EAB005F6555 /* Build configuration list for PBXProject "UIInjection" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D2C8FB5156E8EAB005F6555;
+			productRefGroup = 3D2C8FC1156E8EAB005F6555 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3DBF75F7156F9B3E00C317D6 /* Products */;
+					ProjectRef = 3DBF75F6156F9B3E00C317D6 /* FlexOC.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3D2C8FBF156E8EAB005F6555 /* UIInjection */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3DBF7601156F9B3E00C317D6 /* libFlexOC-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libFlexOC-iOS.a";
+			remoteRef = 3DBF7600156F9B3E00C317D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DBF7603156F9B3E00C317D6 /* FlexOCTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FlexOCTests.octest;
+			remoteRef = 3DBF7602156F9B3E00C317D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DBF7605156F9B3E00C317D6 /* FlexOC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FlexOC.framework;
+			remoteRef = 3DBF7604156F9B3E00C317D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D2C8FBE156E8EAB005F6555 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2C8FCF156E8EAB005F6555 /* InfoPlist.strings in Resources */,
+				3D2C8FDB156E8EAB005F6555 /* ViewController.xib in Resources */,
+				3D2C8FE4156E9C6C005F6555 /* context.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D2C8FBC156E8EAB005F6555 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2C8FD1156E8EAB005F6555 /* main.m in Sources */,
+				3D2C8FD5156E8EAB005F6555 /* AppDelegate.m in Sources */,
+				3D2C8FD8156E8EAB005F6555 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DBF7607156F9B4500C317D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "FlexOC-iOS";
+			targetProxy = 3DBF7606156F9B4500C317D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D2C8FCD156E8EAB005F6555 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D2C8FCE156E8EAB005F6555 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D2C8FD9156E8EAB005F6555 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D2C8FDA156E8EAB005F6555 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D2C8FDC156E8EAB005F6555 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D2C8FDD156E8EAB005F6555 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D2C8FDF156E8EAB005F6555 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIInjection/UIInjection-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					FLEXOC_STATIC_LIB,
+				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../\"";
+				INFOPLIST_FILE = "UIInjection/UIInjection-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D2C8FE0156E8EAB005F6555 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIInjection/UIInjection-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = FLEXOC_STATIC_LIB;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../\"";
+				INFOPLIST_FILE = "UIInjection/UIInjection-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D2C8FBA156E8EAB005F6555 /* Build configuration list for PBXProject "UIInjection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D2C8FDC156E8EAB005F6555 /* Debug */,
+				3D2C8FDD156E8EAB005F6555 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D2C8FDE156E8EAB005F6555 /* Build configuration list for PBXNativeTarget "UIInjection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D2C8FDF156E8EAB005F6555 /* Debug */,
+				3D2C8FE0156E8EAB005F6555 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D2C8FB7156E8EAB005F6555 /* Project object */;
+}

@@ -16,7 +16,9 @@
 #import <FlexOC/Core/Caching/ICachePolicy.h>
 #import <FlexOC/Core/Proxy/ObjectProxy.h>
 #import <FlexOC/Core/Objects/Factory/IObjectFactory.h>
+
 #import <FlexOC/Core/Context/IApplicationContext.h>
+#import <FlexOC/Core/Context/IApplicationContextAware.h>
 
 #import <FlexOC/Core/Context/Implementation/ApplicationContext.h>
 #import <FlexOC/Core/Context/Implementation/XmlApplicationContext.h>
@@ -26,6 +28,8 @@
 #import <FlexOC/Core/Objects/Definition/IObjectFactoryDefinition.h>
 #import <FlexOC/Core/Objects/Definition/IObjectInitDefinition.h>
 #import <FlexOC/Core/Objects/Definition/IObjectValueDefinition.h>
+
+#import <FlexOC/Application/iOS/FlexOCApplication.h>
 
 #else
 
@@ -38,6 +42,7 @@
 #import <FlexOC/ObjectProxy.h>
 #import <FlexOC/IObjectFactory.h>
 #import <FlexOC/IApplicationContext.h>
+#import <FlexOC/IApplicationContextAware.h>
 
 #import <FlexOC/ApplicationContext.h>
 #import <FlexOC/XmlApplicationContext.h>
@@ -48,5 +53,7 @@
 #import <FlexOC/IObjectFactoryDefinition.h>
 #import <FlexOC/IObjectInitDefinition.h>
 #import <FlexOC/IObjectValueDefinition.h>
+
+#import <FlexOC/FlexOCApplication.h>
 
 #endif
