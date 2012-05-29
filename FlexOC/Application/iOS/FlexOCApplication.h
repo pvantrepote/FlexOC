@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FlexOCApplication : UIApplication
+#ifdef FLEXOC_STATIC_LIB
+#import <FlexOC/Core/Context/Annotations/IAnnotations.h>
+#else
+#import <FlexOC/IAnnotations.h>
+#endif
+
+@interface FlexOCApplication : UIApplication<IAnnotations>
 
 @property (strong) id<UIApplicationDelegate> applicationDelegate; 
 

@@ -13,7 +13,11 @@
 @protocol IObjectFactory <NSObject>
 
 -(BOOL) configureObject:(id<NSObject>) object withName:(NSString*) objectName;
+-(BOOL) configureObject:(id<NSObject>) object withDefinition:(id<IObjectDefinition>) objectDefinition;
+
 -(id) getObjectWithName:(NSString*) objectName andDefinition:(id<IObjectDefinition>) objectDefinition;
 -(id) getObjectWithName:(NSString*) objectName;
+
+-(id<IObjectDefinition>) getObjectDefinitionWithName:(NSString*) objectName;
 
 @end

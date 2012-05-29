@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #ifdef FLEXOC_STATIC_LIB
-#import <FlexOC/Core/Context/Implementation/ApplicationContext.h>
+#import <FlexOC/Core/Context/ApplicationContext.h>
 #else
 #import <FlexOC/ApplicationContext.h>
 #endif

@@ -8,5 +8,27 @@
 			</property>
 		</object>
 				
+		<object id="pointcutadvisor" type="AuditAdvisor">
+			<property name="pointcut">
+				<object type="TruePointcut">
+				</object>
+			</property>
+		</object>
+		
+		<object name="testButtonBehavior" type="AOPProxy">
+			<property name="target" ref="testButtonBehaviorTarget" />
+			<property name="interceptors">
+				<list>
+					<entry ref="pointcutadvisor" />
+				</list>
+			</property>
+		</object>
+		
+		<object id="testButtonBehaviorTarget" type="UIButtonService" />
+		
+		<object id="testButton" type="TestButton">
+			<property name="behavior" ref="testButtonBehavior" />
+		</object>
+		
 	</objects>
 </flexoccontext>

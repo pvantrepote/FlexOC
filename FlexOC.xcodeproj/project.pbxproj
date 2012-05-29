@@ -21,8 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3D173E7A154E2090004FCD47 /* XmlAppCtxListHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */; };
-		3D173E7B154E2090004FCD47 /* XmlAppCtxListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */; };
 		3D23CDD2156B9FD900598189 /* ObjectValueDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D23CDD0156B9FD900598189 /* ObjectValueDefinition.h */; };
 		3D23CDD3156B9FD900598189 /* ObjectValueDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D23CDD0156B9FD900598189 /* ObjectValueDefinition.h */; };
 		3D23CDD4156B9FD900598189 /* ObjectValueDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D23CDD1156B9FD900598189 /* ObjectValueDefinition.m */; };
@@ -62,10 +60,6 @@
 		3D2887A31567F0A700CD8813 /* ObjectFactoryDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887A01567F0A700CD8813 /* ObjectFactoryDefinition.h */; };
 		3D2887A41567F0A700CD8813 /* ObjectFactoryDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887A11567F0A700CD8813 /* ObjectFactoryDefinition.m */; };
 		3D2887A51567F0A700CD8813 /* ObjectFactoryDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887A11567F0A700CD8813 /* ObjectFactoryDefinition.m */; };
-		3D2887AB1567F2F500CD8813 /* ApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887A91567F2F400CD8813 /* ApplicationContext.h */; };
-		3D2887AC1567F2F500CD8813 /* ApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887A91567F2F400CD8813 /* ApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D2887AD1567F2F500CD8813 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887AA1567F2F500CD8813 /* ApplicationContext.m */; };
-		3D2887AE1567F2F500CD8813 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887AA1567F2F500CD8813 /* ApplicationContext.m */; };
 		3D2887B415680DB900CD8813 /* ObjectDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887B215680DB800CD8813 /* ObjectDefinition.h */; };
 		3D2887B515680DB900CD8813 /* ObjectDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2887B215680DB800CD8813 /* ObjectDefinition.h */; };
 		3D2887B615680DB900CD8813 /* ObjectDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887B315680DB800CD8813 /* ObjectDefinition.m */; };
@@ -73,6 +67,78 @@
 		3D295AA315367D9900DAF40F /* CircularService1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D295AA215367D9900DAF40F /* CircularService1.m */; };
 		3D295AA815367DC400DAF40F /* CircularService2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D295AA715367DC400DAF40F /* CircularService2.m */; };
 		3D295AAA153680DA00DAF40F /* CircularContext.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D295AA9153680DA00DAF40F /* CircularContext.plist */; };
+		3D2A54251574DD68002FB596 /* IObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54241574DD68002FB596 /* IObjectProxy.h */; };
+		3D2A54261574DD68002FB596 /* IObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54241574DD68002FB596 /* IObjectProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2A542F1574DF0E002FB596 /* ApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54271574DF0E002FB596 /* ApplicationContext.h */; };
+		3D2A54301574DF0E002FB596 /* ApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54271574DF0E002FB596 /* ApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2A54311574DF0E002FB596 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54281574DF0E002FB596 /* ApplicationContext.m */; };
+		3D2A54321574DF0E002FB596 /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54281574DF0E002FB596 /* ApplicationContext.m */; };
+		3D2A54331574DF0E002FB596 /* DictionaryApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54291574DF0E002FB596 /* DictionaryApplicationContext.h */; };
+		3D2A54341574DF0E002FB596 /* DictionaryApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54291574DF0E002FB596 /* DictionaryApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2A54351574DF0E002FB596 /* DictionaryApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A542A1574DF0E002FB596 /* DictionaryApplicationContext.m */; };
+		3D2A54361574DF0E002FB596 /* DictionaryApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A542A1574DF0E002FB596 /* DictionaryApplicationContext.m */; };
+		3D2A54371574DF0E002FB596 /* pListApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A542B1574DF0E002FB596 /* pListApplicationContext.h */; };
+		3D2A54381574DF0E002FB596 /* pListApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A542B1574DF0E002FB596 /* pListApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2A54391574DF0E002FB596 /* pListApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A542C1574DF0E002FB596 /* pListApplicationContext.m */; };
+		3D2A543A1574DF0E002FB596 /* pListApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A542C1574DF0E002FB596 /* pListApplicationContext.m */; };
+		3D2A543B1574DF0E002FB596 /* XmlApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A542D1574DF0E002FB596 /* XmlApplicationContext.h */; };
+		3D2A543C1574DF0E002FB596 /* XmlApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A542D1574DF0E002FB596 /* XmlApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2A543D1574DF0E002FB596 /* XmlApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A542E1574DF0E002FB596 /* XmlApplicationContext.m */; };
+		3D2A543E1574DF0E002FB596 /* XmlApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A542E1574DF0E002FB596 /* XmlApplicationContext.m */; };
+		3D2A545F1574E096002FB596 /* DependencyTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A543F1574E096002FB596 /* DependencyTree.h */; };
+		3D2A54601574E096002FB596 /* DependencyTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A543F1574E096002FB596 /* DependencyTree.h */; };
+		3D2A54611574E096002FB596 /* DependencyTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54401574E096002FB596 /* DependencyTree.m */; };
+		3D2A54621574E096002FB596 /* DependencyTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54401574E096002FB596 /* DependencyTree.m */; };
+		3D2A54631574E096002FB596 /* XmlAppCtxContainerEntryHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54431574E096002FB596 /* XmlAppCtxContainerEntryHandler.h */; };
+		3D2A54641574E096002FB596 /* XmlAppCtxContainerEntryHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54431574E096002FB596 /* XmlAppCtxContainerEntryHandler.h */; };
+		3D2A54651574E096002FB596 /* XmlAppCtxContainerEntryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54441574E096002FB596 /* XmlAppCtxContainerEntryHandler.m */; };
+		3D2A54661574E096002FB596 /* XmlAppCtxContainerEntryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54441574E096002FB596 /* XmlAppCtxContainerEntryHandler.m */; };
+		3D2A54671574E096002FB596 /* XmlAppCtxDictionayHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54451574E096002FB596 /* XmlAppCtxDictionayHandler.h */; };
+		3D2A54681574E096002FB596 /* XmlAppCtxDictionayHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54451574E096002FB596 /* XmlAppCtxDictionayHandler.h */; };
+		3D2A54691574E096002FB596 /* XmlAppCtxDictionayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54461574E096002FB596 /* XmlAppCtxDictionayHandler.m */; };
+		3D2A546A1574E096002FB596 /* XmlAppCtxDictionayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54461574E096002FB596 /* XmlAppCtxDictionayHandler.m */; };
+		3D2A546B1574E096002FB596 /* XmlAppCtxListHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54471574E096002FB596 /* XmlAppCtxListHandler.h */; };
+		3D2A546C1574E096002FB596 /* XmlAppCtxListHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54471574E096002FB596 /* XmlAppCtxListHandler.h */; };
+		3D2A546D1574E096002FB596 /* XmlAppCtxListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54481574E096002FB596 /* XmlAppCtxListHandler.m */; };
+		3D2A546E1574E096002FB596 /* XmlAppCtxListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54481574E096002FB596 /* XmlAppCtxListHandler.m */; };
+		3D2A546F1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A544B1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.h */; };
+		3D2A54701574E096002FB596 /* XmlAppCtxObjectArgumentHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A544B1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.h */; };
+		3D2A54711574E096002FB596 /* XmlAppCtxObjectArgumentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A544C1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.m */; };
+		3D2A54721574E096002FB596 /* XmlAppCtxObjectArgumentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A544C1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.m */; };
+		3D2A54731574E096002FB596 /* XmlAppCtxObjectHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A544D1574E096002FB596 /* XmlAppCtxObjectHandler.h */; };
+		3D2A54741574E096002FB596 /* XmlAppCtxObjectHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A544D1574E096002FB596 /* XmlAppCtxObjectHandler.h */; };
+		3D2A54751574E096002FB596 /* XmlAppCtxObjectHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A544E1574E096002FB596 /* XmlAppCtxObjectHandler.m */; };
+		3D2A54761574E096002FB596 /* XmlAppCtxObjectHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A544E1574E096002FB596 /* XmlAppCtxObjectHandler.m */; };
+		3D2A54771574E096002FB596 /* XmlAppCtxObjectInitHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A544F1574E096002FB596 /* XmlAppCtxObjectInitHandler.h */; };
+		3D2A54781574E096002FB596 /* XmlAppCtxObjectInitHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A544F1574E096002FB596 /* XmlAppCtxObjectInitHandler.h */; };
+		3D2A54791574E096002FB596 /* XmlAppCtxObjectInitHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54501574E096002FB596 /* XmlAppCtxObjectInitHandler.m */; };
+		3D2A547A1574E096002FB596 /* XmlAppCtxObjectInitHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54501574E096002FB596 /* XmlAppCtxObjectInitHandler.m */; };
+		3D2A547B1574E096002FB596 /* XmlAppCtxObjectPropertyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54511574E096002FB596 /* XmlAppCtxObjectPropertyHandler.h */; };
+		3D2A547C1574E096002FB596 /* XmlAppCtxObjectPropertyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54511574E096002FB596 /* XmlAppCtxObjectPropertyHandler.h */; };
+		3D2A547D1574E096002FB596 /* XmlAppCtxObjectPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54521574E096002FB596 /* XmlAppCtxObjectPropertyHandler.m */; };
+		3D2A547E1574E096002FB596 /* XmlAppCtxObjectPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54521574E096002FB596 /* XmlAppCtxObjectPropertyHandler.m */; };
+		3D2A547F1574E096002FB596 /* XmlAppCtxResourcesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54541574E096002FB596 /* XmlAppCtxResourcesHandler.h */; };
+		3D2A54801574E096002FB596 /* XmlAppCtxResourcesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54541574E096002FB596 /* XmlAppCtxResourcesHandler.h */; };
+		3D2A54811574E096002FB596 /* XmlAppCtxResourcesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54551574E096002FB596 /* XmlAppCtxResourcesHandler.m */; };
+		3D2A54821574E096002FB596 /* XmlAppCtxResourcesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54551574E096002FB596 /* XmlAppCtxResourcesHandler.m */; };
+		3D2A54831574E096002FB596 /* XmlAppCtxHandlerBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54561574E096002FB596 /* XmlAppCtxHandlerBase.h */; };
+		3D2A54841574E096002FB596 /* XmlAppCtxHandlerBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54561574E096002FB596 /* XmlAppCtxHandlerBase.h */; };
+		3D2A54851574E096002FB596 /* XmlAppCtxHandlerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54571574E096002FB596 /* XmlAppCtxHandlerBase.m */; };
+		3D2A54861574E096002FB596 /* XmlAppCtxHandlerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54571574E096002FB596 /* XmlAppCtxHandlerBase.m */; };
+		3D2A54871574E096002FB596 /* XmlAppCtxObjectsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54581574E096002FB596 /* XmlAppCtxObjectsHandler.h */; };
+		3D2A54881574E096002FB596 /* XmlAppCtxObjectsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A54581574E096002FB596 /* XmlAppCtxObjectsHandler.h */; };
+		3D2A54891574E096002FB596 /* XmlAppCtxObjectsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54591574E096002FB596 /* XmlAppCtxObjectsHandler.m */; };
+		3D2A548A1574E096002FB596 /* XmlAppCtxObjectsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A54591574E096002FB596 /* XmlAppCtxObjectsHandler.m */; };
+		3D2A548B1574E096002FB596 /* XmlAppCtxRootHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A545A1574E096002FB596 /* XmlAppCtxRootHandler.h */; };
+		3D2A548C1574E096002FB596 /* XmlAppCtxRootHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A545A1574E096002FB596 /* XmlAppCtxRootHandler.h */; };
+		3D2A548D1574E096002FB596 /* XmlAppCtxRootHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A545B1574E096002FB596 /* XmlAppCtxRootHandler.m */; };
+		3D2A548E1574E096002FB596 /* XmlAppCtxRootHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A545B1574E096002FB596 /* XmlAppCtxRootHandler.m */; };
+		3D2A548F1574E096002FB596 /* IXmlApplicationContextParserHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A545C1574E096002FB596 /* IXmlApplicationContextParserHandler.h */; };
+		3D2A54901574E096002FB596 /* IXmlApplicationContextParserHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A545C1574E096002FB596 /* IXmlApplicationContextParserHandler.h */; };
+		3D2A54911574E096002FB596 /* XmlApplicationContextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A545D1574E096002FB596 /* XmlApplicationContextParser.h */; };
+		3D2A54921574E096002FB596 /* XmlApplicationContextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2A545D1574E096002FB596 /* XmlApplicationContextParser.h */; };
+		3D2A54931574E096002FB596 /* XmlApplicationContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A545E1574E096002FB596 /* XmlApplicationContextParser.m */; };
+		3D2A54941574E096002FB596 /* XmlApplicationContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A545E1574E096002FB596 /* XmlApplicationContextParser.m */; };
 		3D3D8FAA156D8BA7004DF21C /* context_rcsTest.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D8FA9156D8BA7004DF21C /* context_rcsTest.xml */; };
 		3D3D8FAD156D8BB8004DF21C /* context_resource.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D8FAC156D8BB8004DF21C /* context_resource.xml */; };
 		3D3D8FAF156D8BED004DF21C /* context_resource_bundle.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D8FAE156D8BED004DF21C /* context_resource_bundle.xml */; };
@@ -87,19 +153,6 @@
 		3D4F8D3B1566ADEA00D73BA9 /* DictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9DF153B1FB9009A3712 /* DictionaryCache.m */; };
 		3D4F8D3C1566ADEA00D73BA9 /* ApplicationContextResourceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6A58D153B67DC006F4983 /* ApplicationContextResourceProvider.m */; };
 		3D4F8D3D1566ADEA00D73BA9 /* IApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9AB153AFDED009A3712 /* IApplicationContext.m */; };
-		3D4F8D3E1566ADEA00D73BA9 /* XmlAppCtxListHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */; };
-		3D4F8D3F1566ADEA00D73BA9 /* XmlAppCtxDictionayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFFD05154B1EF70083386A /* XmlAppCtxDictionayHandler.m */; };
-		3D4F8D401566ADEA00D73BA9 /* XmlAppCtxContainerEntryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFFD09154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m */; };
-		3D4F8D411566ADEA00D73BA9 /* XmlAppCtxObjectHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D713FF21547972E00EB3B1F /* XmlAppCtxObjectHandler.m */; };
-		3D4F8D421566ADEA00D73BA9 /* XmlAppCtxObjectPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */; };
-		3D4F8D431566ADEA00D73BA9 /* XmlAppCtxRootHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCDD153D83CA0044F5DE /* XmlAppCtxRootHandler.m */; };
-		3D4F8D441566ADEA00D73BA9 /* XmlAppCtxHandlerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCE1153D84D80044F5DE /* XmlAppCtxHandlerBase.m */; };
-		3D4F8D451566ADEA00D73BA9 /* XmlAppCtxObjectsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCE5153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m */; };
-		3D4F8D461566ADEA00D73BA9 /* XmlApplicationContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9B1153AFDED009A3712 /* XmlApplicationContextParser.m */; };
-		3D4F8D471566ADEA00D73BA9 /* DependencyTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */; };
-		3D4F8D481566ADEA00D73BA9 /* DictionaryApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9AE153AFDED009A3712 /* DictionaryApplicationContext.m */; };
-		3D4F8D491566ADEA00D73BA9 /* pListApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9B3153AFDED009A3712 /* pListApplicationContext.m */; };
-		3D4F8D4A1566ADEA00D73BA9 /* XmlApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9B5153AFDED009A3712 /* XmlApplicationContext.m */; };
 		3D4F8D4D1566AE1400D73BA9 /* AOPProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEF83F11552AAE200C3D934 /* AOPProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4F8D4E1566AE1400D73BA9 /* IMessageMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809C715514D19001303D6 /* IMessageMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4F8D4F1566AE1400D73BA9 /* IPointcut.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809C915514E7B001303D6 /* IPointcut.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,31 +173,9 @@
 		3D4F8D5E1566AE1400D73BA9 /* DictionaryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9DE153B1FB9009A3712 /* DictionaryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4F8D5F1566AE1400D73BA9 /* ApplicationContextResourceProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB6A58C153B67DC006F4983 /* ApplicationContextResourceProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4F8D601566AE1400D73BA9 /* IApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9AA153AFDED009A3712 /* IApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D4F8D611566AE2A00D73BA9 /* XmlAppCtxListHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */; };
-		3D4F8D621566AE2A00D73BA9 /* XmlAppCtxDictionayHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCFFD04154B1EF70083386A /* XmlAppCtxDictionayHandler.h */; };
-		3D4F8D631566AE2A00D73BA9 /* XmlAppCtxContainerEntryHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCFFD08154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h */; };
-		3D4F8D641566AE2A00D73BA9 /* XmlAppCtxObjectHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D713FF11547972E00EB3B1F /* XmlAppCtxObjectHandler.h */; };
-		3D4F8D651566AE2A00D73BA9 /* XmlAppCtxObjectPropertyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */; };
-		3D4F8D661566AE2A00D73BA9 /* XmlAppCtxRootHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCDC153D83CA0044F5DE /* XmlAppCtxRootHandler.h */; };
-		3D4F8D671566AE2A00D73BA9 /* XmlAppCtxHandlerBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCE0153D84D80044F5DE /* XmlAppCtxHandlerBase.h */; };
-		3D4F8D681566AE2A00D73BA9 /* XmlAppCtxObjectsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCE4153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h */; };
-		3D4F8D691566AE3B00D73BA9 /* XmlApplicationContextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B0153AFDED009A3712 /* XmlApplicationContextParser.h */; };
-		3D4F8D6A1566AE3B00D73BA9 /* IXmlApplicationContextParserHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCDA153D83070044F5DE /* IXmlApplicationContextParserHandler.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3D4F8D6B1566AE3B00D73BA9 /* DependencyTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3D4F8D6C1566AE3B00D73BA9 /* DictionaryApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9AD153AFDED009A3712 /* DictionaryApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D4F8D6D1566AE3B00D73BA9 /* pListApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B2153AFDED009A3712 /* pListApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D4F8D6E1566AE3B00D73BA9 /* XmlApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B4153AFDED009A3712 /* XmlApplicationContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D5B8CF7155550D0008FDD0A /* AOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF83F21552AAE200C3D934 /* AOPProxy.m */; };
 		3D5B8CFA1555521B008FDD0A /* TruePointcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27CBFB15554E2C00D7432F /* TruePointcut.m */; };
-		3D713FF31547972E00EB3B1F /* XmlAppCtxObjectHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D713FF11547972E00EB3B1F /* XmlAppCtxObjectHandler.h */; };
-		3D713FF41547972E00EB3B1F /* XmlAppCtxObjectHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D713FF21547972E00EB3B1F /* XmlAppCtxObjectHandler.m */; };
-		3D713FF71547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */; };
-		3D713FF81547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */; };
 		3DA4BE2D153C44820042221C /* Circularcontext.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DA4BE2C153C44820042221C /* Circularcontext.xml */; };
-		3DA5F672156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA5F670156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h */; };
-		3DA5F673156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA5F670156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h */; };
-		3DA5F674156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5F671156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m */; };
-		3DA5F675156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5F671156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m */; };
 		3DA5F678156D98D1009DAF07 /* FlexOCXMLResourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA5F677156D98D1009DAF07 /* FlexOCXMLResourceTest.m */; };
 		3DAB67CC153700BB00E7EE16 /* context.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3DAB67CB153700BB00E7EE16 /* context.xml */; };
 		3DAC0C8E154EA48000157D1B /* InstanceContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC0C8D154EA48000157D1B /* InstanceContainer.m */; };
@@ -157,12 +188,6 @@
 		3DB809CC15514F43001303D6 /* IAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809CB15514F43001303D6 /* IAdvice.h */; };
 		3DB809CF15514F69001303D6 /* IAdvisor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809CE15514F69001303D6 /* IAdvisor.h */; };
 		3DB809D115514F8C001303D6 /* IPointcutAdvisor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */; };
-		3DB826D2156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB826D0156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h */; };
-		3DB826D3156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB826D0156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h */; };
-		3DB826D4156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB826D1156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m */; };
-		3DB826D5156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB826D1156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m */; };
-		3DB8BE6D15657E8D0049CDDD /* DependencyTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */; };
-		3DB8BE6E15657E8D0049CDDD /* DependencyTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */; };
 		3DBD78561565A24500B3EB9C /* TestExceptionAdvisor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBD78551565A24500B3EB9C /* TestExceptionAdvisor.m */; };
 		3DBD785A1565A36500B3EB9C /* FailedInstanceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBD78591565A36500B3EB9C /* FailedInstanceService.m */; };
 		3DBF75ED156F98B100C317D6 /* FlexOCApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DBF75EB156F98B100C317D6 /* FlexOCApplication.h */; };
@@ -176,22 +201,10 @@
 		3DCEBFE6156FF3A200464B74 /* IApplicationContextAware.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCEBFE5156FF3A200464B74 /* IApplicationContextAware.h */; };
 		3DCEBFE7156FF3A200464B74 /* IApplicationContextAware.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCEBFE5156FF3A200464B74 /* IApplicationContextAware.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DCEBFE9156FF41A00464B74 /* IObjectNameAware.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCEBFE8156FF41A00464B74 /* IObjectNameAware.h */; };
-		3DCEBFEA156FF41A00464B74 /* IObjectNameAware.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCEBFE8156FF41A00464B74 /* IObjectNameAware.h */; };
+		3DCEBFEA156FF41A00464B74 /* IObjectNameAware.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCEBFE8156FF41A00464B74 /* IObjectNameAware.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DCEBFF0156FF92500464B74 /* InstanceServiceNameAware.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCEBFEF156FF92500464B74 /* InstanceServiceNameAware.m */; };
-		3DCFFD06154B1EF70083386A /* XmlAppCtxDictionayHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCFFD04154B1EF70083386A /* XmlAppCtxDictionayHandler.h */; };
-		3DCFFD07154B1EF70083386A /* XmlAppCtxDictionayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFFD05154B1EF70083386A /* XmlAppCtxDictionayHandler.m */; };
-		3DCFFD0A154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DCFFD08154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h */; };
-		3DCFFD0B154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCFFD09154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m */; };
 		3DD5F9BD153AFDED009A3712 /* IApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9AA153AFDED009A3712 /* IApplicationContext.h */; };
 		3DD5F9BE153AFDED009A3712 /* IApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9AB153AFDED009A3712 /* IApplicationContext.m */; };
-		3DD5F9BF153AFDED009A3712 /* DictionaryApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9AD153AFDED009A3712 /* DictionaryApplicationContext.h */; };
-		3DD5F9C0153AFDED009A3712 /* DictionaryApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9AE153AFDED009A3712 /* DictionaryApplicationContext.m */; };
-		3DD5F9C1153AFDED009A3712 /* XmlApplicationContextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B0153AFDED009A3712 /* XmlApplicationContextParser.h */; };
-		3DD5F9C2153AFDED009A3712 /* XmlApplicationContextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9B1153AFDED009A3712 /* XmlApplicationContextParser.m */; };
-		3DD5F9C3153AFDED009A3712 /* pListApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B2153AFDED009A3712 /* pListApplicationContext.h */; };
-		3DD5F9C4153AFDED009A3712 /* pListApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9B3153AFDED009A3712 /* pListApplicationContext.m */; };
-		3DD5F9C5153AFDED009A3712 /* XmlApplicationContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B4153AFDED009A3712 /* XmlApplicationContext.h */; };
-		3DD5F9C6153AFDED009A3712 /* XmlApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9B5153AFDED009A3712 /* XmlApplicationContext.m */; };
 		3DD5F9C7153AFDED009A3712 /* IObjectFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9B9153AFDED009A3712 /* IObjectFactory.h */; };
 		3DD5F9CC153AFFBF009A3712 /* ICache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9CB153AFFBF009A3712 /* ICache.h */; };
 		3DD5F9CE153AFFFD009A3712 /* ICachePolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9CD153AFFFD009A3712 /* ICachePolicy.h */; };
@@ -201,25 +214,19 @@
 		3DD5F9D8153B0977009A3712 /* ReadWriteLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9D6153B0977009A3712 /* ReadWriteLock.m */; };
 		3DD5F9E0153B1FB9009A3712 /* DictionaryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5F9DE153B1FB9009A3712 /* DictionaryCache.h */; };
 		3DD5F9E1153B1FB9009A3712 /* DictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5F9DF153B1FB9009A3712 /* DictionaryCache.m */; };
-		3DD63CFC156ADBA800D557BE /* ApplicationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2887AA1567F2F500CD8813 /* ApplicationContext.m */; };
 		3DD74EF21548DEAB00CC0BBB /* NestedService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD74EF11548DEAB00CC0BBB /* NestedService.m */; };
+		3DDB974715738F1A00289E19 /* IAnnotations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDB974615738F1A00289E19 /* IAnnotations.h */; };
+		3DDB974815738F1A00289E19 /* IAnnotations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDB974615738F1A00289E19 /* IAnnotations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DDB974B157391B000289E19 /* NSObject+FlexOC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDB9749157391B000289E19 /* NSObject+FlexOC.h */; };
+		3DDB974C157391B000289E19 /* NSObject+FlexOC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDB9749157391B000289E19 /* NSObject+FlexOC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DDB974D157391B000289E19 /* NSObject+FlexOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB974A157391B000289E19 /* NSObject+FlexOC.m */; };
+		3DDB974E157391B000289E19 /* NSObject+FlexOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB974A157391B000289E19 /* NSObject+FlexOC.m */; };
 		3DDF0664153623A70029C4AB /* Context.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF0663153623A70029C4AB /* Context.plist */; };
 		3DDF06691536245D0029C4AB /* InstanceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF06681536245D0029C4AB /* InstanceService.m */; };
 		3DDF066D15362D090029C4AB /* InjectionInstanceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF066C15362D090029C4AB /* InjectionInstanceService.m */; };
-		3DE3CCDB153D83070044F5DE /* IXmlApplicationContextParserHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCDA153D83070044F5DE /* IXmlApplicationContextParserHandler.h */; };
-		3DE3CCDE153D83CA0044F5DE /* XmlAppCtxRootHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCDC153D83CA0044F5DE /* XmlAppCtxRootHandler.h */; };
-		3DE3CCDF153D83CA0044F5DE /* XmlAppCtxRootHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCDD153D83CA0044F5DE /* XmlAppCtxRootHandler.m */; };
-		3DE3CCE2153D84D80044F5DE /* XmlAppCtxHandlerBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCE0153D84D80044F5DE /* XmlAppCtxHandlerBase.h */; };
-		3DE3CCE3153D84D80044F5DE /* XmlAppCtxHandlerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCE1153D84D80044F5DE /* XmlAppCtxHandlerBase.m */; };
-		3DE3CCE6153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3CCE4153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h */; };
-		3DE3CCE7153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3CCE5153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m */; };
 		3DE9007E1553F53700A24BF5 /* FlexOCAOPTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */; };
 		3DEF83F31552AAE200C3D934 /* AOPProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEF83F11552AAE200C3D934 /* AOPProxy.h */; };
 		3DEF83F41552AAE200C3D934 /* AOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF83F21552AAE200C3D934 /* AOPProxy.m */; };
-		3DF8582C156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF8582A156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.h */; };
-		3DF8582D156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF8582A156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.h */; };
-		3DF8582E156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8582B156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.m */; };
-		3DF8582F156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8582B156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.m */; };
 		3DFC86411533297400883AD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC86401533297400883AD9 /* Foundation.framework */; };
 		3DFC864F1533297400883AD9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC864E1533297400883AD9 /* SenTestingKit.framework */; };
 		3DFC86511533297400883AD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC86501533297400883AD9 /* UIKit.framework */; };
@@ -240,8 +247,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxListHandler.h; sourceTree = "<group>"; };
-		3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxListHandler.m; sourceTree = "<group>"; };
 		3D23CDD0156B9FD900598189 /* ObjectValueDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectValueDefinition.h; sourceTree = "<group>"; };
 		3D23CDD1156B9FD900598189 /* ObjectValueDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectValueDefinition.m; sourceTree = "<group>"; };
 		3D24E0921565E3CA006301B9 /* RegExPointcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegExPointcut.h; sourceTree = "<group>"; };
@@ -271,8 +276,6 @@
 		3D2887941567E50400CD8813 /* IObjectValueDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IObjectValueDefinition.h; sourceTree = "<group>"; };
 		3D2887A01567F0A700CD8813 /* ObjectFactoryDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectFactoryDefinition.h; sourceTree = "<group>"; };
 		3D2887A11567F0A700CD8813 /* ObjectFactoryDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectFactoryDefinition.m; sourceTree = "<group>"; };
-		3D2887A91567F2F400CD8813 /* ApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationContext.h; sourceTree = "<group>"; };
-		3D2887AA1567F2F500CD8813 /* ApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationContext.m; sourceTree = "<group>"; };
 		3D2887B215680DB800CD8813 /* ObjectDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectDefinition.h; sourceTree = "<group>"; };
 		3D2887B315680DB800CD8813 /* ObjectDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectDefinition.m; sourceTree = "<group>"; };
 		3D295AA115367D9900DAF40F /* CircularService1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularService1.h; sourceTree = "<group>"; };
@@ -280,6 +283,42 @@
 		3D295AA615367DC400DAF40F /* CircularService2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularService2.h; sourceTree = "<group>"; };
 		3D295AA715367DC400DAF40F /* CircularService2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularService2.m; sourceTree = "<group>"; };
 		3D295AA9153680DA00DAF40F /* CircularContext.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CircularContext.plist; sourceTree = "<group>"; };
+		3D2A54241574DD68002FB596 /* IObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IObjectProxy.h; sourceTree = "<group>"; };
+		3D2A54271574DF0E002FB596 /* ApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationContext.h; sourceTree = "<group>"; };
+		3D2A54281574DF0E002FB596 /* ApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationContext.m; sourceTree = "<group>"; };
+		3D2A54291574DF0E002FB596 /* DictionaryApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryApplicationContext.h; sourceTree = "<group>"; };
+		3D2A542A1574DF0E002FB596 /* DictionaryApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryApplicationContext.m; sourceTree = "<group>"; };
+		3D2A542B1574DF0E002FB596 /* pListApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pListApplicationContext.h; sourceTree = "<group>"; };
+		3D2A542C1574DF0E002FB596 /* pListApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pListApplicationContext.m; sourceTree = "<group>"; };
+		3D2A542D1574DF0E002FB596 /* XmlApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlApplicationContext.h; sourceTree = "<group>"; };
+		3D2A542E1574DF0E002FB596 /* XmlApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlApplicationContext.m; sourceTree = "<group>"; };
+		3D2A543F1574E096002FB596 /* DependencyTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependencyTree.h; sourceTree = "<group>"; };
+		3D2A54401574E096002FB596 /* DependencyTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependencyTree.m; sourceTree = "<group>"; };
+		3D2A54431574E096002FB596 /* XmlAppCtxContainerEntryHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxContainerEntryHandler.h; sourceTree = "<group>"; };
+		3D2A54441574E096002FB596 /* XmlAppCtxContainerEntryHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxContainerEntryHandler.m; sourceTree = "<group>"; };
+		3D2A54451574E096002FB596 /* XmlAppCtxDictionayHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxDictionayHandler.h; sourceTree = "<group>"; };
+		3D2A54461574E096002FB596 /* XmlAppCtxDictionayHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxDictionayHandler.m; sourceTree = "<group>"; };
+		3D2A54471574E096002FB596 /* XmlAppCtxListHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxListHandler.h; sourceTree = "<group>"; };
+		3D2A54481574E096002FB596 /* XmlAppCtxListHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxListHandler.m; sourceTree = "<group>"; };
+		3D2A544B1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectArgumentHandler.h; sourceTree = "<group>"; };
+		3D2A544C1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectArgumentHandler.m; sourceTree = "<group>"; };
+		3D2A544D1574E096002FB596 /* XmlAppCtxObjectHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectHandler.h; sourceTree = "<group>"; };
+		3D2A544E1574E096002FB596 /* XmlAppCtxObjectHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectHandler.m; sourceTree = "<group>"; };
+		3D2A544F1574E096002FB596 /* XmlAppCtxObjectInitHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectInitHandler.h; sourceTree = "<group>"; };
+		3D2A54501574E096002FB596 /* XmlAppCtxObjectInitHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectInitHandler.m; sourceTree = "<group>"; };
+		3D2A54511574E096002FB596 /* XmlAppCtxObjectPropertyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectPropertyHandler.h; sourceTree = "<group>"; };
+		3D2A54521574E096002FB596 /* XmlAppCtxObjectPropertyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectPropertyHandler.m; sourceTree = "<group>"; };
+		3D2A54541574E096002FB596 /* XmlAppCtxResourcesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxResourcesHandler.h; sourceTree = "<group>"; };
+		3D2A54551574E096002FB596 /* XmlAppCtxResourcesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxResourcesHandler.m; sourceTree = "<group>"; };
+		3D2A54561574E096002FB596 /* XmlAppCtxHandlerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxHandlerBase.h; sourceTree = "<group>"; };
+		3D2A54571574E096002FB596 /* XmlAppCtxHandlerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxHandlerBase.m; sourceTree = "<group>"; };
+		3D2A54581574E096002FB596 /* XmlAppCtxObjectsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectsHandler.h; sourceTree = "<group>"; };
+		3D2A54591574E096002FB596 /* XmlAppCtxObjectsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectsHandler.m; sourceTree = "<group>"; };
+		3D2A545A1574E096002FB596 /* XmlAppCtxRootHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxRootHandler.h; sourceTree = "<group>"; };
+		3D2A545B1574E096002FB596 /* XmlAppCtxRootHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxRootHandler.m; sourceTree = "<group>"; };
+		3D2A545C1574E096002FB596 /* IXmlApplicationContextParserHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXmlApplicationContextParserHandler.h; sourceTree = "<group>"; };
+		3D2A545D1574E096002FB596 /* XmlApplicationContextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlApplicationContextParser.h; sourceTree = "<group>"; };
+		3D2A545E1574E096002FB596 /* XmlApplicationContextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlApplicationContextParser.m; sourceTree = "<group>"; };
 		3D3D8FA9156D8BA7004DF21C /* context_rcsTest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_rcsTest.xml; sourceTree = "<group>"; };
 		3D3D8FAC156D8BB8004DF21C /* context_resource.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_resource.xml; sourceTree = "<group>"; };
 		3D3D8FAE156D8BED004DF21C /* context_resource_bundle.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context_resource_bundle.xml; sourceTree = "<group>"; };
@@ -288,13 +327,7 @@
 		3D4F8D2B1566AD0100D73BA9 /* iOSFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSFramework-Info.plist"; sourceTree = "<group>"; };
 		3D4F8D2D1566AD0100D73BA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D4F8D2F1566AD0100D73BA9 /* iOSFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSFramework-Prefix.pch"; sourceTree = "<group>"; };
-		3D713FF11547972E00EB3B1F /* XmlAppCtxObjectHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectHandler.h; sourceTree = "<group>"; };
-		3D713FF21547972E00EB3B1F /* XmlAppCtxObjectHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectHandler.m; sourceTree = "<group>"; };
-		3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectPropertyHandler.h; sourceTree = "<group>"; };
-		3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectPropertyHandler.m; sourceTree = "<group>"; };
 		3DA4BE2C153C44820042221C /* Circularcontext.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Circularcontext.xml; sourceTree = "<group>"; };
-		3DA5F670156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxResourcesHandler.h; sourceTree = "<group>"; };
-		3DA5F671156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxResourcesHandler.m; sourceTree = "<group>"; };
 		3DA5F676156D98D1009DAF07 /* FlexOCXMLResourceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexOCXMLResourceTest.h; sourceTree = "<group>"; };
 		3DA5F677156D98D1009DAF07 /* FlexOCXMLResourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCXMLResourceTest.m; sourceTree = "<group>"; };
 		3DAB67CB153700BB00E7EE16 /* context.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = context.xml; sourceTree = "<group>"; };
@@ -310,10 +343,6 @@
 		3DB809CB15514F43001303D6 /* IAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdvice.h; sourceTree = "<group>"; };
 		3DB809CE15514F69001303D6 /* IAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdvisor.h; sourceTree = "<group>"; };
 		3DB809D015514F8C001303D6 /* IPointcutAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPointcutAdvisor.h; sourceTree = "<group>"; };
-		3DB826D0156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectInitHandler.h; sourceTree = "<group>"; };
-		3DB826D1156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectInitHandler.m; sourceTree = "<group>"; };
-		3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependencyTree.h; sourceTree = "<group>"; };
-		3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependencyTree.m; sourceTree = "<group>"; };
 		3DBD78541565A24500B3EB9C /* TestExceptionAdvisor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExceptionAdvisor.h; sourceTree = "<group>"; };
 		3DBD78551565A24500B3EB9C /* TestExceptionAdvisor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestExceptionAdvisor.m; sourceTree = "<group>"; };
 		3DBD78581565A36500B3EB9C /* FailedInstanceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedInstanceService.h; sourceTree = "<group>"; };
@@ -330,20 +359,8 @@
 		3DCEBFE8156FF41A00464B74 /* IObjectNameAware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IObjectNameAware.h; sourceTree = "<group>"; };
 		3DCEBFEE156FF92500464B74 /* InstanceServiceNameAware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceServiceNameAware.h; sourceTree = "<group>"; };
 		3DCEBFEF156FF92500464B74 /* InstanceServiceNameAware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceServiceNameAware.m; sourceTree = "<group>"; };
-		3DCFFD04154B1EF70083386A /* XmlAppCtxDictionayHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxDictionayHandler.h; sourceTree = "<group>"; };
-		3DCFFD05154B1EF70083386A /* XmlAppCtxDictionayHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxDictionayHandler.m; sourceTree = "<group>"; };
-		3DCFFD08154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxContainerEntryHandler.h; sourceTree = "<group>"; };
-		3DCFFD09154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxContainerEntryHandler.m; sourceTree = "<group>"; };
 		3DD5F9AA153AFDED009A3712 /* IApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IApplicationContext.h; sourceTree = "<group>"; };
 		3DD5F9AB153AFDED009A3712 /* IApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IApplicationContext.m; sourceTree = "<group>"; };
-		3DD5F9AD153AFDED009A3712 /* DictionaryApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryApplicationContext.h; sourceTree = "<group>"; };
-		3DD5F9AE153AFDED009A3712 /* DictionaryApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryApplicationContext.m; sourceTree = "<group>"; };
-		3DD5F9B0153AFDED009A3712 /* XmlApplicationContextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlApplicationContextParser.h; sourceTree = "<group>"; };
-		3DD5F9B1153AFDED009A3712 /* XmlApplicationContextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlApplicationContextParser.m; sourceTree = "<group>"; };
-		3DD5F9B2153AFDED009A3712 /* pListApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pListApplicationContext.h; sourceTree = "<group>"; };
-		3DD5F9B3153AFDED009A3712 /* pListApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pListApplicationContext.m; sourceTree = "<group>"; };
-		3DD5F9B4153AFDED009A3712 /* XmlApplicationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlApplicationContext.h; sourceTree = "<group>"; };
-		3DD5F9B5153AFDED009A3712 /* XmlApplicationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlApplicationContext.m; sourceTree = "<group>"; };
 		3DD5F9B9153AFDED009A3712 /* IObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IObjectFactory.h; sourceTree = "<group>"; };
 		3DD5F9CB153AFFBF009A3712 /* ICache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICache.h; sourceTree = "<group>"; };
 		3DD5F9CD153AFFFD009A3712 /* ICachePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICachePolicy.h; sourceTree = "<group>"; };
@@ -355,25 +372,19 @@
 		3DD5F9DF153B1FB9009A3712 /* DictionaryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryCache.m; sourceTree = "<group>"; };
 		3DD74EF01548DEAB00CC0BBB /* NestedService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestedService.h; sourceTree = "<group>"; };
 		3DD74EF11548DEAB00CC0BBB /* NestedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestedService.m; sourceTree = "<group>"; };
+		3DDB974615738F1A00289E19 /* IAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAnnotations.h; sourceTree = "<group>"; };
+		3DDB9749157391B000289E19 /* NSObject+FlexOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FlexOC.h"; sourceTree = "<group>"; };
+		3DDB974A157391B000289E19 /* NSObject+FlexOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FlexOC.m"; sourceTree = "<group>"; };
 		3DDF0663153623A70029C4AB /* Context.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Context.plist; sourceTree = "<group>"; };
 		3DDF06671536245D0029C4AB /* InstanceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceService.h; sourceTree = "<group>"; };
 		3DDF06681536245D0029C4AB /* InstanceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceService.m; sourceTree = "<group>"; };
 		3DDF066B15362D090029C4AB /* InjectionInstanceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InjectionInstanceService.h; sourceTree = "<group>"; };
 		3DDF066C15362D090029C4AB /* InjectionInstanceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InjectionInstanceService.m; sourceTree = "<group>"; };
 		3DDF066E15362D190029C4AB /* IInstanceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IInstanceService.h; sourceTree = "<group>"; };
-		3DE3CCDA153D83070044F5DE /* IXmlApplicationContextParserHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXmlApplicationContextParserHandler.h; sourceTree = "<group>"; };
-		3DE3CCDC153D83CA0044F5DE /* XmlAppCtxRootHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxRootHandler.h; sourceTree = "<group>"; };
-		3DE3CCDD153D83CA0044F5DE /* XmlAppCtxRootHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxRootHandler.m; sourceTree = "<group>"; };
-		3DE3CCE0153D84D80044F5DE /* XmlAppCtxHandlerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxHandlerBase.h; sourceTree = "<group>"; };
-		3DE3CCE1153D84D80044F5DE /* XmlAppCtxHandlerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxHandlerBase.m; sourceTree = "<group>"; };
-		3DE3CCE4153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectsHandler.h; sourceTree = "<group>"; };
-		3DE3CCE5153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectsHandler.m; sourceTree = "<group>"; };
 		3DE9007C1553F53700A24BF5 /* FlexOCAOPTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexOCAOPTest.h; sourceTree = "<group>"; };
 		3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexOCAOPTest.m; sourceTree = "<group>"; };
 		3DEF83F11552AAE200C3D934 /* AOPProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPProxy.h; sourceTree = "<group>"; };
 		3DEF83F21552AAE200C3D934 /* AOPProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPProxy.m; sourceTree = "<group>"; };
-		3DF8582A156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlAppCtxObjectArgumentHandler.h; sourceTree = "<group>"; };
-		3DF8582B156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlAppCtxObjectArgumentHandler.m; sourceTree = "<group>"; };
 		3DFC863D1533297400883AD9 /* libFlexOC-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFlexOC-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFC86401533297400883AD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DFC86441533297400883AD9 /* FlexOC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlexOC-Prefix.pch"; sourceTree = "<group>"; };
@@ -422,7 +433,6 @@
 				3DA4BE2C153C44820042221C /* Circularcontext.xml */,
 				3DB610AE153C312F0027DCD9 /* FlexOCXmlTest.h */,
 				3DB610AF153C312F0027DCD9 /* FlexOCXmlTest.m */,
-				3DB040FB1552143F000FA19F /* pointcut.xml */,
 				3DE9007C1553F53700A24BF5 /* FlexOCAOPTest.h */,
 				3DE9007D1553F53700A24BF5 /* FlexOCAOPTest.m */,
 				3D3D8FA9156D8BA7004DF21C /* context_rcsTest.xml */,
@@ -440,6 +450,7 @@
 		3D26EC31156E37C5009C95CE /* pListTests */ = {
 			isa = PBXGroup;
 			children = (
+				3DB040FB1552143F000FA19F /* pointcut.xml */,
 				3D295AA9153680DA00DAF40F /* CircularContext.plist */,
 				3DFC865D1533297400883AD9 /* FlexOCTests.m */,
 				3DFC865C1533297400883AD9 /* FlexOCTests.h */,
@@ -458,6 +469,7 @@
 		3D27F6A31550487500753582 /* Proxy */ = {
 			isa = PBXGroup;
 			children = (
+				3D2A54241574DD68002FB596 /* IObjectProxy.h */,
 				3D27F6A5155048F100753582 /* ObjectProxy.h */,
 				3D27F6A6155048F100753582 /* ObjectProxy.m */,
 				3D27F6A91550512F00753582 /* LazyObjectProxy.h */,
@@ -493,6 +505,67 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
+		3D2A54411574E096002FB596 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				3D2A54421574E096002FB596 /* Containers */,
+				3D2A54491574E096002FB596 /* Context */,
+				3D2A544A1574E096002FB596 /* Object */,
+				3D2A54531574E096002FB596 /* Resources */,
+				3D2A54561574E096002FB596 /* XmlAppCtxHandlerBase.h */,
+				3D2A54571574E096002FB596 /* XmlAppCtxHandlerBase.m */,
+				3D2A54581574E096002FB596 /* XmlAppCtxObjectsHandler.h */,
+				3D2A54591574E096002FB596 /* XmlAppCtxObjectsHandler.m */,
+				3D2A545A1574E096002FB596 /* XmlAppCtxRootHandler.h */,
+				3D2A545B1574E096002FB596 /* XmlAppCtxRootHandler.m */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		3D2A54421574E096002FB596 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				3D2A54431574E096002FB596 /* XmlAppCtxContainerEntryHandler.h */,
+				3D2A54441574E096002FB596 /* XmlAppCtxContainerEntryHandler.m */,
+				3D2A54451574E096002FB596 /* XmlAppCtxDictionayHandler.h */,
+				3D2A54461574E096002FB596 /* XmlAppCtxDictionayHandler.m */,
+				3D2A54471574E096002FB596 /* XmlAppCtxListHandler.h */,
+				3D2A54481574E096002FB596 /* XmlAppCtxListHandler.m */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		3D2A54491574E096002FB596 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		3D2A544A1574E096002FB596 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				3D2A544B1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.h */,
+				3D2A544C1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.m */,
+				3D2A544D1574E096002FB596 /* XmlAppCtxObjectHandler.h */,
+				3D2A544E1574E096002FB596 /* XmlAppCtxObjectHandler.m */,
+				3D2A544F1574E096002FB596 /* XmlAppCtxObjectInitHandler.h */,
+				3D2A54501574E096002FB596 /* XmlAppCtxObjectInitHandler.m */,
+				3D2A54511574E096002FB596 /* XmlAppCtxObjectPropertyHandler.h */,
+				3D2A54521574E096002FB596 /* XmlAppCtxObjectPropertyHandler.m */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		3D2A54531574E096002FB596 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D2A54541574E096002FB596 /* XmlAppCtxResourcesHandler.h */,
+				3D2A54551574E096002FB596 /* XmlAppCtxResourcesHandler.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3D4F8D291566AD0100D73BA9 /* iOSFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,33 +584,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3D713FEF1547970700EB3B1F /* Object */ = {
-			isa = PBXGroup;
-			children = (
-				3D713FF11547972E00EB3B1F /* XmlAppCtxObjectHandler.h */,
-				3D713FF21547972E00EB3B1F /* XmlAppCtxObjectHandler.m */,
-				3D713FF51547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h */,
-				3D713FF61547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m */,
-				3DB826D0156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h */,
-				3DB826D1156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m */,
-				3DF8582A156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.h */,
-				3DF8582B156D0C3600B578D8 /* XmlAppCtxObjectArgumentHandler.m */,
-			);
-			path = Object;
-			sourceTree = "<group>";
-		};
-		3DA5F66E156D9482009DAF07 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				3DA5F670156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h */,
-				3DA5F671156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		3DB6A58B153B6791006F4983 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				3D2A54411574E096002FB596 /* Handlers */,
+				3D2A543F1574E096002FB596 /* DependencyTree.h */,
+				3D2A54401574E096002FB596 /* DependencyTree.m */,
+				3D2A545C1574E096002FB596 /* IXmlApplicationContextParserHandler.h */,
+				3D2A545D1574E096002FB596 /* XmlApplicationContextParser.h */,
+				3D2A545E1574E096002FB596 /* XmlApplicationContextParser.m */,
 				3DB6A58C153B67DC006F4983 /* ApplicationContextResourceProvider.h */,
 				3DB6A58D153B67DC006F4983 /* ApplicationContextResourceProvider.m */,
 			);
@@ -635,19 +690,6 @@
 			path = OSX;
 			sourceTree = "<group>";
 		};
-		3DCFFD03154B1ED70083386A /* Containers */ = {
-			isa = PBXGroup;
-			children = (
-				3D173E78154E208F004FCD47 /* XmlAppCtxListHandler.h */,
-				3D173E79154E208F004FCD47 /* XmlAppCtxListHandler.m */,
-				3DCFFD04154B1EF70083386A /* XmlAppCtxDictionayHandler.h */,
-				3DCFFD05154B1EF70083386A /* XmlAppCtxDictionayHandler.m */,
-				3DCFFD08154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h */,
-				3DCFFD09154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m */,
-			);
-			path = Containers;
-			sourceTree = "<group>";
-		};
 		3DD5F9A8153AFDED009A3712 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,42 +705,21 @@
 		3DD5F9A9153AFDED009A3712 /* Context */ = {
 			isa = PBXGroup;
 			children = (
-				3DD5F9AC153AFDED009A3712 /* Implementation */,
+				3DDB974415738EE900289E19 /* Annotations */,
 				3DB6A58B153B6791006F4983 /* Support */,
+				3DCEBFE5156FF3A200464B74 /* IApplicationContextAware.h */,
 				3DD5F9AA153AFDED009A3712 /* IApplicationContext.h */,
 				3DD5F9AB153AFDED009A3712 /* IApplicationContext.m */,
-				3DCEBFE5156FF3A200464B74 /* IApplicationContextAware.h */,
+				3D2A54271574DF0E002FB596 /* ApplicationContext.h */,
+				3D2A54281574DF0E002FB596 /* ApplicationContext.m */,
+				3D2A54291574DF0E002FB596 /* DictionaryApplicationContext.h */,
+				3D2A542A1574DF0E002FB596 /* DictionaryApplicationContext.m */,
+				3D2A542B1574DF0E002FB596 /* pListApplicationContext.h */,
+				3D2A542C1574DF0E002FB596 /* pListApplicationContext.m */,
+				3D2A542D1574DF0E002FB596 /* XmlApplicationContext.h */,
+				3D2A542E1574DF0E002FB596 /* XmlApplicationContext.m */,
 			);
 			path = Context;
-			sourceTree = "<group>";
-		};
-		3DD5F9AC153AFDED009A3712 /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				3DD5F9AF153AFDED009A3712 /* Support */,
-				3DD5F9AD153AFDED009A3712 /* DictionaryApplicationContext.h */,
-				3DD5F9AE153AFDED009A3712 /* DictionaryApplicationContext.m */,
-				3DD5F9B2153AFDED009A3712 /* pListApplicationContext.h */,
-				3DD5F9B3153AFDED009A3712 /* pListApplicationContext.m */,
-				3DD5F9B4153AFDED009A3712 /* XmlApplicationContext.h */,
-				3DD5F9B5153AFDED009A3712 /* XmlApplicationContext.m */,
-				3D2887A91567F2F400CD8813 /* ApplicationContext.h */,
-				3D2887AA1567F2F500CD8813 /* ApplicationContext.m */,
-			);
-			path = Implementation;
-			sourceTree = "<group>";
-		};
-		3DD5F9AF153AFDED009A3712 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				3DE3CCD8153D82DE0044F5DE /* Handlers */,
-				3DD5F9B0153AFDED009A3712 /* XmlApplicationContextParser.h */,
-				3DD5F9B1153AFDED009A3712 /* XmlApplicationContextParser.m */,
-				3DE3CCDA153D83070044F5DE /* IXmlApplicationContextParserHandler.h */,
-				3DB8BE6B15657E8D0049CDDD /* DependencyTree.h */,
-				3DB8BE6C15657E8D0049CDDD /* DependencyTree.m */,
-			);
-			path = Support;
 			sourceTree = "<group>";
 		};
 		3DD5F9B7153AFDED009A3712 /* Objects */ = {
@@ -706,6 +727,8 @@
 			children = (
 				3D28878F1567E4E000CD8813 /* Definition */,
 				3DD5F9B8153AFDED009A3712 /* Factory */,
+				3DDB9749157391B000289E19 /* NSObject+FlexOC.h */,
+				3DDB974A157391B000289E19 /* NSObject+FlexOC.m */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -749,20 +772,12 @@
 			path = Threading;
 			sourceTree = "<group>";
 		};
-		3DE3CCD8153D82DE0044F5DE /* Handlers */ = {
+		3DDB974415738EE900289E19 /* Annotations */ = {
 			isa = PBXGroup;
 			children = (
-				3DA5F66E156D9482009DAF07 /* Resources */,
-				3DCFFD03154B1ED70083386A /* Containers */,
-				3D713FEF1547970700EB3B1F /* Object */,
-				3DE3CCDC153D83CA0044F5DE /* XmlAppCtxRootHandler.h */,
-				3DE3CCDD153D83CA0044F5DE /* XmlAppCtxRootHandler.m */,
-				3DE3CCE0153D84D80044F5DE /* XmlAppCtxHandlerBase.h */,
-				3DE3CCE1153D84D80044F5DE /* XmlAppCtxHandlerBase.m */,
-				3DE3CCE4153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h */,
-				3DE3CCE5153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m */,
+				3DDB974615738F1A00289E19 /* IAnnotations.h */,
 			);
-			path = Handlers;
+			path = Annotations;
 			sourceTree = "<group>";
 		};
 		3DFC86321533297400883AD9 = {
@@ -845,6 +860,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DCEBFEA156FF41A00464B74 /* IObjectNameAware.h in Headers */,
+				3DDB974815738F1A00289E19 /* IAnnotations.h in Headers */,
+				3DDB974C157391B000289E19 /* NSObject+FlexOC.h in Headers */,
+				3D2A54261574DD68002FB596 /* IObjectProxy.h in Headers */,
+				3D2A54301574DF0E002FB596 /* ApplicationContext.h in Headers */,
+				3D2A54341574DF0E002FB596 /* DictionaryApplicationContext.h in Headers */,
+				3D2A54381574DF0E002FB596 /* pListApplicationContext.h in Headers */,
+				3D2A543C1574DF0E002FB596 /* XmlApplicationContext.h in Headers */,
 				3D4F8D4D1566AE1400D73BA9 /* AOPProxy.h in Headers */,
 				3D4F8D4E1566AE1400D73BA9 /* IMessageMatcher.h in Headers */,
 				3D4F8D4F1566AE1400D73BA9 /* IPointcut.h in Headers */,
@@ -857,28 +880,14 @@
 				3D4F8D561566AE1400D73BA9 /* TruePointcut.h in Headers */,
 				3D4F8D571566AE1400D73BA9 /* RegExPointcut.h in Headers */,
 				3D4F8D581566AE1400D73BA9 /* ObjectProxy.h in Headers */,
-				3D4F8D6C1566AE3B00D73BA9 /* DictionaryApplicationContext.h in Headers */,
-				3D4F8D6D1566AE3B00D73BA9 /* pListApplicationContext.h in Headers */,
 				3D4F8D591566AE1400D73BA9 /* LazyObjectProxy.h in Headers */,
 				3D4F8D5A1566AE1400D73BA9 /* ReadWriteLock.h in Headers */,
 				3D4F8D5B1566AE1400D73BA9 /* MemoryWarningCachePolicy.h in Headers */,
-				3D4F8D6E1566AE3B00D73BA9 /* XmlApplicationContext.h in Headers */,
 				3D4F8D5C1566AE1400D73BA9 /* ICache.h in Headers */,
 				3D4F8D5D1566AE1400D73BA9 /* ICachePolicy.h in Headers */,
 				3D4F8D5E1566AE1400D73BA9 /* DictionaryCache.h in Headers */,
 				3D4F8D5F1566AE1400D73BA9 /* ApplicationContextResourceProvider.h in Headers */,
 				3D4F8D601566AE1400D73BA9 /* IApplicationContext.h in Headers */,
-				3D4F8D6B1566AE3B00D73BA9 /* DependencyTree.h in Headers */,
-				3D4F8D691566AE3B00D73BA9 /* XmlApplicationContextParser.h in Headers */,
-				3D4F8D6A1566AE3B00D73BA9 /* IXmlApplicationContextParserHandler.h in Headers */,
-				3D4F8D611566AE2A00D73BA9 /* XmlAppCtxListHandler.h in Headers */,
-				3D4F8D621566AE2A00D73BA9 /* XmlAppCtxDictionayHandler.h in Headers */,
-				3D4F8D631566AE2A00D73BA9 /* XmlAppCtxContainerEntryHandler.h in Headers */,
-				3D4F8D641566AE2A00D73BA9 /* XmlAppCtxObjectHandler.h in Headers */,
-				3D4F8D651566AE2A00D73BA9 /* XmlAppCtxObjectPropertyHandler.h in Headers */,
-				3D4F8D661566AE2A00D73BA9 /* XmlAppCtxRootHandler.h in Headers */,
-				3D4F8D671566AE2A00D73BA9 /* XmlAppCtxHandlerBase.h in Headers */,
-				3D4F8D681566AE2A00D73BA9 /* XmlAppCtxObjectsHandler.h in Headers */,
 				3D28876D1567BAA800CD8813 /* FlexOC.h in Headers */,
 				3D28877D1567C16200CD8813 /* IObjectFactory.h in Headers */,
 				3D2887961567E50400CD8813 /* IObjectDefinition.h in Headers */,
@@ -886,16 +895,25 @@
 				3D28879A1567E50400CD8813 /* IObjectInitDefinition.h in Headers */,
 				3D28879E1567E50400CD8813 /* IObjectValueDefinition.h in Headers */,
 				3D2887A31567F0A700CD8813 /* ObjectFactoryDefinition.h in Headers */,
-				3D2887AC1567F2F500CD8813 /* ApplicationContext.h in Headers */,
 				3D2887B515680DB900CD8813 /* ObjectDefinition.h in Headers */,
 				3D264152156A7ECA00CDA69D /* ObjectInitDefinition.h in Headers */,
 				3D23CDD3156B9FD900598189 /* ObjectValueDefinition.h in Headers */,
-				3DB826D3156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */,
-				3DF8582D156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */,
-				3DA5F673156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h in Headers */,
 				3DBF75EE156F98B100C317D6 /* FlexOCApplication.h in Headers */,
 				3DCEBFE7156FF3A200464B74 /* IApplicationContextAware.h in Headers */,
-				3DCEBFEA156FF41A00464B74 /* IObjectNameAware.h in Headers */,
+				3D2A54601574E096002FB596 /* DependencyTree.h in Headers */,
+				3D2A54641574E096002FB596 /* XmlAppCtxContainerEntryHandler.h in Headers */,
+				3D2A54681574E096002FB596 /* XmlAppCtxDictionayHandler.h in Headers */,
+				3D2A546C1574E096002FB596 /* XmlAppCtxListHandler.h in Headers */,
+				3D2A54701574E096002FB596 /* XmlAppCtxObjectArgumentHandler.h in Headers */,
+				3D2A54741574E096002FB596 /* XmlAppCtxObjectHandler.h in Headers */,
+				3D2A54781574E096002FB596 /* XmlAppCtxObjectInitHandler.h in Headers */,
+				3D2A547C1574E096002FB596 /* XmlAppCtxObjectPropertyHandler.h in Headers */,
+				3D2A54801574E096002FB596 /* XmlAppCtxResourcesHandler.h in Headers */,
+				3D2A54841574E096002FB596 /* XmlAppCtxHandlerBase.h in Headers */,
+				3D2A54881574E096002FB596 /* XmlAppCtxObjectsHandler.h in Headers */,
+				3D2A548C1574E096002FB596 /* XmlAppCtxRootHandler.h in Headers */,
+				3D2A54901574E096002FB596 /* IXmlApplicationContextParserHandler.h in Headers */,
+				3D2A54921574E096002FB596 /* XmlApplicationContextParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,10 +922,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DD5F9BD153AFDED009A3712 /* IApplicationContext.h in Headers */,
-				3DD5F9BF153AFDED009A3712 /* DictionaryApplicationContext.h in Headers */,
-				3DD5F9C1153AFDED009A3712 /* XmlApplicationContextParser.h in Headers */,
-				3DD5F9C3153AFDED009A3712 /* pListApplicationContext.h in Headers */,
-				3DD5F9C5153AFDED009A3712 /* XmlApplicationContext.h in Headers */,
 				3DD5F9C7153AFDED009A3712 /* IObjectFactory.h in Headers */,
 				3DD5F9CC153AFFBF009A3712 /* ICache.h in Headers */,
 				3DD5F9CE153AFFFD009A3712 /* ICachePolicy.h in Headers */,
@@ -915,15 +929,6 @@
 				3DD5F9D7153B0977009A3712 /* ReadWriteLock.h in Headers */,
 				3DD5F9E0153B1FB9009A3712 /* DictionaryCache.h in Headers */,
 				3DB6A58E153B67DC006F4983 /* ApplicationContextResourceProvider.h in Headers */,
-				3DE3CCDB153D83070044F5DE /* IXmlApplicationContextParserHandler.h in Headers */,
-				3DE3CCDE153D83CA0044F5DE /* XmlAppCtxRootHandler.h in Headers */,
-				3DE3CCE2153D84D80044F5DE /* XmlAppCtxHandlerBase.h in Headers */,
-				3DE3CCE6153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.h in Headers */,
-				3D713FF31547972E00EB3B1F /* XmlAppCtxObjectHandler.h in Headers */,
-				3D713FF71547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.h in Headers */,
-				3DCFFD06154B1EF70083386A /* XmlAppCtxDictionayHandler.h in Headers */,
-				3DCFFD0A154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.h in Headers */,
-				3D173E7A154E2090004FCD47 /* XmlAppCtxListHandler.h in Headers */,
 				3D27F6A7155048F100753582 /* ObjectProxy.h in Headers */,
 				3D27F6AB1550512F00753582 /* LazyObjectProxy.h in Headers */,
 				3DB809C815514D19001303D6 /* IMessageMatcher.h in Headers */,
@@ -936,7 +941,6 @@
 				3D27CBE31555478900D7432F /* IMessageAfterAdvice.h in Headers */,
 				3D27CBE51555480A00D7432F /* IMessageExceptionAdvice.h in Headers */,
 				3D27CBFC15554E2D00D7432F /* TruePointcut.h in Headers */,
-				3DB8BE6D15657E8D0049CDDD /* DependencyTree.h in Headers */,
 				3D24E0941565E3CA006301B9 /* RegExPointcut.h in Headers */,
 				3D28876C1567BAA800CD8813 /* FlexOC.h in Headers */,
 				3D2887951567E50400CD8813 /* IObjectDefinition.h in Headers */,
@@ -944,16 +948,33 @@
 				3D2887991567E50400CD8813 /* IObjectInitDefinition.h in Headers */,
 				3D28879D1567E50400CD8813 /* IObjectValueDefinition.h in Headers */,
 				3D2887A21567F0A700CD8813 /* ObjectFactoryDefinition.h in Headers */,
-				3D2887AB1567F2F500CD8813 /* ApplicationContext.h in Headers */,
 				3D2887B415680DB900CD8813 /* ObjectDefinition.h in Headers */,
 				3D264151156A7ECA00CDA69D /* ObjectInitDefinition.h in Headers */,
 				3D23CDD2156B9FD900598189 /* ObjectValueDefinition.h in Headers */,
-				3DB826D2156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.h in Headers */,
-				3DF8582C156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.h in Headers */,
-				3DA5F672156D94BA009DAF07 /* XmlAppCtxResourcesHandler.h in Headers */,
 				3DBF75ED156F98B100C317D6 /* FlexOCApplication.h in Headers */,
 				3DCEBFE6156FF3A200464B74 /* IApplicationContextAware.h in Headers */,
 				3DCEBFE9156FF41A00464B74 /* IObjectNameAware.h in Headers */,
+				3DDB974715738F1A00289E19 /* IAnnotations.h in Headers */,
+				3DDB974B157391B000289E19 /* NSObject+FlexOC.h in Headers */,
+				3D2A54251574DD68002FB596 /* IObjectProxy.h in Headers */,
+				3D2A542F1574DF0E002FB596 /* ApplicationContext.h in Headers */,
+				3D2A54331574DF0E002FB596 /* DictionaryApplicationContext.h in Headers */,
+				3D2A54371574DF0E002FB596 /* pListApplicationContext.h in Headers */,
+				3D2A543B1574DF0E002FB596 /* XmlApplicationContext.h in Headers */,
+				3D2A545F1574E096002FB596 /* DependencyTree.h in Headers */,
+				3D2A54631574E096002FB596 /* XmlAppCtxContainerEntryHandler.h in Headers */,
+				3D2A54671574E096002FB596 /* XmlAppCtxDictionayHandler.h in Headers */,
+				3D2A546B1574E096002FB596 /* XmlAppCtxListHandler.h in Headers */,
+				3D2A546F1574E096002FB596 /* XmlAppCtxObjectArgumentHandler.h in Headers */,
+				3D2A54731574E096002FB596 /* XmlAppCtxObjectHandler.h in Headers */,
+				3D2A54771574E096002FB596 /* XmlAppCtxObjectInitHandler.h in Headers */,
+				3D2A547B1574E096002FB596 /* XmlAppCtxObjectPropertyHandler.h in Headers */,
+				3D2A547F1574E096002FB596 /* XmlAppCtxResourcesHandler.h in Headers */,
+				3D2A54831574E096002FB596 /* XmlAppCtxHandlerBase.h in Headers */,
+				3D2A54871574E096002FB596 /* XmlAppCtxObjectsHandler.h in Headers */,
+				3D2A548B1574E096002FB596 /* XmlAppCtxRootHandler.h in Headers */,
+				3D2A548F1574E096002FB596 /* IXmlApplicationContextParserHandler.h in Headers */,
+				3D2A54911574E096002FB596 /* XmlApplicationContextParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1119,28 +1140,29 @@
 				3D4F8D3B1566ADEA00D73BA9 /* DictionaryCache.m in Sources */,
 				3D4F8D3C1566ADEA00D73BA9 /* ApplicationContextResourceProvider.m in Sources */,
 				3D4F8D3D1566ADEA00D73BA9 /* IApplicationContext.m in Sources */,
-				3D4F8D3E1566ADEA00D73BA9 /* XmlAppCtxListHandler.m in Sources */,
-				3D4F8D3F1566ADEA00D73BA9 /* XmlAppCtxDictionayHandler.m in Sources */,
-				3D4F8D401566ADEA00D73BA9 /* XmlAppCtxContainerEntryHandler.m in Sources */,
-				3D4F8D411566ADEA00D73BA9 /* XmlAppCtxObjectHandler.m in Sources */,
-				3D4F8D421566ADEA00D73BA9 /* XmlAppCtxObjectPropertyHandler.m in Sources */,
-				3D4F8D431566ADEA00D73BA9 /* XmlAppCtxRootHandler.m in Sources */,
-				3D4F8D441566ADEA00D73BA9 /* XmlAppCtxHandlerBase.m in Sources */,
-				3D4F8D451566ADEA00D73BA9 /* XmlAppCtxObjectsHandler.m in Sources */,
-				3D4F8D461566ADEA00D73BA9 /* XmlApplicationContextParser.m in Sources */,
-				3D4F8D471566ADEA00D73BA9 /* DependencyTree.m in Sources */,
-				3D4F8D481566ADEA00D73BA9 /* DictionaryApplicationContext.m in Sources */,
-				3D4F8D491566ADEA00D73BA9 /* pListApplicationContext.m in Sources */,
-				3D4F8D4A1566ADEA00D73BA9 /* XmlApplicationContext.m in Sources */,
 				3D2887A51567F0A700CD8813 /* ObjectFactoryDefinition.m in Sources */,
-				3D2887AE1567F2F500CD8813 /* ApplicationContext.m in Sources */,
 				3D2887B715680DB900CD8813 /* ObjectDefinition.m in Sources */,
 				3D264154156A7ECA00CDA69D /* ObjectInitDefinition.m in Sources */,
 				3D23CDD5156B9FD900598189 /* ObjectValueDefinition.m in Sources */,
-				3DB826D5156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */,
-				3DF8582F156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */,
-				3DA5F675156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m in Sources */,
 				3DBF75F0156F98B100C317D6 /* FlexOCApplication.m in Sources */,
+				3DDB974E157391B000289E19 /* NSObject+FlexOC.m in Sources */,
+				3D2A54321574DF0E002FB596 /* ApplicationContext.m in Sources */,
+				3D2A54361574DF0E002FB596 /* DictionaryApplicationContext.m in Sources */,
+				3D2A543A1574DF0E002FB596 /* pListApplicationContext.m in Sources */,
+				3D2A543E1574DF0E002FB596 /* XmlApplicationContext.m in Sources */,
+				3D2A54621574E096002FB596 /* DependencyTree.m in Sources */,
+				3D2A54661574E096002FB596 /* XmlAppCtxContainerEntryHandler.m in Sources */,
+				3D2A546A1574E096002FB596 /* XmlAppCtxDictionayHandler.m in Sources */,
+				3D2A546E1574E096002FB596 /* XmlAppCtxListHandler.m in Sources */,
+				3D2A54721574E096002FB596 /* XmlAppCtxObjectArgumentHandler.m in Sources */,
+				3D2A54761574E096002FB596 /* XmlAppCtxObjectHandler.m in Sources */,
+				3D2A547A1574E096002FB596 /* XmlAppCtxObjectInitHandler.m in Sources */,
+				3D2A547E1574E096002FB596 /* XmlAppCtxObjectPropertyHandler.m in Sources */,
+				3D2A54821574E096002FB596 /* XmlAppCtxResourcesHandler.m in Sources */,
+				3D2A54861574E096002FB596 /* XmlAppCtxHandlerBase.m in Sources */,
+				3D2A548A1574E096002FB596 /* XmlAppCtxObjectsHandler.m in Sources */,
+				3D2A548E1574E096002FB596 /* XmlAppCtxRootHandler.m in Sources */,
+				3D2A54941574E096002FB596 /* XmlApplicationContextParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1149,37 +1171,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DD5F9BE153AFDED009A3712 /* IApplicationContext.m in Sources */,
-				3DD5F9C0153AFDED009A3712 /* DictionaryApplicationContext.m in Sources */,
-				3DD5F9C2153AFDED009A3712 /* XmlApplicationContextParser.m in Sources */,
-				3DD5F9C4153AFDED009A3712 /* pListApplicationContext.m in Sources */,
-				3DD5F9C6153AFDED009A3712 /* XmlApplicationContext.m in Sources */,
 				3DD5F9D3153B0421009A3712 /* MemoryWarningCachePolicy.m in Sources */,
 				3DD5F9D8153B0977009A3712 /* ReadWriteLock.m in Sources */,
 				3DD5F9E1153B1FB9009A3712 /* DictionaryCache.m in Sources */,
 				3DB6A58F153B67DC006F4983 /* ApplicationContextResourceProvider.m in Sources */,
-				3DE3CCDF153D83CA0044F5DE /* XmlAppCtxRootHandler.m in Sources */,
-				3DE3CCE3153D84D80044F5DE /* XmlAppCtxHandlerBase.m in Sources */,
-				3DE3CCE7153D8CDC0044F5DE /* XmlAppCtxObjectsHandler.m in Sources */,
-				3D713FF41547972E00EB3B1F /* XmlAppCtxObjectHandler.m in Sources */,
-				3D713FF81547993300EB3B1F /* XmlAppCtxObjectPropertyHandler.m in Sources */,
-				3DCFFD07154B1EF70083386A /* XmlAppCtxDictionayHandler.m in Sources */,
-				3DCFFD0B154B1F0A0083386A /* XmlAppCtxContainerEntryHandler.m in Sources */,
-				3D173E7B154E2090004FCD47 /* XmlAppCtxListHandler.m in Sources */,
 				3D27F6A8155048F100753582 /* ObjectProxy.m in Sources */,
 				3D27F6AC1550512F00753582 /* LazyObjectProxy.m in Sources */,
 				3DEF83F41552AAE200C3D934 /* AOPProxy.m in Sources */,
 				3D27CBFD15554E2D00D7432F /* TruePointcut.m in Sources */,
-				3DB8BE6E15657E8D0049CDDD /* DependencyTree.m in Sources */,
 				3D24E0951565E3CA006301B9 /* RegExPointcut.m in Sources */,
 				3D2887A41567F0A700CD8813 /* ObjectFactoryDefinition.m in Sources */,
-				3D2887AD1567F2F500CD8813 /* ApplicationContext.m in Sources */,
 				3D2887B615680DB900CD8813 /* ObjectDefinition.m in Sources */,
 				3D264153156A7ECA00CDA69D /* ObjectInitDefinition.m in Sources */,
 				3D23CDD4156B9FD900598189 /* ObjectValueDefinition.m in Sources */,
-				3DB826D4156CE5C2003A6317 /* XmlAppCtxObjectInitHandler.m in Sources */,
-				3DF8582E156D0C3700B578D8 /* XmlAppCtxObjectArgumentHandler.m in Sources */,
-				3DA5F674156D94BA009DAF07 /* XmlAppCtxResourcesHandler.m in Sources */,
 				3DBF75EF156F98B100C317D6 /* FlexOCApplication.m in Sources */,
+				3DDB974D157391B000289E19 /* NSObject+FlexOC.m in Sources */,
+				3D2A54311574DF0E002FB596 /* ApplicationContext.m in Sources */,
+				3D2A54351574DF0E002FB596 /* DictionaryApplicationContext.m in Sources */,
+				3D2A54391574DF0E002FB596 /* pListApplicationContext.m in Sources */,
+				3D2A543D1574DF0E002FB596 /* XmlApplicationContext.m in Sources */,
+				3D2A54611574E096002FB596 /* DependencyTree.m in Sources */,
+				3D2A54651574E096002FB596 /* XmlAppCtxContainerEntryHandler.m in Sources */,
+				3D2A54691574E096002FB596 /* XmlAppCtxDictionayHandler.m in Sources */,
+				3D2A546D1574E096002FB596 /* XmlAppCtxListHandler.m in Sources */,
+				3D2A54711574E096002FB596 /* XmlAppCtxObjectArgumentHandler.m in Sources */,
+				3D2A54751574E096002FB596 /* XmlAppCtxObjectHandler.m in Sources */,
+				3D2A54791574E096002FB596 /* XmlAppCtxObjectInitHandler.m in Sources */,
+				3D2A547D1574E096002FB596 /* XmlAppCtxObjectPropertyHandler.m in Sources */,
+				3D2A54811574E096002FB596 /* XmlAppCtxResourcesHandler.m in Sources */,
+				3D2A54851574E096002FB596 /* XmlAppCtxHandlerBase.m in Sources */,
+				3D2A54891574E096002FB596 /* XmlAppCtxObjectsHandler.m in Sources */,
+				3D2A548D1574E096002FB596 /* XmlAppCtxRootHandler.m in Sources */,
+				3D2A54931574E096002FB596 /* XmlApplicationContextParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1203,7 +1226,6 @@
 				3D5B8CFA1555521B008FDD0A /* TruePointcut.m in Sources */,
 				3DBD78561565A24500B3EB9C /* TestExceptionAdvisor.m in Sources */,
 				3DBD785A1565A36500B3EB9C /* FailedInstanceService.m in Sources */,
-				3DD63CFC156ADBA800D557BE /* ApplicationContext.m in Sources */,
 				3DA5F678156D98D1009DAF07 /* FlexOCXMLResourceTest.m in Sources */,
 				3D26EC34156E3812009C95CE /* FlexOCpListResourceTest.m in Sources */,
 				3DCEBFF0156FF92500464B74 /* InstanceServiceNameAware.m in Sources */,

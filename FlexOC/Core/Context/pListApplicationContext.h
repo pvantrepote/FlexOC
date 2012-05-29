@@ -7,7 +7,7 @@
 //
 
 #ifdef FLEXOC_STATIC_LIB
-#import <FlexOC/Core/Context/Implementation/DictionaryApplicationContext.h>
+#import <FlexOC/Core/Context/DictionaryApplicationContext.h>
 #else
 #import <FlexOC/DictionaryApplicationContext.h>
 #endif

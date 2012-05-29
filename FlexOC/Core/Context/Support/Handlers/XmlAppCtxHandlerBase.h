@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <FlexOC/Core/Context/Implementation/Support/IXmlApplicationContextParserHandler.h>
+#import <FlexOC/Core/Context/Support/IXmlApplicationContextParserHandler.h>
 
 @interface XmlAppCtxHandlerBase : NSObject<IXmlApplicationContextParserHandler, NSXMLParserDelegate> {
 	@private

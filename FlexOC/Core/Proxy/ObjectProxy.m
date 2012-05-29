@@ -18,15 +18,19 @@
 
 #pragma mark - NSObject override
 
+-(BOOL)isProxy {
+	return YES;
+}
+
 -(void) forwardInvocation:(NSInvocation *)anInvocation {
-	
+	/// Unwrape if the tagert is lazy
 	if ([self.target isKindOfClass:[LazyObjectProxy class]]) {
-		/// Its a lazy object
 		self.target = ((LazyObjectProxy*)self.target).target;
 	}
 	
 	if ([self.target respondsToSelector:anInvocation.selector]) {
-		[anInvocation invokeWithTarget:self.target];
+		anInvocation.target = self.target;
+		[anInvocation invoke];
 	}
 	else {
 		[self doesNotRecognizeSelector:anInvocation.selector];
@@ -34,10 +38,19 @@
 }
 
 -(NSMethodSignature *) methodSignatureForSelector:(SEL)aSelector {
+	/// Unwrape if the tagert is lazy
+	if ([self.target isKindOfClass:[LazyObjectProxy class]]) {
+		self.target = ((LazyObjectProxy*)self.target).target;
+	}
+	
 	return [self.target methodSignatureForSelector:aSelector];
 }
 
 -(id) forwardingTargetForSelector:(SEL)aSelector {
+	/// Unwrape if the tagert is lazy
+	if ([self.target isKindOfClass:[LazyObjectProxy class]]) {
+		self.target = ((LazyObjectProxy*)self.target).target;
+	}
 	
 	if ([self.target respondsToSelector:aSelector]) {
 		return self.target;
@@ -50,6 +63,11 @@
 }
 
 -(id) replacementObjectForCoder:(NSCoder *)aCoder {
+	/// Unwrape if the tagert is lazy
+	if ([self.target isKindOfClass:[LazyObjectProxy class]]) {
+		self.target = ((LazyObjectProxy*)self.target).target;
+	}
+	
 	return self.target;
 }
 

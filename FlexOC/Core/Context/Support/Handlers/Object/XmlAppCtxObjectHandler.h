@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Tamajii Inc. All rights reserved.
 //
 
-#import <FlexOC/Core/Context/Implementation/Support/Handlers/XmlAppCtxHandlerBase.h>
+#import <FlexOC/Core/Context/Support/Handlers/XmlAppCtxHandlerBase.h>
 
 @protocol IObjectDefinition;
 

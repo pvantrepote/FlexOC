@@ -9,10 +9,13 @@
 #import "FlexOCApplication.h"
 
 #import "IApplicationContext.h"
+#import "IAnnotations.h"
 
 @implementation FlexOCApplication
 
 #pragma mark - Properties
+
+FLEXOC_OBJECT_ID("FlexOCApplication");
 
 @synthesize applicationDelegate;
 
@@ -22,7 +25,7 @@
 	self = [super init];
 	if (self) {
 		if ([[IApplicationContext sharedApplicationContext] configureObject:self 
-																   withName:NSStringFromClass([self class])]) {
+																   withName:self.flexOCObjectID]) {
 			self.delegate = applicationDelegate;			
 		}
 	}
@@ -36,7 +39,7 @@
 
 -(void)awakeFromNib {
 	if ([[IApplicationContext sharedApplicationContext] configureObject:self 
-															   withName:NSStringFromClass([self class])]) {
+															   withName:self.flexOCObjectID]) {
 		self.delegate = applicationDelegate;			
 	}
 }

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <FlexOC/Core/Context/Implementation/Support/Handlers/XmlAppCtxHandlerBase.h>
+#import <FlexOC/Core/Context/Support/Handlers/XmlAppCtxHandlerBase.h>
 @class ApplicationContext;
 
 @interface XmlAppCtxRootHandler : XmlAppCtxHandlerBase {

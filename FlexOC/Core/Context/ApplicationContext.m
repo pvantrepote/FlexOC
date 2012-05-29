@@ -91,6 +91,16 @@
 				   andDefinition:objectDefinition];
 }
 
+-(BOOL) configureObject:(id<NSObject>) objectInstance withDefinition:(id<IObjectDefinition>) objectDefinition {
+	return [self configureObject:objectInstance 
+						withName:objectDefinition.name 
+				   andDefinition:objectDefinition];	
+}
+
+-(id<IObjectDefinition>) getObjectDefinitionWithName:(NSString*) objectName {
+	return [objectsCfg objectForKey:objectName];
+}
+
 -(id) getObjectWithName:(NSString*) objectName andDefinition:(id<IObjectDefinition>) objectDefinition {
 	if (!objectDefinition) return nil;
 	
@@ -103,6 +113,12 @@
 	id instance = [DependencyTree hasCircularDependencyForObjectName:objectName];
 	if (instance) {
 		return (!allowCircularDependencies) ? nil : instance;
+	}
+	
+	/// Check if the object instance has been pushed to the TLS
+	instance = [[[NSThread currentThread] threadDictionary] objectForKey:objectName];
+	if (instance) {
+		return instance;
 	}
 	
 	/// Check if its a singleton
@@ -142,7 +158,7 @@
 	if (!c) return nil;
 	
 	BOOL initialized = NO;
-	NSObject* objectInstance = nil;
+	id objectInstance = nil;
 	
 	/// Check if its a lazy object
 	if (objectDefinition.isLazy) {
@@ -264,6 +280,21 @@
 
 -(BOOL) configureObject:(NSObject* )objectInstance withName:(NSString *)objectName andDefinition:(id<IObjectDefinition>) objectDefinition {
 	
+	NSMutableDictionary* properties = objectDefinition.properties;
+	if (properties && [properties count]) {
+		/// Assign all properties
+		NSMutableDictionary* keyValues = [NSMutableDictionary dictionary];
+		for (NSString* key in [properties allKeys]) {
+			id<IObjectValueDefinition> value = [self getValue:[properties objectForKey:key]];
+			if (value) {
+				[keyValues setObject:value  
+							  forKey:key];			
+			}
+		}
+		
+		[objectInstance setValuesForKeysWithDictionary:keyValues];
+	}
+		
 	/// Assign the context of the instance is comform to IApplicationContextAware
 	if ([objectInstance conformsToProtocol:@protocol(IApplicationContextAware)]) {
 		((id<IApplicationContextAware>)objectInstance).context = self;
@@ -272,25 +303,7 @@
 	/// Assign the name of the instance is comform to IObjectNameAware
 	if ([objectInstance conformsToProtocol:@protocol(IObjectNameAware)]) {
 		((id<IObjectNameAware>)objectInstance).name = objectName;
-	}			
-
-	NSMutableDictionary* properties = objectDefinition.properties;
-	if (!properties || ![properties count]) {
-		/// Nothing to do, just return YES
-		return YES;
 	}
-		
-	/// Assign all properties
-	NSMutableDictionary* keyValues = [NSMutableDictionary dictionary];
-	for (NSString* key in [properties allKeys]) {
-		id<IObjectValueDefinition> value = [self getValue:[properties objectForKey:key]];
-		if (value) {
-			[keyValues setObject:value  
-						  forKey:key];			
-		}
-	}
-	
-	[objectInstance setValuesForKeysWithDictionary:keyValues];
 	
 	return YES;
 }

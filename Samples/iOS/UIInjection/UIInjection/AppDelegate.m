@@ -11,11 +11,22 @@
 #import <FlexOC/FlexOC.h>
 
 #import "ViewController.h"
+#import <FlexOC/Core/Objects/NSObject+FlexOC.h>
+#import <FlexOC/Core/Objects/NSObject+FlexOC.m>
+#import <FlexOC/AOP/Support/AOPProxy.h>
+#import <FlexOC/AOP/TruePointcut.h>
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+
++(void)load {
+	[super load];
+	
+	[AOPProxy version];
+	[TruePointcut version];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
